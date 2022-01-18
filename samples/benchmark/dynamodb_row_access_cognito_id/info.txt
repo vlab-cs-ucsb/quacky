@@ -1,0 +1,4 @@
+This policy allows row-level access to a DynamoDB table based on 
+an Amazon Cognito ID. It uses the ForAllValues condition.
+
+source = https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_examples_dynamodb_rows.html_

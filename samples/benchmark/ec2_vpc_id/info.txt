@@ -1,0 +1,4 @@
+This policy allows managing ec2 security groups associated with a specific
+virtual private cloud and allows the actions to be completed on the console. 
+
+source = https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_examples_ec2_securitygroups-vpc.html_

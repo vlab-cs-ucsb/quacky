@@ -1,0 +1,31 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ec2:AuthorizeSecurityGroupEgress",
+                "ec2:AuthorizeSecurityGroupIngress",
+                "ec2:DeleteSecurityGroup",
+                "ec2:RevokeSecurityGroupEgress",
+                "ec2:RevokeSecurityGroupIngress"
+            ],
+            "Resource": "arn:aws:ec2:*:*:security-group/*",
+            "Condition": {
+                "ArnEquals": {
+                    "ec2:Vpc": "arn:aws:ec2:*:*:vpc/vpc-vpc-id"
+                }
+            }
+        },
+        {
+            "Action": [
+                "ec2:DescribeSecurityGroups",
+                "ec2:DescribeSecurityGroupReferences",
+                "ec2:DescribeStaleSecurityGroups",
+                "ec2:DescribeVpcs"
+            ],
+            "Effect": "Allow",
+            "Resource": "*"
+        }
+    ]
+}

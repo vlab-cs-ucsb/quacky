@@ -1,0 +1,17 @@
+{
+  "Resource":[
+    "arn:aws:s3:::billing",
+    "arn:aws:s3:::school",
+    "arn:aws:s3:::work",
+    "arn:aws:s3:::taxes",
+    "arn:aws:s3:::data"],
+  "Condition":{
+    "s3:prefix": [
+      "guest",
+      "user",
+      "admin",
+      "owner",
+      "manager"
+    ]
+  }
+}

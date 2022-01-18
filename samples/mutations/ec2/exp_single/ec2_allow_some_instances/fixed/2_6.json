@@ -1,0 +1,16 @@
+{
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": "ec2:*",
+            "Resource": [
+                "*"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Action": "ec2:*",
+            "Resource": "arn:aws:ec2:*"
+        }
+    ]
+}

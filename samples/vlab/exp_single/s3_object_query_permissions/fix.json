@@ -1,0 +1,18 @@
+{
+    "Statement": [
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": [
+                "s3:ListBucketVersions",
+                "s3:ListBucket"
+            ],
+            "Resource": "arn:aws:s3:::BUCKETNAME",
+            "Condition": {
+                "ForAllValues:StringLikeIfExists": {
+                    "s3:prefix": "0001"
+                }
+            }
+        }
+    ]
+}

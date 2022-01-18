@@ -1,0 +1,29 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "ec2:RunInstances",
+      "Resource": [
+		"arn:aws:ec2:<region>:<account_id>:subnet/*", 
+		"arn:aws:ec2:<region>:<account_id>:security-group/*"
+		],
+        "Condition": {
+         "StringEquals": {
+            "ec2:Vpc": "arn:aws:ec2:<region>:<account_id>:vpc/<vpc_id>"
+            }
+      }
+    },
+    {
+      "Effect": "Allow",
+      "Action": "ec2:RunInstances",
+      "Resource": [ 
+	     "arn:aws:ec2:<region>::image/ami-*",
+         "arn:aws:ec2:<region>:<account_id>:instance/*",
+         "arn:aws:ec2:<region>:<account_id>:volume/*",
+         "arn:aws:ec2:<region>:<account_id>:network-interface/*",
+         "arn:aws:ec2:<region>:<account_id>:key-pair/*"
+         ]
+    }
+  ]
+}

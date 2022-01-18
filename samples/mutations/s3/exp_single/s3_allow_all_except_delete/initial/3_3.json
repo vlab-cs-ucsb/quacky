@@ -1,0 +1,15 @@
+{
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": "s3:*",
+            "Resource": "arn:aws:s3:::*"
+        },
+        {
+            "Sid": "NoBucketDelete",
+            "Effect": "Deny",
+            "NotResource": "arn:aws:s3:::*",
+            "NotAction": "s3:*"
+        }
+    ]
+}

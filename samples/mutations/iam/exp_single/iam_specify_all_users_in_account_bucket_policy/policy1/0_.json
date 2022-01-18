@@ -1,0 +1,15 @@
+{
+    "Statement": [
+        {
+            "Sid": "Stmt1507580843085",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::12345667789012:root"
+            },
+            "Action": [
+                "s3:ListBucket"
+            ],
+            "Resource": "arn:aws:s3:::mybucket"
+        }
+    ]
+}

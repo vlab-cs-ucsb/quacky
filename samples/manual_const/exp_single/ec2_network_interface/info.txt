@@ -1,0 +1,2 @@
+expected count: 5
+This policy allows all ec2 network interface actions on the resource.

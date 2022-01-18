@@ -1,0 +1,18 @@
+{
+    "Statement": [
+        {
+            "Sid": "TheseActionsDontSupportResourceLevelPermissions",
+            "Effect": "Allow",
+            "Action": [
+                "ec2:Describe*"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "TheseActionsSupportResourceLevelPermissions",
+            "Action": "ec2:*",
+            "Resource": "arn:aws:ec2:ap-southeast-1b:639080490749:instance/i-0899dfec6a516710a",
+            "Effect": "Allow"
+        }
+    ]
+}

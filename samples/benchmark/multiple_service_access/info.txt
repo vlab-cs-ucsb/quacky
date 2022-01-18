@@ -1,0 +1,4 @@
+This policy allows full access to multiple services and limits 
+access to specific resources. 
+
+source = https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_examples_multiple-services-console.html

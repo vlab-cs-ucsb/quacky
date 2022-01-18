@@ -1,0 +1,20 @@
+
+**Policies in ec2**
+
+bound: `100`, variables: `True`, constraints: `True`, smt-lib: `False`
+
+|Policy|SAT/UNSAT|Solve Time (ms)|lg(tuple)|Count Time (ms)|lg(principal)|lg(action)|lg(resource)|
+|-|-|-|-|-|-|-|-|
+|[../samples/ec2/exp_single/ec2_prevent_running_classic/policy.json](../samples/ec2/exp_single/ec2_prevent_running_classic/policy.json)|SAT|9744.64|1242.0774104173113|67.3168|0.0|2.807354922057604|342.0984311951053|
+|[../samples/ec2/exp_single/ec2_require_mfa_session_token/policy.json](../samples/ec2/exp_single/ec2_require_mfa_session_token/policy.json)|SAT|48090.2|462.3723862746307|1146.5|0.0|9.581200581924957|461.3723862729742|
+|[../samples/ec2/exp_single/ec2_launch_instance_specific_subnet/policy.json](../samples/ec2/exp_single/ec2_launch_instance_specific_subnet/policy.json)|SAT|8590.32|412.7638880477745|70.6243|0.0|7.0|412.7638880477745|
+|[../samples/ec2/exp_single/ec2_allow_ebs_volume_owners/policy.json](../samples/ec2/exp_single/ec2_allow_ebs_volume_owners/policy.json)|SAT|1872.89|776.8856146991324|42.7686|0.0|2.0|123.06923575264415|
+|[../samples/ec2/exp_single/ec2_limit_ebs_volume_size/fixed.json](../samples/ec2/exp_single/ec2_limit_ebs_volume_size/fixed.json)|SAT|52199.4|1431.4416685774345|1360.42|0.0|6.169925001442312|531.4626893552286|
+|[../samples/ec2/exp_single/ec2_limit_ebs_volume_size/initial.json](../samples/ec2/exp_single/ec2_limit_ebs_volume_size/initial.json)|SAT|49415|1431.4416685774345|1218.7|0.0|6.169925001442312|531.4626893552286|
+|[../samples/ec2/exp_single/ec2_restrict_to_specific_instance/policy.json](../samples/ec2/exp_single/ec2_restrict_to_specific_instance/policy.json)|SAT|1289.73|470.79250529474086|23.65|0.0|6.94251450533924|54.069235752644154|
+|[../samples/ec2/exp_single/ec2_enforce_project_tagging/policy.json](../samples/ec2/exp_single/ec2_enforce_project_tagging/policy.json)|SAT|47240.8|1331.068449425438|1245.29|0.0|8.08746284125034|431.08946581160654|
+|[../samples/ec2/exp_single/ec2_actions_region_aws-portal/policy.json](../samples/ec2/exp_single/ec2_actions_region_aws-portal/policy.json)|SAT|61097|1583.4040475505933|1617.72|0.0|9.714245517666123|679.8247206060817|
+|[../samples/ec2/exp_single/ec2_validate_attach_volume/policy.json](../samples/ec2/exp_single/ec2_validate_attach_volume/policy.json)|UNSAT|1411.08|-|-|-|-|-|
+|[../samples/ec2/exp_single/ec2_terminate_instance_ip/policy.json](../samples/ec2/exp_single/ec2_terminate_instance_ip/policy.json)|SAT|1324.36|154.06923575264415|43.8728|0.0|0.0|122.06923575264415|
+|[../samples/ec2/exp_single/ec2_allow_some_instances/fixed.json](../samples/ec2/exp_single/ec2_allow_some_instances/fixed.json)|SAT|7369.07|1312.7428672699807|231.988|0.0|4.857980995127573|412.7638880477748|
+|[../samples/ec2/exp_single/ec2_allow_some_instances/initial.json](../samples/ec2/exp_single/ec2_allow_some_instances/initial.json)|SAT|7263.1|412.7638880477748|105.634|0.0|3.8073549220576037|412.7638880477748|

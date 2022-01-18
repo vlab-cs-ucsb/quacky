@@ -1,0 +1,20 @@
+{
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:*",
+            "Resource": "*"
+        },
+        {
+            "Sid": "TestBlock",
+            "Effect": "Deny",
+            "Principal": "*",
+            "Action": "s3:*",
+            "Resource": [
+                "arn:aws:s3:::madeupbucketname/Directory1",
+                "arn:aws:s3:::madeupbucketname/Directory1/*"
+            ]
+        }
+    ]
+}

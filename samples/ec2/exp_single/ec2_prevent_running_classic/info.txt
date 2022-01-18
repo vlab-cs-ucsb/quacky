@@ -1,0 +1,7 @@
+raw.txt contains the original policy. The region, account-id, and 
+vpc-id were stubs so we sanitized it to match with the actual 
+variable constraints.
+
+The sample vpc-id came from https://docs.aws.amazon.com/vpc/latest/userguide/vpc-subnets-commands-example.html 
+
+source = https://forums.aws.amazon.com/thread.jspa?messageID=525094&#525094

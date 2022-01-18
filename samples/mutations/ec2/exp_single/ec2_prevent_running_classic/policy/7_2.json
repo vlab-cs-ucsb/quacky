@@ -1,0 +1,14 @@
+{
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": "ec2:RunInstances",
+            "Resource": "arn:aws:ec2:us-east-1:123412341234:*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": "ec2:RunInstances",
+            "Resource": "arn:aws:ec2:us-east-1::*"
+        }
+    ]
+}

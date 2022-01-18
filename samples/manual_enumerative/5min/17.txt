@@ -1,0 +1,6 @@
+|[../samples/manual_enumerative/exp_single/no_wildcards/policy.json](../samples/manual_enumerative/exp_single/no_wildcards/policy.json)|4|54.830312728881836|4|14.07208|
+{}
+|[../samples/manual_enumerative/exp_single/2_wildcards/policy.json](../samples/manual_enumerative/exp_single/2_wildcards/policy.json)|1028|59457.95464515686|1028|79.04026999999999|
+{}
+|[../samples/manual_enumerative/exp_single/1_wildcard/policy.json](../samples/manual_enumerative/exp_single/1_wildcard/policy.json)|516|14131.983995437622|516|56.51468|
+{}

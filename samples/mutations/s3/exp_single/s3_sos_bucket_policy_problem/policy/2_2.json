@@ -1,0 +1,20 @@
+{
+    "Statement": [
+        {
+            "Sid": "AllowRequestsReferred",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "*",
+            "Resource": "arn:aws:s3:::example/*"
+        },
+        {
+            "Sid": "DenyRequestsReferred",
+            "Effect": "Deny",
+            "NotPrincipal": {
+                "Service": "lambda.amazonaws.com"
+            },
+            "Action": "*",
+            "Resource": "arn:aws:s3:::example/*"
+        }
+    ]
+}

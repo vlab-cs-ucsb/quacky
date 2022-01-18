@@ -1,0 +1,89 @@
+(declare-const actionName String)
+(declare-const actionNamespace String)
+(declare-const resourceAccount String)
+(declare-const resourcePartition String)
+(declare-const resourceRegion String)
+(declare-const resourceResource String)
+(declare-const resourceService String)
+(declare-const |s3:prefix| String)
+(declare-const |s3:prefix_exists| Bool)
+
+; Action: p0.0
+(declare-const p0.0.action Bool)
+(assert (= p0.0.action (and (= "s3" actionNamespace) (= "getobject" actionName))))
+
+; Resource: p0.0
+(declare-const p0.0.resource Bool)
+(assert (= p0.0.resource (and (= "aws" resourcePartition) (= "s3" resourceService) (= "" resourceRegion) (= "" resourceAccount) (str.prefixof "examplebucket/" resourceResource))))
+
+; Principal: p0.0
+(declare-const p0.0.principal Bool)
+(assert p0.0.principal)
+
+; Condition: p0.0.0.0
+(declare-const p0.0.0.0.condition Bool)
+(assert (= p0.0.0.0.condition (and |s3:prefix_exists| (str.prefixof "${aws:username}/" |s3:prefix|))))
+
+; Condition: p0.0.0
+(declare-const p0.0.0.condition Bool)
+(assert (= p0.0.0.condition p0.0.0.0.condition))
+
+; Condition: p0.0
+(declare-const p0.0.condition Bool)
+(assert (= p0.0.condition p0.0.0.condition))
+
+; Statement: p0.0
+(declare-const p0.0.statement.allows Bool)
+(declare-const p0.0.statement.denies Bool)
+(assert (= p0.0.statement.allows (and p0.0.action p0.0.resource p0.0.principal p0.0.condition)))
+(assert (not p0.0.statement.denies))
+
+; Policy: 0
+(declare-const p0.allows Bool)
+(declare-const p0.denies Bool)
+(declare-const p0.neutral Bool)
+(assert (= p0.allows (and (not p0.denies) p0.0.statement.allows)))
+(assert (= p0.denies p0.0.statement.denies))
+(assert (= p0.neutral (and (not p0.allows) (not p0.denies))))
+
+; Action: p1.0
+(declare-const p1.0.action Bool)
+(assert (= p1.0.action (and (= "s3" actionNamespace) (= "getobject" actionName))))
+
+; Resource: p1.0
+(declare-const p1.0.resource Bool)
+(assert (= p1.0.resource (and (= "aws" resourcePartition) (= "s3" resourceService) (= "" resourceRegion) (= "" resourceAccount) (str.prefixof "examplebucket/" resourceResource))))
+
+; Principal: p1.0
+(declare-const p1.0.principal Bool)
+(assert p1.0.principal)
+
+; Condition: p1.0.0.0
+(declare-const p1.0.0.0.condition Bool)
+(assert (= p1.0.0.0.condition (and |s3:prefix_exists| (str.prefixof "home/" |s3:prefix|))))
+
+; Condition: p1.0.0
+(declare-const p1.0.0.condition Bool)
+(assert (= p1.0.0.condition p1.0.0.0.condition))
+
+; Condition: p1.0
+(declare-const p1.0.condition Bool)
+(assert (= p1.0.condition p1.0.0.condition))
+
+; Statement: p1.0
+(declare-const p1.0.statement.allows Bool)
+(declare-const p1.0.statement.denies Bool)
+(assert (= p1.0.statement.allows (and p1.0.action p1.0.resource p1.0.principal p1.0.condition)))
+(assert (not p1.0.statement.denies))
+
+; Policy: 1
+(declare-const p1.allows Bool)
+(declare-const p1.denies Bool)
+(declare-const p1.neutral Bool)
+(assert (= p1.allows (and (not p1.denies) p1.0.statement.allows)))
+(assert (= p1.denies p1.0.statement.denies))
+(assert (= p1.neutral (and (not p1.allows) (not p1.denies))))
+(assert p0.allows)
+(assert (or p1.denies p1.neutral))
+(check-sat)
+(get-model)

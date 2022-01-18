@@ -1,0 +1,6 @@
+|[../samples/manual_enumerative/exp_single/no_wildcards/policy.json](../samples/manual_enumerative/exp_single/no_wildcards/policy.json)|4|71.84982299804688|4|27.26498|
+{}
+|[../samples/manual_enumerative/exp_single/2_wildcards/policy.json](../samples/manual_enumerative/exp_single/2_wildcards/policy.json)|3905|1201399.9030590057|263172|76.73251|
+{1: 1062, 2: 1448, 3: 1750, 4: 1990, 5: 2188, 6: 2351, 7: 2500, 8: 2620, 9: 2729, 10: 2850, 11: 2968, 12: 3086, 13: 3207, 14: 3320, 15: 3427, 16: 3529, 17: 3629, 18: 3725, 19: 3817, 20: 3904}
+|[../samples/manual_enumerative/exp_single/1_wildcard/policy.json](../samples/manual_enumerative/exp_single/1_wildcard/policy.json)|3465|1201340.585231781|131588|56.53908|
+{1: 1027, 2: 1347, 3: 1610, 4: 1828, 5: 2009, 6: 2157, 7: 2283, 8: 2398, 9: 2505, 10: 2595, 11: 2676, 12: 2764, 13: 2859, 14: 2955, 15: 3048, 16: 3138, 17: 3224, 18: 3307, 19: 3387, 20: 3464}

@@ -1,0 +1,3 @@
+This policy allows exactly 1 combination of principal, action, and resource. 
+
+source = https://forums.aws.amazon.com/thread.jspa?messageID=808740#808740

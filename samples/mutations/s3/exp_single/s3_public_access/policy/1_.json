@@ -1,0 +1,19 @@
+{
+    "Statement": [
+        {
+            "Sid": "Allow get requests referred by mydomain.com",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::files.mydomain.com/*",
+            "Condition": {
+                "StringLike": {
+                    "aws:Referer": [
+                        "https://console.aws.amazon.com/*",
+                        "https://www.mydomain.com/*"
+                    ]
+                }
+            }
+        }
+    ]
+}

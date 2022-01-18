@@ -1,0 +1,309 @@
+{
+    "cloudkms.googleapis.com/cryptokeyversion": [
+        "cloudkms.cryptokeyversions.create",
+        "cloudkms.cryptokeyversions.destroy",
+        "cloudkms.cryptokeyversions.get",
+        "cloudkms.cryptokeyversions.list",
+        "cloudkms.cryptokeyversions.restore",
+        "cloudkms.cryptokeyversions.update",
+        "cloudkms.cryptokeyversions.usetodecrypt",
+        "cloudkms.cryptokeyversions.usetoencrypt",
+        "cloudkms.cryptokeyversions.usetosign",
+        "cloudkms.cryptokeyversions.viewpublickey"
+    ],
+    "cloudkms.googleapis.com/cryptokey": [
+        "cloudkms.cryptokeys.create",
+        "cloudkms.cryptokeys.get",
+        "cloudkms.cryptokeys.getiampolicy",
+        "cloudkms.cryptokeys.list",
+        "cloudkms.cryptokeys.setiampolicy",
+        "cloudkms.cryptokeys.update"
+    ],
+    "cloudkms.googleapis.com/keyring": [
+        "cloudkms.keyrings.create",
+        "cloudkms.keyrings.get",
+        "cloudkms.keyrings.getiampolicy",
+        "cloudkms.keyrings.list",
+        "cloudkms.keyrings.setiampolicy"
+    ],
+    "compute.googleapis.com/backendservice": [
+        "compute.backendservices.create",
+        "compute.backendservices.delete",
+        "compute.backendservices.get",
+        "compute.backendservices.list",
+        "compute.backendservices.setsecuritypolicy",
+        "compute.backendservices.update",
+        "compute.backendservices.use"
+    ],
+    "compute.googleapis.com/disk": [
+        "compute.disks.addresourcepolicies",
+        "compute.disks.create",
+        "compute.disks.createsnapshot",
+        "compute.disks.delete",
+        "compute.disks.get",
+        "compute.disks.getiampolicy",
+        "compute.disks.list",
+        "compute.disks.removeresourcepolicies",
+        "compute.disks.resize",
+        "compute.disks.setiampolicy",
+        "compute.disks.setlabels",
+        "compute.disks.update",
+        "compute.disks.use",
+        "compute.disks.usereadonly"
+    ],
+    "compute.googleapis.com/firewall": [
+        "compute.firewalls.create",
+        "compute.firewalls.delete",
+        "compute.firewalls.get",
+        "compute.firewalls.list",
+        "compute.firewalls.update"
+    ],
+    "compute.googleapis.com/forwardingrule": [
+        "compute.forwardingrules.create",
+        "compute.forwardingrules.delete",
+        "compute.forwardingrules.get",
+        "compute.forwardingrules.list",
+        "compute.forwardingrules.setlabels",
+        "compute.forwardingrules.settarget",
+        "compute.forwardingrules.update"
+    ],
+    "compute.googleapis.com/globalforwardingrule": [
+        "compute.globalforwardingrules.create",
+        "compute.globalforwardingrules.delete",
+        "compute.globalforwardingrules.get",
+        "compute.globalforwardingrules.list",
+        "compute.globalforwardingrules.psccreate",
+        "compute.globalforwardingrules.pscdelete",
+        "compute.globalforwardingrules.pscget",
+        "compute.globalforwardingrules.pscupdate",
+        "compute.globalforwardingrules.setlabels",
+        "compute.globalforwardingrules.settarget",
+        "compute.globalforwardingrules.update"
+    ],
+    "compute.googleapis.com/image": [
+        "compute.images.create",
+        "compute.images.delete",
+        "compute.images.deprecate",
+        "compute.images.get",
+        "compute.images.getfromfamily",
+        "compute.images.getiampolicy",
+        "compute.images.list",
+        "compute.images.setiampolicy",
+        "compute.images.setlabels",
+        "compute.images.update",
+        "compute.images.usereadonly"
+    ],
+    "compute.googleapis.com/instancetemplate": [
+        "compute.instancetemplates.create",
+        "compute.instancetemplates.delete",
+        "compute.instancetemplates.get",
+        "compute.instancetemplates.getiampolicy",
+        "compute.instancetemplates.list",
+        "compute.instancetemplates.setiampolicy",
+        "compute.instancetemplates.usereadonly"
+    ],
+    "compute.googleapis.com/instance": [
+        "compute.instances.addaccessconfig",
+        "compute.instances.addmaintenancepolicies",
+        "compute.instances.attachdisk",
+        "compute.instances.create",
+        "compute.instances.delete",
+        "compute.instances.deleteaccessconfig",
+        "compute.instances.detachdisk",
+        "compute.instances.get",
+        "compute.instances.geteffectivefirewalls",
+        "compute.instances.getguestattributes",
+        "compute.instances.getiampolicy",
+        "compute.instances.getscreenshot",
+        "compute.instances.getserialportoutput",
+        "compute.instances.getshieldedinstanceidentity",
+        "compute.instances.getshieldedvmidentity",
+        "compute.instances.list",
+        "compute.instances.listreferrers",
+        "compute.instances.osadminlogin",
+        "compute.instances.oslogin",
+        "compute.instances.removemaintenancepolicies",
+        "compute.instances.reset",
+        "compute.instances.resume",
+        "compute.instances.setdeletionprotection",
+        "compute.instances.setdiskautodelete",
+        "compute.instances.setiampolicy",
+        "compute.instances.setlabels",
+        "compute.instances.setmachineresources",
+        "compute.instances.setmachinetype",
+        "compute.instances.setmetadata",
+        "compute.instances.setmincpuplatform",
+        "compute.instances.setscheduling",
+        "compute.instances.setserviceaccount",
+        "compute.instances.setshieldedinstanceintegritypolicy",
+        "compute.instances.setshieldedvmintegritypolicy",
+        "compute.instances.settags",
+        "compute.instances.start",
+        "compute.instances.startwithencryptionkey",
+        "compute.instances.stop",
+        "compute.instances.suspend",
+        "compute.instances.update",
+        "compute.instances.updateaccessconfig",
+        "compute.instances.updatedisplaydevice",
+        "compute.instances.updatenetworkinterface",
+        "compute.instances.updateshieldedinstanceconfig",
+        "compute.instances.updateshieldedvmconfig",
+        "compute.instances.use",
+        "compute.instances.usereadonly"
+    ],
+    "compute.googleapis.com/snapshot": [
+        "compute.snapshots.create",
+        "compute.snapshots.delete",
+        "compute.snapshots.get",
+        "compute.snapshots.getiampolicy",
+        "compute.snapshots.list",
+        "compute.snapshots.setiampolicy",
+        "compute.snapshots.setlabels",
+        "compute.snapshots.usereadonly"
+    ],
+    "gkemulticloud.googleapis.com/awscluster": [
+        "gkemulticloud.awsclusters.create",
+        "gkemulticloud.awsclusters.delete",
+        "gkemulticloud.awsclusters.get",
+        "gkemulticloud.awsclusters.getadminkubeconfig",
+        "gkemulticloud.awsclusters.list",
+        "gkemulticloud.awsclusters.update"
+    ],
+    "gkemulticloud.googleapis.com/awsnodepool": [
+        "gkemulticloud.awsnodepools.create",
+        "gkemulticloud.awsnodepools.delete",
+        "gkemulticloud.awsnodepools.get",
+        "gkemulticloud.awsnodepools.list"
+    ],
+    "gkemulticloud.googleapis.com/azurecluster": [
+        "gkemulticloud.azureclusters.create",
+        "gkemulticloud.azureclusters.delete",
+        "gkemulticloud.azureclusters.get",
+        "gkemulticloud.azureclusters.getadminkubeconfig",
+        "gkemulticloud.azureclusters.list",
+        "gkemulticloud.azureclusters.update"
+    ],
+    "gkemulticloud.googleapis.com/azurenodepool": [
+        "gkemulticloud.azurenodepools.create",
+        "gkemulticloud.azurenodepools.delete",
+        "gkemulticloud.azurenodepools.get",
+        "gkemulticloud.azurenodepools.list"
+    ],
+    "iap.googleapis.com/tunnel": [
+        "iap.tunnel.getiampolicy",
+        "iap.tunnel.setiampolicy"
+    ],
+    "iap.googleapis.com/tunnelinstance": [
+        "iap.tunnelinstances.accessviaiap",
+        "iap.tunnelinstances.getiampolicy",
+        "iap.tunnelinstances.setiampolicy"
+    ],
+    "iap.googleapis.com/tunnelzone": [
+        "iap.tunnelzones.getiampolicy",
+        "iap.tunnelzones.setiampolicy"
+    ],
+    "iap.googleapis.com/web": [
+        "iap.web.getiampolicy",
+        "iap.web.getsettings",
+        "iap.web.setiampolicy",
+        "iap.web.updatesettings"
+    ],
+    "iap.googleapis.com/webserviceversion": [
+        "iap.webserviceversions.accessviaiap",
+        "iap.webserviceversions.getiampolicy",
+        "iap.webserviceversions.getsettings",
+        "iap.webserviceversions.setiampolicy",
+        "iap.webserviceversions.updatesettings"
+    ],
+    "iap.googleapis.com/webservice": [
+        "iap.webservices.getiampolicy",
+        "iap.webservices.getsettings",
+        "iap.webservices.setiampolicy",
+        "iap.webservices.updatesettings"
+    ],
+    "iap.googleapis.com/webtype": [
+        "iap.webtypes.getiampolicy",
+        "iap.webtypes.getsettings",
+        "iap.webtypes.setiampolicy",
+        "iap.webtypes.updatesettings"
+    ],
+    "pubsublite.googleapis.com/subscription": [
+        "pubsublite.subscriptions.create",
+        "pubsublite.subscriptions.delete",
+        "pubsublite.subscriptions.get",
+        "pubsublite.subscriptions.getcursor",
+        "pubsublite.subscriptions.list",
+        "pubsublite.subscriptions.setcursor",
+        "pubsublite.subscriptions.subscribe",
+        "pubsublite.subscriptions.update"
+    ],
+    "pubsublite.googleapis.com/topic": [
+        "pubsublite.topics.computeheadcursor",
+        "pubsublite.topics.computemessagestats",
+        "pubsublite.topics.create",
+        "pubsublite.topics.delete",
+        "pubsublite.topics.get",
+        "pubsublite.topics.getpartitions",
+        "pubsublite.topics.list",
+        "pubsublite.topics.listsubscriptions",
+        "pubsublite.topics.publish",
+        "pubsublite.topics.subscribe",
+        "pubsublite.topics.update"
+    ],
+    "secretmanager.googleapis.com/secret": [
+        "secretmanager.secrets.create",
+        "secretmanager.secrets.delete",
+        "secretmanager.secrets.get",
+        "secretmanager.secrets.getiampolicy",
+        "secretmanager.secrets.list",
+        "secretmanager.secrets.setiampolicy",
+        "secretmanager.secrets.update"
+    ],
+    "spanner.googleapis.com/database": [
+        "spanner.databases.beginorrollbackreadwritetransaction",
+        "spanner.databases.beginpartitioneddmltransaction",
+        "spanner.databases.beginreadonlytransaction",
+        "spanner.databases.create",
+        "spanner.databases.createbackup",
+        "spanner.databases.drop",
+        "spanner.databases.get",
+        "spanner.databases.getddl",
+        "spanner.databases.getiampolicy",
+        "spanner.databases.list",
+        "spanner.databases.partitionquery",
+        "spanner.databases.partitionread",
+        "spanner.databases.read",
+        "spanner.databases.select",
+        "spanner.databases.setiampolicy",
+        "spanner.databases.update",
+        "spanner.databases.updateddl",
+        "spanner.databases.write"
+    ],
+    "spanner.googleapis.com/instance": [
+        "spanner.instances.create",
+        "spanner.instances.delete",
+        "spanner.instances.get",
+        "spanner.instances.getiampolicy",
+        "spanner.instances.list",
+        "spanner.instances.setiampolicy",
+        "spanner.instances.update"
+    ],
+    "storage.googleapis.com/bucket": [
+        "storage.buckets.create",
+        "storage.buckets.delete",
+        "storage.buckets.get",
+        "storage.buckets.getiampolicy",
+        "storage.buckets.list",
+        "storage.buckets.setiampolicy",
+        "storage.buckets.update"
+    ],
+    "storage.googleapis.com/object": [
+        "storage.objects.create",
+        "storage.objects.delete",
+        "storage.objects.get",
+        "storage.objects.getiampolicy",
+        "storage.objects.list",
+        "storage.objects.setiampolicy",
+        "storage.objects.update"
+    ]
+}

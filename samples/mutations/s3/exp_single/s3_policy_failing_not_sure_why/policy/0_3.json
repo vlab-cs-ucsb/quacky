@@ -1,0 +1,17 @@
+{
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:*",
+            "Resource": "*"
+        },
+        {
+            "Sid": "TestBlock",
+            "Effect": "Deny",
+            "Principal": "*",
+            "NotResource": "arn:aws:s3:::*",
+            "NotAction": "s3:*"
+        }
+    ]
+}

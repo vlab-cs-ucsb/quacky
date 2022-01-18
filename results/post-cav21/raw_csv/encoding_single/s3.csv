@@ -1,0 +1,21 @@
+Policy,SAT/UNSAT,Solve Time (ms),lg(tuple),Count Time (ms),lg(principal),lg(action),lg(resource)
+/samples/s3/exp_single/s3_iam_user_cannot_create_folder_through_console/policy.json,SAT,1390.47,2260.960065941997,27.6947,0.0,5.044394119358453,457.11157034269354
+/samples/s3/exp_single/s3_allow_all_except_delete/fixed.json,SAT,1192.19,628.9125371587496,7.53066,0.0,6.357552004618085,624.0056465631411
+/samples/s3/exp_single/s3_allow_all_except_delete/initial.json,SAT,1119.97,628.9125371587496,3.95705,0.0,4.906890595608519,624.0056465631411
+/samples/s3/exp_single/s3_public_access/policy.json,SAT,275.416,1944.0169396894232,9.07753,800.0056465631411,0.0,544.0056465631412
+/samples/s3/exp_single/s3_object_query_permissions/policy1.json,SAT,1563.04,2284.906890620335,60.1209,0.0,5.044394119358453,480.0056466622347
+/samples/s3/exp_single/s3_object_query_permissions/fix.json,SAT,159.754,2.0,4.10457,0.0,1.0,0.0
+/samples/s3/exp_single/s3_policy_for_lambda_function/policy2.json,SAT,318.365,657.5906090638623,5.16815,0.0,2.0,656.0056465631411
+/samples/s3/exp_single/s3_policy_for_lambda_function/policy1.json,SAT,1636.12,572.9125371587496,8.08769,0.0,4.906890595608519,568.0056465631411
+/samples/s3/exp_single/s3_restrict_access_to_certain_roles/policy.json,SAT,1186.81,636.9125371587497,5.24056,0.0,6.321928094887362,632.0056465631412
+/samples/s3/exp_single/s3_bucket_folder_restrict_by_user/policy.json,SAT,2639.66,2308.9068906171065,73.3303,0.0,5.044394119358453,504.00564656314117
+/samples/s3/exp_single/s3_remove_permissions_individual_files/policy2.json,SAT,1274.71,2056.0169396894235,159.507,800.0056465631411,0.0,568.0056465631411
+/samples/s3/exp_single/s3_remove_permissions_individual_files/policy1.json,UNSAT,135.708,,,,,
+/samples/s3/exp_single/s3_policy_failing_not_sure_why/policy.json,SAT,2005.62,1484.7372577648314,335.957,800.0056465631411,7.800899899920305,679.8247206060817
+/samples/s3/exp_single/s3_bucket_policy_grant_read_specific_file_type/policy.json,SAT,171.35,1384.0112931262825,4.70775,800.0056465631411,0.0,584.0056465631411
+/samples/s3/exp_single/s3_policy_provides_programmatic_access/policy3.json,SAT,1818.31,2348.9068906171065,29.9957,0.0,5.044394119358453,544.0056465631412
+/samples/s3/exp_single/s3_policy_provides_programmatic_access/policy2.json,SAT,1373.83,2332.9068906171065,29.242,0.0,5.0,528.0056465631411
+/samples/s3/exp_single/s3_policy_provides_programmatic_access/policy1.json,SAT,1138.51,5.0,6.01155,0.0,5.0,1.0
+/samples/s3/exp_single/s3_policy_public_and_principal_specific_permissions/policy.json,SAT,1267.1,1416.0112931262822,19.2932,800.0056465631411,5.672425341971496,616.0056465631411
+/samples/s3/exp_single/s3_sos_bucket_policy_problem/policy.json,SAT,38217.8,2076.923830285368,2035.58,800.0056465631411,4.906890595608519,632.0056465631412
+/samples/s3/exp_single/s3_policy_or_condition/policy.json,SAT,664.479,2192.0169396894235,127.012,800.0056465631411,0.0,664.0056465631412

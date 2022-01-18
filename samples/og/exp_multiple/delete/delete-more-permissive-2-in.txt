@@ -1,0 +1,78 @@
+(declare-variable actionName String)
+(declare-variable actionNamespace String)
+
+; Action: p0.0
+(declare-variable p0.0.action Bool)
+(assert (= p0.0.action (= "sns" actionNamespace)))
+
+; Resource: p0.0
+(declare-variable p0.0.resource Bool)
+(assert p0.0.resource)
+
+; Statement: p0.0
+(declare-variable p0.0.statement.allows Bool)
+(declare-variable p0.0.statement.denies Bool)
+(assert (= p0.0.statement.allows (and p0.0.action p0.0.resource)))
+(assert (not p0.0.statement.denies))
+
+; Action: p0.1
+(declare-variable p0.1.action Bool)
+(assert (= p0.1.action (not (and (= "sns" actionNamespace) (str.prefixof actionName "delete")))))
+
+; Resource: p0.1
+(declare-variable p0.1.resource Bool)
+(assert p0.1.resource)
+
+; Statement: p0.1
+(declare-variable p0.1.statement.allows Bool)
+(declare-variable p0.1.statement.denies Bool)
+(assert (= p0.1.statement.allows (and p0.1.action p0.1.resource)))
+(assert (not p0.1.statement.denies))
+
+; Policy: 0
+(declare-variable p0.allows Bool)
+(declare-variable p0.denies Bool)
+(declare-variable p0.neutral Bool)
+(assert (= p0.allows (and (not p0.denies) (or p0.0.statement.allows p0.1.statement.allows))))
+(assert (= p0.denies (or p0.0.statement.denies p0.1.statement.denies)))
+(assert (= p0.neutral (and (not p0.allows) (not p0.denies))))
+
+; Action: p1.0
+(declare-variable p1.0.action Bool)
+(assert (= p1.0.action (= "sns" actionNamespace)))
+
+; Resource: p1.0
+(declare-variable p1.0.resource Bool)
+(assert p1.0.resource)
+
+; Statement: p1.0
+(declare-variable p1.0.statement.allows Bool)
+(declare-variable p1.0.statement.denies Bool)
+(assert (= p1.0.statement.allows (and p1.0.action p1.0.resource)))
+(assert (not p1.0.statement.denies))
+
+; Action: p1.1
+(declare-variable p1.1.action Bool)
+(assert (= p1.1.action (and (= "sns" actionNamespace) (str.prefixof actionName "delete" ))))
+
+; Resource: p1.1
+(declare-variable p1.1.resource Bool)
+(assert p1.1.resource)
+
+; Statement: p1.1
+(declare-variable p1.1.statement.allows Bool)
+(declare-variable p1.1.statement.denies Bool)
+(assert (not p1.1.statement.allows))
+(assert (= p1.1.statement.denies (and p1.1.action p1.1.resource)))
+
+; Policy: 1
+(declare-variable p1.allows Bool)
+(declare-variable p1.denies Bool)
+(declare-variable p1.neutral Bool)
+(assert (= p1.allows (and (not p1.denies) (or p1.0.statement.allows p1.1.statement.allows))))
+(assert (= p1.denies (or p1.0.statement.denies p1.1.statement.denies)))
+(assert (= p1.neutral (and (not p1.allows) (not p1.denies))))
+(assert p0.allows)
+(assert (or p1.denies p1.neutral))
+(check-sat)
+(get-model)

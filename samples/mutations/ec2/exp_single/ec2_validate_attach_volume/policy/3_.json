@@ -1,0 +1,15 @@
+{
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": "ec2:AttachVolume",
+            "Resource": "arn:aws:ec2:::*",
+            "Condition": {
+                "StringEqualsIgnoreCase": {
+                    "ec2:ResourceTag/mytag": "atam"
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "Statement": [
+        {
+            "Id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Authorization/roleDefinitions/ba92f5b4-2d11-453d-a403-e96b0029c9fe",
+            "Effect": "Allow",
+            "Principal": "foo",
+            "Action": [
+                "microsoft.storage/storageaccounts/blobservices/containers/delete",
+                "microsoft.storage/storageaccounts/blobservices/containers/read",
+                "microsoft.storage/storageaccounts/blobservices/containers/write",
+                "microsoft.storage/storageaccounts/blobservices/generateuserdelegationkey/action",
+                "microsoft.storage/storageaccounts/blobservices/containers/blobs/delete",
+                "microsoft.storage/storageaccounts/blobservices/containers/blobs/read",
+                "microsoft.storage/storageaccounts/blobservices/containers/blobs/write",
+                "microsoft.storage/storageaccounts/blobservices/containers/blobs/move/action",
+                "microsoft.storage/storageaccounts/blobservices/containers/blobs/add/action"
+            ],
+            "Resource": "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rgname/*"
+        }
+    ]
+}

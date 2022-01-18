@@ -1,0 +1,5 @@
+This policy gives full access - any principal can perform any action 
+on any resource that the policy is applied to. This policy should be 
+equally or more permissive than any other policy. 
+
+source = https://forums.aws.amazon.com/thread.jspa?messageID=901140

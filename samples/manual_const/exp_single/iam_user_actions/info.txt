@@ -1,0 +1,2 @@
+expected count: 47
+This policy allows any IAM user action on the resource.

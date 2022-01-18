@@ -1,0 +1,4 @@
+This policy allows one action and then denies the same action. Because AWS 
+defaults to denying access, this policy should block all access (unsat). 
+
+source = https://forums.aws.amazon.com/thread.jspa?messageID=871431#871431

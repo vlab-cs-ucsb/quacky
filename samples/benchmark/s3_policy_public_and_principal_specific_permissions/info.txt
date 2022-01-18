@@ -1,0 +1,4 @@
+This policy allows one principal to perform any s3 action on a bucket, and 
+allows any principal to perform one action on the contents of that bucket.
+
+source = https://forums.aws.amazon.com/thread.jspa?threadID=294372&tstart=650

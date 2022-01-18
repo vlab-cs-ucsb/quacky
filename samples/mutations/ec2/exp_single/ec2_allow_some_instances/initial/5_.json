@@ -1,0 +1,14 @@
+{
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": "ec2:*",
+            "Resource": "arn:aws:ec2:*:*:*/*",
+            "Condition": {
+                "StringEquals": {
+                    "ec2:ResourceTag/CodProyecto": "2014_2263"
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": "ec2:RunInstances",
+            "Resource": [
+                "arn:aws:ec2:us-east-1:123412341234:subnet/*",
+                "arn:aws:ec2:us-east-1:123412341234:security-group/*"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Action": "ec2:RunInstances",
+            "Resource": [
+                "arn:aws:ec2:us-east-1::image/ami-*",
+                "arn:aws:ec2:us-east-1:123412341243:instance/*",
+                "arn:aws:ec2:us-east-1:123412341234:volume/*",
+                "arn:aws:ec2:us-east-1:123412341234:network-interface/*",
+                "arn:aws:ec2:us-east-1:123412341234:key-pair/*"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,51 @@
+sat
+(model
+  (define-fun p1.1.action () Bool
+    false)
+  (define-fun p1.1.statement.allows () Bool
+    false)
+  (define-fun p1.allows () Bool
+    false)
+  (define-fun p0.denies () Bool
+    false)
+  (define-fun p0.neutral () Bool
+    false)
+  (define-fun p0.1.resource () Bool
+    true)
+  (define-fun p1.1.statement.denies () Bool
+    false)
+  (define-fun p1.0.resource () Bool
+    true)
+  (define-fun p0.allows () Bool
+    true)
+  (define-fun p1.neutral () Bool
+    true)
+  (define-fun p1.0.action () Bool
+    false)
+  (define-fun p0.1.statement.denies () Bool
+    false)
+  (define-fun p1.0.statement.allows () Bool
+    false)
+  (define-fun p1.denies () Bool
+    false)
+  (define-fun actionName () String
+    "")
+  (define-fun p1.1.resource () Bool
+    true)
+  (define-fun actionNamespace () String
+    "!0!")
+  (define-fun p0.1.action () Bool
+    true)
+  (define-fun p0.0.action () Bool
+    false)
+  (define-fun p0.0.resource () Bool
+    true)
+  (define-fun p0.0.statement.denies () Bool
+    false)
+  (define-fun p1.0.statement.denies () Bool
+    false)
+  (define-fun p0.0.statement.allows () Bool
+    false)
+  (define-fun p0.1.statement.allows () Bool
+    true)
+)

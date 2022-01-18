@@ -1,0 +1,20 @@
+{
+	"Id": "Policy1541353430646",
+	"Version": "2012-10-17",
+	"Statement": [
+	{
+		"Sid": "Stmt1541353373980",
+		"Action": [
+			"s3:GetObject"
+		],
+		"Effect": "Allow",
+		"Resource": "arn:aws:s3:::examplebucket/*",
+		"Condition": {
+			"StringEquals": {
+				"s3:prefix": "mp3"
+			}
+		},
+		"Principal": "*"
+	}
+	]
+}

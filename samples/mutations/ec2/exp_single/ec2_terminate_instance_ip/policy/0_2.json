@@ -1,0 +1,22 @@
+{
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ec2:TerminateInstances"
+            ],
+            "Resource": [
+                "*"
+            ]
+        },
+        {
+            "Effect": "Deny",
+            "Action": [
+                "ec2:TerminateInstances"
+            ],
+            "Resource": [
+                "*"
+            ]
+        }
+    ]
+}

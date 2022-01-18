@@ -1,0 +1,20 @@
+{
+    "Statement": [
+        {
+            "Sid": "Stmt1527265797507",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::99999999999:role/my-role"
+            },
+            "Action": "s3:*",
+            "Resource": "arn:aws:s3:::my-bucket"
+        },
+        {
+            "Sid": "Stmt1527700198181",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::my-bucket/*"
+        }
+    ]
+}

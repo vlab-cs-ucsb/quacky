@@ -1,0 +1,27 @@
+{
+    "Statement": [
+        {
+            "Sid": "AllowPutForAllS3TestfilesLambda",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::999999999999:user/myuser"
+                ]
+            },
+            "Action": "s3:*",
+            "Resource": "arn:aws:s3:::prod--testfiles/*"
+        },
+        {
+            "Sid": "DenyPutForAllS3TestfilesExceptLambda",
+            "Effect": "Deny",
+            "NotPrincipal": {
+                "AWS": [
+                    "arn:aws:iam::999999999999:root",
+                    "arn:aws:iam::999999999999:user/myuser"
+                ]
+            },
+            "Action": "s3:Put*",
+            "Resource": "arn:aws:s3:::prod--testfiles/*"
+        }
+    ]
+}

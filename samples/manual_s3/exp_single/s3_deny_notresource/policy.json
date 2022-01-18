@@ -1,0 +1,27 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "Stmt1466440042000",
+      "Effect": "Allow",
+      "Action": [
+        "s3:DeleteBucket",
+        "s3:ListBucket",
+        "s3:PutBucketPolicy"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "Stmt1466440042000",
+      "Effect": "Deny",
+      "Action": [
+        "s3:DeleteBucket",
+        "s3:ListBucket",
+        "s3:PutBucketPolicy"
+      ],
+      "NotResource": [
+        "arn:aws:s3:::billing"
+      ]
+    }
+ ]
+}

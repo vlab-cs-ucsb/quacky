@@ -1,0 +1,61 @@
+//////// PRODUCTIONS ////////
+
+// starting symbol
+start : lexp2
+
+// logical expressions
+lexp2 : lexp1 (OR lexp2)?
+lexp1 : lexp0 (AND lexp2)?
+lexp0 : NOT lexp0 | "(" lexp2 ")" | match | rexp
+
+// action match expression
+match : "ActionMatches" "{" ESCAPED_STRING "}"
+
+// relational expressions
+rexp  : attr op value
+attr  : elems | "@" SYMBOL  "[" SYMBOL "]"
+op    : (PRODUCT ":")? OPERATOR
+value : elems | NUMBER | ESCAPED_STRING
+
+// sets
+elems  : "{" (elem ("," elem)?)? "}"
+elem  : NUMBER | ESCAPED_STRING
+
+//////// TERMINALS ////////
+
+// logical operators
+OR  : "OR" | "||"
+AND : "AND" | "&&"
+NOT : "NOT" | "!"
+
+// relational (condition) operators
+PRODUCT  : "ForAnyOfAnyValues"
+         | "ForAllOfAnyValues"
+         | "ForAnyOfAllValues"
+         | "ForAllOfAllValues"
+OPERATOR : "StringEqualsIgnoreCase"
+         | "StringEquals"
+         | "StringNotEqualsIgnoreCase"
+         | "StringNotEquals"
+         | "StringStartsWithIgnoreCase"
+         | "StringStartsWith"
+         | "StringNotStartsWithIgnoreCase"
+         | "StringNotStartsWith"
+         | "StringLikeIgnoreCase"
+         | "StringLike"
+         | "StringNotLikeIgnoreCase"
+         | "StringNotLike"
+         | "NumericEquals"
+         | "NumericNotEquals"
+         | "NumericLessThanEquals"
+         | "NumericLessThan"
+         | "NumericGreaterThanEquals"
+         | "NumericGreaterThan"
+
+// other terminals
+SYMBOL : /[\w.:\/*?]+/
+
+%import common.ESCAPED_STRING
+%import common.NUMBER
+%import common.WS
+%ignore WS

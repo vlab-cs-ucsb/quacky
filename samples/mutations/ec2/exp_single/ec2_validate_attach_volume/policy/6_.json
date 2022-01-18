@@ -1,0 +1,10 @@
+{
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": "ec2:AttachVolume",
+            "Resource": "arn:aws:ec2:::*"
+        }
+    ]
+}

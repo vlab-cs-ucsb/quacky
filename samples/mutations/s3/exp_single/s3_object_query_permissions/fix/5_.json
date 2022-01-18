@@ -1,0 +1,15 @@
+{
+    "Statement": [
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": "s3:*",
+            "Resource": "arn:aws:s3:::singlecomm.recordings",
+            "Condition": {
+                "ForAllValues:StringLikeIfExists": {
+                    "s3:prefix": "0001"
+                }
+            }
+        }
+    ]
+}

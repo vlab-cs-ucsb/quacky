@@ -1,0 +1,106 @@
+(declare-const actionName String)
+(declare-const actionNamespace String)
+(declare-const resourceAccount String)
+(declare-const resourcePartition String)
+(declare-const resourceRegion String)
+(declare-const resourceResource String)
+(declare-const resourceService String)
+(declare-const |s3:max-keys| Int)
+(declare-const |s3:max-keys_exists| Bool)
+
+; Action: p0.0
+(declare-const p0.0.action Bool)
+(assert (= p0.0.action (and (= "s3" actionNamespace) (= "listbucket" actionName))))
+
+; Resource: p0.0
+(declare-const p0.0.resource Bool)
+(assert (= p0.0.resource (and (= "aws" resourcePartition) (= "s3" resourceService) (= "" resourceRegion) (= "" resourceAccount) (= "examplebucket" resourceResource))))
+
+; Principal: p0.0
+(declare-const p0.0.principal Bool)
+(assert p0.0.principal)
+
+; Condition: p0.0.0.0
+(declare-const p0.0.0.0.condition Bool)
+(assert (= p0.0.0.0.condition (=> |s3:max-keys_exists| (<= |s3:max-keys| 10))))
+
+; Condition: p0.0.0
+(declare-const p0.0.0.condition Bool)
+(assert (= p0.0.0.condition p0.0.0.0.condition))
+
+; Condition: p0.0
+(declare-const p0.0.condition Bool)
+(assert (= p0.0.condition p0.0.0.condition))
+
+; Statement: p0.0
+(declare-const p0.0.statement.allows Bool)
+(declare-const p0.0.statement.denies Bool)
+(assert (= p0.0.statement.allows (and p0.0.action p0.0.resource p0.0.principal p0.0.condition)))
+(assert (not p0.0.statement.denies))
+
+; Action: p0.1
+(declare-const p0.1.action Bool)
+(assert (= p0.1.action (and (= "s3" actionNamespace) (= "listbucket" actionName))))
+
+; Resource: p0.1
+(declare-const p0.1.resource Bool)
+(assert (= p0.1.resource (and (= "aws" resourcePartition) (= "s3" resourceService) (= "" resourceRegion) (= "" resourceAccount) (= "examplebucket" resourceResource))))
+
+; Principal: p0.1
+(declare-const p0.1.principal Bool)
+(assert p0.1.principal)
+
+; Condition: p0.1.0.0
+(declare-const p0.1.0.0.condition Bool)
+(assert (= p0.1.0.0.condition (=> |s3:max-keys_exists| (< 10 |s3:max-keys|))))
+
+; Condition: p0.1.0
+(declare-const p0.1.0.condition Bool)
+(assert (= p0.1.0.condition p0.1.0.0.condition))
+
+; Condition: p0.1
+(declare-const p0.1.condition Bool)
+(assert (= p0.1.condition p0.1.0.condition))
+
+; Statement: p0.1
+(declare-const p0.1.statement.allows Bool)
+(declare-const p0.1.statement.denies Bool)
+(assert (= p0.1.statement.allows (and p0.1.action p0.1.resource p0.1.principal p0.1.condition)))
+(assert (not p0.1.statement.denies))
+
+; Policy: 0
+(declare-const p0.allows Bool)
+(declare-const p0.denies Bool)
+(declare-const p0.neutral Bool)
+(assert (= p0.allows (and (not p0.denies) (or p0.0.statement.allows p0.1.statement.allows))))
+(assert (= p0.denies (or p0.0.statement.denies p0.1.statement.denies)))
+(assert (= p0.neutral (and (not p0.allows) (not p0.denies))))
+
+; Action: p1.0
+(declare-const p1.0.action Bool)
+(assert (= p1.0.action (and (= "s3" actionNamespace) (= "listbucket" actionName))))
+
+; Resource: p1.0
+(declare-const p1.0.resource Bool)
+(assert (= p1.0.resource (and (= "aws" resourcePartition) (= "s3" resourceService) (= "" resourceRegion) (= "" resourceAccount) (= "examplebucket" resourceResource))))
+
+; Principal: p1.0
+(declare-const p1.0.principal Bool)
+(assert p1.0.principal)
+
+; Statement: p1.0
+(declare-const p1.0.statement.allows Bool)
+(declare-const p1.0.statement.denies Bool)
+(assert (= p1.0.statement.allows (and p1.0.action p1.0.resource p1.0.principal)))
+(assert (not p1.0.statement.denies))
+
+; Policy: 1
+(declare-const p1.allows Bool)
+(declare-const p1.denies Bool)
+(declare-const p1.neutral Bool)
+(assert (= p1.allows (and (not p1.denies) p1.0.statement.allows)))
+(assert (= p1.denies p1.0.statement.denies))
+(assert (= p1.neutral (and (not p1.allows) (not p1.denies))))
+(assert (or p0.neutral p0.denies))
+(assert p1.allows)
+(check-sat)

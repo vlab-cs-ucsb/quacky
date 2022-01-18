@@ -1,0 +1,6 @@
+This policy allows tag owners full access from the AWS API or CLI
+to RDS resources that they've tagged. It contains 8 statements, most
+of which check the username against the tag owner for certain RDS 
+actions.
+
+source = https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_examples_rds_tag-owner.html

@@ -1,0 +1,7 @@
+[{
+    "scope": "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rgname",
+    "properties": {
+        "roleDefinitionId": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Authorization/roleDefinitions/fb879df8-f326-4884-b1cf-06f3ad86be52",
+        "principalId": "foo"
+    }
+}]

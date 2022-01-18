@@ -1,0 +1,18 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "iam:PutRolePolicy",
+        "iam:UpdateAssumeRolePolicy",
+        "iam:AttachRolePolicy",
+        "iam:DeleteRolePolicy",
+        "iam:DetachRolePolicy"
+      ],
+      "NotResource": [
+        "arn:aws:iam::$account:role/$role-name"
+      ]
+    }
+  ]
+}

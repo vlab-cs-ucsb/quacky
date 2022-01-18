@@ -1,0 +1,12 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ec2:Create*"
+      ],
+      "Resource": "arn:aws:ec2:us-east-1:123456789012:network-interface/eni-12345678"
+    }
+  ]
+}

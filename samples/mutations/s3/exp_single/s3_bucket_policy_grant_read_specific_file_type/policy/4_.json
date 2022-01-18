@@ -1,0 +1,13 @@
+{
+    "Statement": [
+        {
+            "Sid": "Stmt1541353373980",
+            "Action": [
+                "s3:GetObject"
+            ],
+            "Effect": "Allow",
+            "Resource": "arn:aws:s3:::examplebucket/*",
+            "Principal": "*"
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": "s3:GetBucketLocation",
+      "Effect": "Allow",
+      "Resource": ["arn:aws:s3:::*"]
+    },
+    {
+      "Action": ["s3:ListBucket"],
+      "Effect": "Allow",
+      "Resource": ["arn:aws:s3:::examplebucket"],
+      "Condition":{"StringEquals":{"s3:prefix":[""],"s3:delimiter":["/"]}}
+     },
+    {
+      "Action": ["s3:ListBucket"],
+      "Effect": "Allow",
+      "Resource": ["arn:aws:s3:::examplebucket"],
+      "Condition":{"StringLike":{"s3:prefix":["folder/*"]}}
+    },
+    {
+       "Action":["s3:*"],
+       "Effect":"Allow",
+       "Resource": ["arn:aws:s3:::examplebucket/folder",
+		    "arn:aws:s3:::examplebucket/folder/*"]
+    }
+  ]
+}

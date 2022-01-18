@@ -1,0 +1,15 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "iam:CreateUser",
+        "iam:DeleteUser"
+      ],
+      "Resource": [
+        "arn:aws:iam::*:user/*@domain.com"
+      ]
+    }
+  ]
+}

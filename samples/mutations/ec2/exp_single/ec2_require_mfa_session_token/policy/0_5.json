@@ -1,0 +1,21 @@
+{
+    "Statement": [
+        {
+            "Sid": "AllowAllActionsForEC2",
+            "Effect": "Allow",
+            "Action": "ec2:*",
+            "Resource": "*"
+        },
+        {
+            "Sid": "DenyStopAndTerminateWhenMFAIsNotPresent",
+            "Effect": "Deny",
+            "Condition": {
+                "BoolIfExists": {
+                    "aws:MultiFactorAuthPresent": false
+                }
+            },
+            "NotResource": "*",
+            "NotAction": "ec2:*"
+        }
+    ]
+}

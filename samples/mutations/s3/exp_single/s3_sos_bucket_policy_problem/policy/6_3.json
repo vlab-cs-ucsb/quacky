@@ -1,0 +1,34 @@
+{
+    "Statement": [
+        {
+            "Sid": "AllowRequestsReferred",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "*",
+            "Resource": "arn:aws:s3:::example/*"
+        },
+        {
+            "Sid": "DenyRequestsReferred",
+            "Effect": "Deny",
+            "NotPrincipal": {
+                "Service": "lambda.amazonaws.com"
+            },
+            "Action": "*",
+            "Resource": "arn:aws:s3:::example/*",
+            "Condition": {
+                "StringNotLike": {
+                    "aws:Referer": [
+                        "https://www.example.com/*",
+                        "https://example.com/*",
+                        "https://example.herokuapp.com/*",
+                        "https://dfgdsfgdfg.cloudfront.net/*",
+                        "https://yygertwgbvcv.cloudfront.net/*"
+                    ]
+                },
+                "NotIpAddress": {
+                    "aws:SourceIp": "219.77.225.236"
+                }
+            }
+        }
+    ]
+}

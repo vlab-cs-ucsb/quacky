@@ -1,0 +1,17 @@
+{
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": "ec2:*",
+            "Resource": "arn:aws:ec2:*:*:instance/*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ec2:AttachVolume",
+                "ec2:DetachVolume"
+            ],
+            "Resource": "arn:aws:ec2:*:*:volume/*"
+        }
+    ]
+}

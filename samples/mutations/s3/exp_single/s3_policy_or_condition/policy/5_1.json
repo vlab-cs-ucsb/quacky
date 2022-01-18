@@ -1,0 +1,33 @@
+{
+    "Statement": [
+        {
+            "Sid": "AllowIp",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::xxx/*",
+            "Condition": {
+                "IpAddress": {
+                    "aws:SourceIp": [
+                        "0.0.0.0"
+                    ]
+                }
+            }
+        },
+        {
+            "Sid": "AllowReferer",
+            "Effect": "Deny",
+            "Principal": "*",
+            "Condition": {
+                "StringNotLike": {
+                    "aws:Referer": [
+                        "test.com/*",
+                        "http://test.com/*"
+                    ]
+                }
+            },
+            "NotResource": "arn:aws:s3:::xxx/*",
+            "NotAction": "s3:GetObject"
+        }
+    ]
+}

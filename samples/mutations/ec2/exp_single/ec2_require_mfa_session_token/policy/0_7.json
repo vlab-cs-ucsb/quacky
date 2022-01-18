@@ -1,0 +1,16 @@
+{
+    "Statement": [
+        {
+            "Sid": "AllowAllActionsForEC2",
+            "Effect": "Allow",
+            "Action": "ec2:*",
+            "Resource": "*"
+        },
+        {
+            "Sid": "DenyStopAndTerminateWhenMFAIsNotPresent",
+            "Effect": "Deny",
+            "NotResource": "*",
+            "NotAction": "ec2:*"
+        }
+    ]
+}

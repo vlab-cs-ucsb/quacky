@@ -1,0 +1,18 @@
+{
+    "Version": "2008-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "*"
+            },
+            "Action": "*",
+            "Resource": "arn:aws:s3:::myrandomnameforbucket/*",
+            "Condition": {
+                "StringEquals": {
+                    "aws:PrincipalType": "User"
+                }
+            }
+        }
+    ]
+}

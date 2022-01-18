@@ -1,0 +1,14 @@
+{
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "iam:CreateUser",
+                "iam:DeleteUser"
+            ],
+            "Resource": [
+                "arn:aws:iam::*:user/*@domain.com"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,5 @@
+{
+    "ec2": "arn:aws:ec2:${Region}:${Account}:\\*",
+    "iam": "arn:aws:iam::${Account}:\\*",
+    "s3": "arn:aws:s3:::\\*"
+}

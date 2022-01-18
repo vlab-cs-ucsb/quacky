@@ -1,0 +1,36 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [{
+            "Effect": "Allow",
+            "Action": [
+                "ec2:DescribeInstances",
+                "ec2:DescribeInstanceStatus",
+                "ec2:DescribeInstanceAttribute",
+                "ec2:DescribeImageAttribute",
+                "ec2:DescribeRegions",
+                "ec2:DescribeAvailabilityZones",
+                "ec2:DescribeNetworkAcls",
+                "ec2:DescribeReservedInstances",
+                "ec2:DescribeTags",
+                "ec2:DescribeVolumeAttribute",
+                "ec2:DescribeVolumeStatus",
+                "ec2:DescribeImages",
+                "ec2:DescribeKeyPairs",
+                "ec2:DescribeSecurityGroups",
+                "ec2:DescribeAvailabilityZones",
+                "ec2:RunInstances"
+            ],
+            "Resource": ["*"]
+        },
+        {
+            "Effect": "Allow",
+            "Action": ["ec2:StopInstances","ec2:StartInstances"],
+            "Resource": ["arn:aws:ec2:*"],
+            "Condition": {
+                "StringEquals": {
+                    "ec2:ResourceTag/CodProyecto": "2014_2263"
+                }
+            }
+        }
+    ]
+}

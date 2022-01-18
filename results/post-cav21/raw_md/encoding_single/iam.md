@@ -1,0 +1,15 @@
+
+**Policies in iam**
+
+bound: `100`, variables: `True`, constraints: `True`, smt-lib: `False`
+
+|Policy|SAT/UNSAT|Solve Time (ms)|lg(tuple)|Count Time (ms)|lg(principal)|lg(action)|lg(resource)|
+|-|-|-|-|-|-|-|-|
+|[../samples/iam/exp_single/iam_user_access_to_s3_uploads_fail/fixed.json](../samples/iam/exp_single/iam_user_access_to_s3_uploads_fail/fixed.json)|SAT|455.905|587.8130014851988|16.7386|0.0|4.584962500721157|584.0056465631411|
+|[../samples/iam/exp_single/iam_user_access_to_s3_uploads_fail/initial.json](../samples/iam/exp_single/iam_user_access_to_s3_uploads_fail/initial.json)|SAT|314.431|586.3275746580285|8.86915|0.0|3.0|584.0056465631411|
+|[../samples/iam/exp_single/iam_role_policy_modify_iam_but_not_own_policies/policy.json](../samples/iam/exp_single/iam_role_policy_modify_iam_but_not_own_policies/policy.json)|SAT|401.626|482.8226191555779|10.0813|0.0|3.1699250014423126|480.5006910606906|
+|[../samples/iam/exp_single/iam_specify_all_users_in_account_bucket_policy/policy2.json](../samples/iam/exp_single/iam_specify_all_users_in_account_bucket_policy/policy2.json)|SAT|1220.23|1324.918183721891|5.81789|800.0056465631411|4.906890595608519|520.0056465631411|
+|[../samples/iam/exp_single/iam_specify_all_users_in_account_bucket_policy/policy1.json](../samples/iam/exp_single/iam_specify_all_users_in_account_bucket_policy/policy1.json)|SAT|138.589|0.0|4.16499|0.0|0.0|0.0|
+|[../samples/iam/exp_single/iam_policy_allow_adding_deleting_users/fixed.json](../samples/iam/exp_single/iam_policy_allow_adding_deleting_users/fixed.json)|SAT|270.822|409.8463317267081|16.2438|0.0|1.0|408.8463317267081|
+|[../samples/iam/exp_single/iam_policy_allow_adding_deleting_users/initial.json](../samples/iam/exp_single/iam_policy_allow_adding_deleting_users/initial.json)|SAT|206.725|1281.5063376238318|10.6791|0.0|1.5849625007211563|480.5006910606906|
+|[../samples/iam/exp_single/iam_simplest_policy/policy.json](../samples/iam/exp_single/iam_simplest_policy/policy.json)|SAT|2132.63|684.7316112016902|90.9206|0.0|8.665335917185176|679.8247206060817|

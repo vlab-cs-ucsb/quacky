@@ -1,0 +1,19 @@
+{
+    "Statement": [
+        {
+            "Id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Authorization/roleDefinitions/1c0163c0-47e6-4577-8991-ea5c82e286e4",
+            "Effect": "Allow",
+            "Principal": "foo",
+            "Action": [
+                "microsoft.network/publicipaddresses/read",
+                "microsoft.network/virtualnetworks/read",
+                "microsoft.network/loadbalancers/read",
+                "microsoft.network/networkinterfaces/read",
+                "microsoft.compute/virtualmachines/*/read",
+                "microsoft.compute/virtualmachines/login/action",
+                "microsoft.compute/virtualmachines/loginasadmin/action"
+            ],
+            "Resource": "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rgname/*"
+        }
+    ]
+}

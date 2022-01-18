@@ -1,0 +1,124 @@
+ESCAPE_CHAR : "\\"
+START : "^"
+END : "$"
+ALL_CHAR : "."
+START_CLASS : "["
+END_CLASS : "]"
+START_SUBPATTERN : "("
+END_SUBPATTERN : ")"
+GROUP_QUALIFIER : "?"
+ZO_QUANTIFIER : "?"
+GREEDY_QUALIFIER : "?"
+KLEENE_STAR : "*"
+KLEENE_PLUS : "+"
+POSSESSIVE_QUANTIFIER : "+"
+INTER : "&"
+UNION : "|"
+COMPLEMENT : "~"
+
+metacharacters : (ESCAPE_CHAR | START | END | ALL_CHAR | START_CLASS | END_CLASS | START_SUBPATTERN | END_SUBPATTERN | GROUP_QUALIFIER | ZO_QUANTIFIER | KLEENE_STAR | KLEENE_PLUS | INTER | UNION | COMPLEMENT | POSSESSIVE_QUANTIFIER)
+
+// Constant metacharacter in character classes
+
+ESCAPE_CLASS_CHAR : "\\"
+NEGATE_CLASS : "^"
+RANGE : "-"
+POSIX_CHAR_START : "["
+POSIX_CHAR_END : "]"
+
+square_metacharacters : ESCAPE_CLASS_CHAR | NEGATE_CLASS | RANGE | POSIX_CHAR_START | POSIX_CHAR_END
+
+// Non-printable
+
+alarm : "a"
+escape : "e"
+form_feed : "f"
+line_feed : "n"
+carriage_return : "r"
+tab : "t"
+
+hex_code.3 : "x" ("{" /[a-fA-F0-9]+/"}" | /[a-fA-F0-9]{2}/ )
+octal_code.3 : "d" ("{" /[0-8]+/"}" | /[0-8]{2}/ )
+
+non_print_char : ESCAPE_CHAR (alarm | escape | form_feed | line_feed | carriage_return | tab | octal_code | hex_code )
+
+
+// ctrlx support removed for simplicity.
+// \0dd removed as well.
+
+// Generic character types
+
+DECIMAL_DIGIT : "P"
+NON_DECIMAL_DIGIT : "D"
+HORIZONTAL_WHITESPACE : "h"
+NON_HORIZONT_WHITESPACE : "H"
+WHITESPACE : "s"
+NON_WHITESPACE : "S"
+VERTICAL_WHITESPACE : "v"
+NON_VERTICAL_WHITESPACE : "V"
+WORD_CHAR : "w"
+NON_WORD_CHAR : "W"
+
+char_types.1: ESCAPE_CHAR (DECIMAL_DIGIT | NON_DECIMAL_DIGIT | HORIZONTAL_WHITESPACE | NON_HORIZONT_WHITESPACE | WHITESPACE | NON_WHITESPACE | VERTICAL_WHITESPACE | NON_VERTICAL_WHITESPACE| WORD_CHAR | NON_WORD_CHAR)
+
+// Character classes
+escaped_square_simple_value : ESCAPE_CHAR /[^\^\[\]|\\]/
+escaped_square_metacharacters: ESCAPE_CHAR square_metacharacters
+square_base_value : /[^*+.?\^\[\]|\\()-]/
+range_literal_value :  square_base_value | escaped_square_metacharacters | non_print_char | escaped_square_simple_value
+square_literal_value : char_types | range_literal_value
+range : range_literal_value RANGE range_literal_value
+posix_set : POSIX_CHAR_START ":" posix_set_descr ":" POSIX_CHAR_END
+posix_set_descr : ( "alnum" | "alpha" | "ascii" | "blank" | "cntrl" | "digit" | "graph" | "lower" | "print" | "punct" | "space" | "upper" | "word" | "xdigit" )
+
+positive_class : (range | square_literal_value | posix_set)
+negative_class : NEGATE_CLASS positive_class+
+char_class : START_CLASS (positive_class+ | negative_class) END_CLASS
+
+
+// pattern
+escaped_simple_value : ESCAPE_CHAR /[^*+.?\^\[\]|\\()xudaewWrntSdDhHfvVbB]/
+escaped_meta_value : ESCAPE_CHAR metacharacters
+base_value : /[^*+.?\^\[\]|\\(){}]/
+literal_value : base_value | escaped_meta_value | non_print_char | escaped_simple_value | char_types
+
+WORD_BOUNDARY : "b"
+NOT_WORD_BOUNDARY : "B"
+
+all_char: ALL_CHAR
+
+base_pattern : (literal_value | char_class | all_char)
+inter_pattern : pattern (INTER pattern)+
+union_pattern : pattern (UNION pattern)+
+complement_pattern : COMPLEMENT pattern 
+subpattern : START_SUBPATTERN (qualified_pattern | captured_pattern) END_SUBPATTERN
+qualified_pattern : GROUP_QUALIFIER (":" pattern | named_pattern)
+name_of_pattern : /[a-zA-Z][a-zA-Z]{,31}/
+named_pattern : "<" name_of_pattern ">" | "'" name_of_pattern "'" | "P<" name_of_pattern ">"
+captured_pattern : pattern
+repetition_pattern_base : base_pattern | subpattern
+repetition_pattern : repetition_pattern_base  (quantifier | non_greedy_quantifier)
+quantifier : KLEENE_STAR | KLEENE_PLUS | ZO_QUANTIFIER | "{" INT"," INT? "}"
+non_greedy_quantifier : quantifier  GREEDY_QUALIFIER
+pattern : (base_pattern | subpattern | repetition_pattern | inter_pattern | union_pattern | complement_pattern | assertion)*
+
+// assertion
+
+POSITIVE_LOOKAHEAD : "="
+NEGATIVE_LOOKAHEAD : "!"
+POSITIVE_LOOKBEHIND : "<="
+NEGATIVE_LOOKBEHIND : "<!"
+
+base_assertion : (ESCAPE_CHAR (WORD_BOUNDARY | NOT_WORD_BOUNDARY)) |  START | END
+positive_lookahead : POSITIVE_LOOKAHEAD pattern
+negative_lookahead : NEGATIVE_LOOKAHEAD pattern
+lookahead : START_SUBPATTERN  GROUP_QUALIFIER (positive_lookahead | negative_lookahead) END_SUBPATTERN
+positive_lookbehind : POSITIVE_LOOKBEHIND pattern
+negative_lookbehind : NEGATIVE_LOOKBEHIND pattern
+lookbehind : START_SUBPATTERN  GROUP_QUALIFIER (positive_lookbehind | negative_lookbehind) END_SUBPATTERN
+assertion : (lookbehind | lookahead | base_assertion)
+
+start : pattern
+%import common.LETTER
+%import common.DIGIT
+%import common.INT

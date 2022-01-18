@@ -1,0 +1,10 @@
+{
+  "Resource":[
+    "arn:aws:s3:::billing",
+    "arn:aws:s3:::banking",
+    "arn:aws:s3:::school",
+    "arn:aws:s3:::work",
+    "arn:aws:s3:::taxes",
+    "arn:aws:s3:::accounting",
+    "arn:aws:s3:::data"]
+}

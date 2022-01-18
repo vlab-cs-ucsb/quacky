@@ -1,0 +1,15 @@
+{
+    "Statement": [
+        {
+            "Sid": "Stmt1438227033000",
+            "Effect": "Allow",
+            "Action": [
+                "iam:CreateUser",
+                "iam:DeleteUser"
+            ],
+            "Resource": [
+                "*"
+            ]
+        }
+    ]
+}

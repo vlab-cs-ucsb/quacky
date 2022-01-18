@@ -1,0 +1,7 @@
+This policy is relatively complex with 7 statements. They detail a typical 
+company access hierarchy where everyone can list specified folders, but 
+can only perform other s3 actions in a shared folder or the user's own 
+folder. The policy uses conditions, some with multiple keys and some with 
+multiple key values. 
+
+source = https://forums.aws.amazon.com/thread.jspa?threadID=275918&tstart=425

@@ -1,0 +1,15 @@
+{
+	"Version": "2012-10-17",
+	"Statement": [
+	{
+		"Sid": "TestBlock",
+		"Effect": "Deny",
+		"Principal": "*",
+		"Action": "s3:*",
+		"Resource": [
+			"arn:aws:s3:::madeupbucketname/Directory1",
+			"arn:aws:s3:::madeupbucketname/Directory1/*"
+		]
+	}
+	]
+}

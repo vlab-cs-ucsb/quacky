@@ -1,0 +1,50 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "AllowServices",
+            "Effect": "Allow",
+            "Action": [
+                "s3:*",
+                "cloudwatch:*",
+                "ec2:*"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "AllowIAMConsoleForCredentials",
+            "Effect": "Allow",
+            "Action": [
+                "iam:ListUsers",
+                "iam:GetAccountPasswordPolicy"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "AllowManageOwnPasswordAndAccessKeys",
+            "Effect": "Allow",
+            "Action": [
+                "iam:*AccessKey*",
+                "iam:ChangePassword",
+                "iam:GetUser",
+                "iam:*LoginProfile*"
+            ],
+            "Resource": ["arn:aws:iam::*:user/${aws:username}"]
+        },
+        {
+            "Sid": "DenyS3Logs",
+            "Effect": "Deny",
+            "Action": "s3:*",
+            "Resource": [
+                "arn:aws:s3:::logs",
+                "arn:aws:s3:::logs/*"
+            ]
+        },
+        {
+            "Sid": "DenyEC2Production",
+            "Effect": "Deny",
+            "Action": "ec2:*",
+            "Resource": "arn:aws:ec2:*:*:instance/i-1234567890abcdef0"
+        }
+    ]
+}

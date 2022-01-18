@@ -1,0 +1,5 @@
+This policy explicitly denies access to a pipeline that the 
+user didn't create. It contains no allow statements and is 
+intended to be used in conjunction with other policies.
+
+source = https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_examples_datapipeline_not-owned.html 

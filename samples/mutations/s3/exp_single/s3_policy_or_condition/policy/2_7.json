@@ -1,0 +1,18 @@
+{
+    "Statement": [
+        {
+            "Sid": "AllowIp",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::xxx/*"
+        },
+        {
+            "Sid": "AllowReferer",
+            "Effect": "Deny",
+            "Principal": "*",
+            "NotResource": "arn:aws:s3:::xxx/*",
+            "NotAction": "s3:GetObject"
+        }
+    ]
+}

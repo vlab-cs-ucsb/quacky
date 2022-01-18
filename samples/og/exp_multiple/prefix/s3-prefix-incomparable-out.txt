@@ -1,0 +1,65 @@
+sat
+(model 
+  (define-fun resourceAccount () String
+    "")
+  (define-fun |s3:prefix| () String
+    "${aws:username}/")
+  (define-fun resourceResource () String
+    "examplebucket/")
+  (define-fun p0.neutral () Bool
+    false)
+  (define-fun p0.0.0.0.condition () Bool
+    true)
+  (define-fun p1.0.resource () Bool
+    true)
+  (define-fun resourceRegion () String
+    "")
+  (define-fun p1.0.action () Bool
+    true)
+  (define-fun p1.0.0.0.condition () Bool
+    false)
+  (define-fun p1.0.principal () Bool
+    true)
+  (define-fun p0.0.principal () Bool
+    true)
+  (define-fun p1.0.0.condition () Bool
+    false)
+  (define-fun p1.0.statement.allows () Bool
+    false)
+  (define-fun actionName () String
+    "getobject")
+  (define-fun actionNamespace () String
+    "s3")
+  (define-fun resourcePartition () String
+    "aws")
+  (define-fun p0.0.resource () Bool
+    true)
+  (define-fun p1.0.statement.denies () Bool
+    false)
+  (define-fun p0.0.0.condition () Bool
+    true)
+  (define-fun p0.denies () Bool
+    false)
+  (define-fun p1.neutral () Bool
+    true)
+  (define-fun resourceService () String
+    "s3")
+  (define-fun p0.allows () Bool
+    true)
+  (define-fun p1.denies () Bool
+    false)
+  (define-fun p1.0.condition () Bool
+    false)
+  (define-fun |s3:prefix_exists| () Bool
+    true)
+  (define-fun p0.0.action () Bool
+    true)
+  (define-fun p0.0.statement.denies () Bool
+    false)
+  (define-fun p0.0.condition () Bool
+    true)
+  (define-fun p0.0.statement.allows () Bool
+    true)
+  (define-fun p1.allows () Bool
+    false)
+)

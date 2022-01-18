@@ -1,0 +1,15 @@
+{
+    "Statement": [
+        {
+            "Id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Authorization/roleDefinitions/b7e6dc6d-f1e8-4753-8033-0f276bb0955b",
+            "Effect": "Allow",
+            "Principal": "foo",
+            "Action": [
+                "microsoft.storage/storageaccounts/blobservices/containers/*",
+                "microsoft.storage/storageaccounts/blobservices/generateuserdelegationkey/action",
+                "microsoft.storage/storageaccounts/blobservices/containers/blobs/*"
+            ],
+            "Resource": "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rgname/*"
+        }
+    ]
+}

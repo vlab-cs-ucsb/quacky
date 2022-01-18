@@ -1,0 +1,24 @@
+{
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": "s3:*",
+            "Resource": [
+                "arn:aws:s3:::mybucket/*"
+            ]
+        },
+        {
+            "Sid": "NoBucketDelete",
+            "Effect": "Deny",
+            "NotResource": [
+                "arn:aws:s3:::mybucket"
+            ],
+            "NotAction": [
+                "s3:DeleteBucket",
+                "s3:DeleteBucketPolicy",
+                "s3:DeleteBucketWebsite",
+                "s3:DeleteObjectVersion"
+            ]
+        }
+    ]
+}

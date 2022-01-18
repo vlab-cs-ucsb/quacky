@@ -1,0 +1,3486 @@
+{
+    "microsoft.batch": {
+        "batchaccounts/jobschedules": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "batchaccounts/jobs": [
+            "read",
+            "write",
+            "delete"
+        ]
+    },
+    "microsoft.cognitiveservices": {
+        "accounts/anomalydetector/timeseries/changepoint": [
+            "detect/action"
+        ],
+        "accounts/anomalydetector/timeseries/entire": [
+            "detect/action"
+        ],
+        "accounts/anomalydetector/timeseries/last": [
+            "detect/action"
+        ],
+        "accounts/metricsadvisor/alert/anomaly/configurations": [
+            "write",
+            "delete",
+            "read"
+        ],
+        "accounts/metricsadvisor/alert/anomaly/configurations/alerts": [
+            "query/action"
+        ],
+        "accounts/metricsadvisor/alert/anomaly/configurations/alerts/anomalies": [
+            "read"
+        ],
+        "accounts/metricsadvisor/alert/anomaly/configurations/alerts/incidents": [
+            "read"
+        ],
+        "accounts/metricsadvisor/metrics/enrichment/anomalydetection/configurations": [
+            "read"
+        ],
+        "accounts/metricsadvisor/enrichment/anomalydetection/configurations": [
+            "write",
+            "delete",
+            "read"
+        ],
+        "accounts/metricsadvisor/enrichment/anomalydetection/configurations/anomalies": [
+            "query/action"
+        ],
+        "accounts/metricsadvisor/enrichment/anomalydetection/configurations/anomalies/dimension": [
+            "query/action"
+        ],
+        "accounts/metricsadvisor/enrichment/anomalydetection/configurations/alert/anomaly/configurations": [
+            "read"
+        ],
+        "accounts/metricsadvisor/enrichment/anomalydetection/configurations/incidents": [
+            "query/action"
+        ],
+        "accounts/metricsadvisor/enrichment/anomalydetection/configurations/incidents/rootcause": [
+            "read"
+        ],
+        "accounts/metricsadvisor/enrichment/anomalydetection/configurations/series": [
+            "query/action"
+        ],
+        "accounts/autosuggest": [
+            "search/action"
+        ],
+        "accounts/formrecognizer/prebuilt/businesscard": [
+            "analyze/action"
+        ],
+        "accounts/formrecognizer/prebuilt/businesscard/analyzeresults": [
+            "read"
+        ],
+        "accounts/computervision": [
+            "analyze/action",
+            "describe/action",
+            "generatethumbnail/action",
+            "ocr/action",
+            "recognizetext/action",
+            "tag/action",
+            "areaofinterest/action",
+            "detect/action"
+        ],
+        "accounts/computervision/models": [
+            "read",
+            "analyze/action"
+        ],
+        "accounts/computervision/read": [
+            "analyze/action"
+        ],
+        "accounts/computervision/read/analyzeresults": [
+            "read"
+        ],
+        "accounts/computervision/read/core": [
+            "asyncbatchanalyze/action"
+        ],
+        "accounts/computervision/read/operations": [
+            "read"
+        ],
+        "accounts/computervision/textoperations": [
+            "read"
+        ],
+        "accounts/contentmoderator": [
+            "imagelists/action",
+            "termlists/action"
+        ],
+        "accounts/contentmoderator/imagelists": [
+            "read",
+            "delete",
+            "refreshindex/action",
+            "write"
+        ],
+        "accounts/contentmoderator/imagelists/images": [
+            "write",
+            "delete",
+            "read"
+        ],
+        "accounts/contentmoderator/teams": [
+            "jobs/action",
+            "reviews/action"
+        ],
+        "accounts/contentmoderator/teams/jobs": [
+            "read"
+        ],
+        "accounts/contentmoderator/teams/reviews": [
+            "read",
+            "publish/action",
+            "transcript/action",
+            "transcriptmoderationresult/action"
+        ],
+        "accounts/contentmoderator/teams/reviews/accesskey": [
+            "read"
+        ],
+        "accounts/contentmoderator/teams/reviews/frames": [
+            "write",
+            "read"
+        ],
+        "accounts/contentmoderator/teams/settings/templates": [
+            "write",
+            "delete",
+            "read"
+        ],
+        "accounts/contentmoderator/teams/workflows": [
+            "write",
+            "read"
+        ],
+        "accounts/contentmoderator/processimage": [
+            "evaluate/action",
+            "findfaces/action",
+            "match/action",
+            "ocr/action"
+        ],
+        "accounts/contentmoderator/processtext": [
+            "detectlanguage/action",
+            "screen/action"
+        ],
+        "accounts/contentmoderator/termlists": [
+            "bulkupdate/action",
+            "delete",
+            "read",
+            "refreshindex/action",
+            "write"
+        ],
+        "accounts/contentmoderator/termlists/terms": [
+            "write",
+            "delete",
+            "read"
+        ],
+        "accounts/formrecognizer/custom": [
+            "train/action",
+            "models/action"
+        ],
+        "accounts/formrecognizer/custom/models": [
+            "analyze/action",
+            "delete",
+            "read",
+            "copyauthorization/action",
+            "copy/action",
+            "compose/action"
+        ],
+        "accounts/formrecognizer/custom/models/copyresults": [
+            "read"
+        ],
+        "accounts/formrecognizer/custom/models/analyzeresults": [
+            "read"
+        ],
+        "accounts/formrecognizer/custom/models/keys": [
+            "read"
+        ],
+        "accounts/customvision": [
+            "projects/action",
+            "user/action",
+            "quota/action"
+        ],
+        "accounts/customvision/domains": [
+            "read"
+        ],
+        "accounts/customvision/classify/iterations": [
+            "image/action",
+            "url/action"
+        ],
+        "accounts/customvision/classify/iterations/image": [
+            "nostore/action"
+        ],
+        "accounts/customvision/classify/iterations/url": [
+            "nostore/action"
+        ],
+        "accounts/customvision/detect/iterations": [
+            "image/action",
+            "url/action"
+        ],
+        "accounts/customvision/detect/iterations/image": [
+            "nostore/action"
+        ],
+        "accounts/customvision/detect/iterations/url": [
+            "nostore/action"
+        ],
+        "accounts/customvision/labelproposals": [
+            "setting/action"
+        ],
+        "accounts/customvision/labelproposals/setting": [
+            "read"
+        ],
+        "accounts/customvision/project": [
+            "migrate/action"
+        ],
+        "accounts/customvision/projects": [
+            "images/action",
+            "tags/action",
+            "delete",
+            "read",
+            "train/action",
+            "write",
+            "import/action"
+        ],
+        "accounts/customvision/projects/artifacts": [
+            "read"
+        ],
+        "accounts/customvision/projects/export": [
+            "read"
+        ],
+        "accounts/customvision/projects/images": [
+            "regions/action",
+            "files/action",
+            "predictions/action",
+            "urls/action",
+            "tags/action",
+            "delete",
+            "regionproposals/action",
+            "suggested/action",
+            "read",
+            "metadata/action"
+        ],
+        "accounts/customvision/projects/images/count": [
+            "read"
+        ],
+        "accounts/customvision/projects/images/id": [
+            "read"
+        ],
+        "accounts/customvision/projects/images/regions": [
+            "delete"
+        ],
+        "accounts/customvision/projects/images/suggested": [
+            "count/action"
+        ],
+        "accounts/customvision/projects/images/tagged": [
+            "read"
+        ],
+        "accounts/customvision/projects/images/tagged/count": [
+            "read"
+        ],
+        "accounts/customvision/projects/images/tags": [
+            "delete"
+        ],
+        "accounts/customvision/projects/images/untagged": [
+            "read"
+        ],
+        "accounts/customvision/projects/images/untagged/count": [
+            "read"
+        ],
+        "accounts/customvision/projects/iterations": [
+            "delete",
+            "export/action",
+            "read",
+            "publish/action",
+            "write"
+        ],
+        "accounts/customvision/projects/iterations/export": [
+            "read"
+        ],
+        "accounts/customvision/projects/iterations/performance": [
+            "read"
+        ],
+        "accounts/customvision/projects/iterations/performance/images": [
+            "read"
+        ],
+        "accounts/customvision/projects/iterations/performance/images/count": [
+            "read"
+        ],
+        "accounts/customvision/projects/iterations/publish": [
+            "delete"
+        ],
+        "accounts/customvision/projects/predictions": [
+            "delete",
+            "query/action"
+        ],
+        "accounts/customvision/projects/quicktest": [
+            "image/action",
+            "url/action"
+        ],
+        "accounts/customvision/projects/tags": [
+            "delete",
+            "read",
+            "write"
+        ],
+        "accounts/customvision/projects/tagsandregions": [
+            "suggestions/action"
+        ],
+        "accounts/customvision/projects/train": [
+            "advanced/action"
+        ],
+        "accounts/customvision/quota": [
+            "delete"
+        ],
+        "accounts/customvision/quota/refresh": [
+            "write"
+        ],
+        "accounts/customvision/usage/training/resource/tier": [
+            "read"
+        ],
+        "accounts/customvision/usage/prediction/user": [
+            "read"
+        ],
+        "accounts/customvision/usage/training/user": [
+            "read"
+        ],
+        "accounts/customvision/user": [
+            "delete"
+        ],
+        "accounts/customvision/user/state": [
+            "write"
+        ],
+        "accounts/customvision/user/tier": [
+            "write"
+        ],
+        "accounts/customvision/users": [
+            "read"
+        ],
+        "accounts/customvision/whitelist": [
+            "delete",
+            "read",
+            "write"
+        ],
+        "accounts/customvision.prediction": [
+            "projects/action",
+            "user/action",
+            "quota/action"
+        ],
+        "accounts/customvision.prediction/domains": [
+            "read"
+        ],
+        "accounts/customvision.prediction/classify/iterations": [
+            "image/action",
+            "url/action"
+        ],
+        "accounts/customvision.prediction/classify/iterations/image": [
+            "nostore/action"
+        ],
+        "accounts/customvision.prediction/classify/iterations/url": [
+            "nostore/action"
+        ],
+        "accounts/customvision.prediction/detect/iterations": [
+            "image/action",
+            "url/action"
+        ],
+        "accounts/customvision.prediction/detect/iterations/image": [
+            "nostore/action"
+        ],
+        "accounts/customvision.prediction/detect/iterations/url": [
+            "nostore/action"
+        ],
+        "accounts/customvision.prediction/labelproposals": [
+            "setting/action"
+        ],
+        "accounts/customvision.prediction/labelproposals/setting": [
+            "read"
+        ],
+        "accounts/customvision.prediction/project": [
+            "migrate/action"
+        ],
+        "accounts/customvision.prediction/projects": [
+            "images/action",
+            "tags/action",
+            "delete",
+            "read",
+            "train/action",
+            "write",
+            "import/action"
+        ],
+        "accounts/customvision.prediction/projects/export": [
+            "read"
+        ],
+        "accounts/customvision.prediction/projects/images": [
+            "regions/action",
+            "files/action",
+            "predictions/action",
+            "urls/action",
+            "tags/action",
+            "delete",
+            "regionproposals/action",
+            "suggested/action"
+        ],
+        "accounts/customvision.prediction/projects/images/id": [
+            "read"
+        ],
+        "accounts/customvision.prediction/projects/images/regions": [
+            "delete"
+        ],
+        "accounts/customvision.prediction/projects/images/suggested": [
+            "count/action"
+        ],
+        "accounts/customvision.prediction/projects/images/tagged": [
+            "read"
+        ],
+        "accounts/customvision.prediction/projects/images/tagged/count": [
+            "read"
+        ],
+        "accounts/customvision.prediction/projects/images/tags": [
+            "delete"
+        ],
+        "accounts/customvision.prediction/projects/images/untagged": [
+            "read"
+        ],
+        "accounts/customvision.prediction/projects/images/untagged/count": [
+            "read"
+        ],
+        "accounts/customvision.prediction/projects/iterations": [
+            "delete",
+            "export/action",
+            "read",
+            "publish/action",
+            "write"
+        ],
+        "accounts/customvision.prediction/projects/iterations/export": [
+            "read"
+        ],
+        "accounts/customvision.prediction/projects/iterations/performance": [
+            "read"
+        ],
+        "accounts/customvision.prediction/projects/iterations/performance/images": [
+            "read"
+        ],
+        "accounts/customvision.prediction/projects/iterations/performance/images/count": [
+            "read"
+        ],
+        "accounts/customvision.prediction/projects/iterations/publish": [
+            "delete"
+        ],
+        "accounts/customvision.prediction/projects/predictions": [
+            "delete",
+            "query/action"
+        ],
+        "accounts/customvision.prediction/projects/quicktest": [
+            "image/action",
+            "url/action"
+        ],
+        "accounts/customvision.prediction/projects/tags": [
+            "delete",
+            "read",
+            "write"
+        ],
+        "accounts/customvision.prediction/projects/tagsandregions": [
+            "suggestions/action"
+        ],
+        "accounts/customvision.prediction/projects/train": [
+            "advanced/action"
+        ],
+        "accounts/customvision.prediction/quota": [
+            "delete"
+        ],
+        "accounts/customvision.prediction/quota/refresh": [
+            "write"
+        ],
+        "accounts/customvision.prediction/usage/training/resource/tier": [
+            "read"
+        ],
+        "accounts/customvision.prediction/usage/prediction/user": [
+            "read"
+        ],
+        "accounts/customvision.prediction/usage/training/user": [
+            "read"
+        ],
+        "accounts/customvision.prediction/user": [
+            "delete"
+        ],
+        "accounts/customvision.prediction/user/state": [
+            "write"
+        ],
+        "accounts/customvision.prediction/user/tier": [
+            "write"
+        ],
+        "accounts/customvision.prediction/users": [
+            "read"
+        ],
+        "accounts/customvision.prediction/whitelist": [
+            "delete",
+            "read",
+            "write"
+        ],
+        "accounts/metricsadvisor/datafeeds": [
+            "write",
+            "delete",
+            "read"
+        ],
+        "accounts/metricsadvisor/datafeeds/ingestionprogress": [
+            "read",
+            "reset/action"
+        ],
+        "accounts/metricsadvisor/datafeeds/ingestionstatus": [
+            "query/action"
+        ],
+        "accounts/metricsadvisor/metrics/data": [
+            "query/action"
+        ],
+        "accounts/metricsadvisor/metrics/dimension": [
+            "query/action"
+        ],
+        "accounts/formrecognizer/layout": [
+            "analyze/action"
+        ],
+        "accounts/formrecognizer/layout/analyzeresults": [
+            "read"
+        ],
+        "accounts/metricsadvisor/metrics/status/enrichment/anomalydetection": [
+            "query/action"
+        ],
+        "accounts/entitysearch": [
+            "search/action"
+        ],
+        "accounts/face": [
+            "detect/action",
+            "findsimilars/action",
+            "group/action",
+            "identify/action",
+            "verify/action"
+        ],
+        "accounts/face/facelists": [
+            "write",
+            "delete",
+            "read"
+        ],
+        "accounts/face/facelists/persistedfaces": [
+            "write",
+            "delete"
+        ],
+        "accounts/face/snapshot": [
+            "take/action",
+            "read",
+            "apply/action",
+            "delete",
+            "write"
+        ],
+        "accounts/face/largefacelists": [
+            "write",
+            "delete",
+            "read",
+            "train/action"
+        ],
+        "accounts/face/largefacelists/persistedfaces": [
+            "write",
+            "delete",
+            "read"
+        ],
+        "accounts/face/largefacelists/training": [
+            "read"
+        ],
+        "accounts/face/largepersongroups": [
+            "write",
+            "delete",
+            "read",
+            "train/action",
+            "persons/action"
+        ],
+        "accounts/face/largepersongroups/persons": [
+            "delete",
+            "read",
+            "write"
+        ],
+        "accounts/face/largepersongroups/persons/persistedfaces": [
+            "write",
+            "delete",
+            "read"
+        ],
+        "accounts/face/largepersongroups/training": [
+            "read"
+        ],
+        "accounts/face/persongroups": [
+            "write",
+            "delete",
+            "read",
+            "train/action",
+            "persons/action"
+        ],
+        "accounts/face/persongroups/persons": [
+            "delete",
+            "read",
+            "write"
+        ],
+        "accounts/face/persongroups/persons/persistedfaces": [
+            "write",
+            "delete",
+            "read"
+        ],
+        "accounts/face/persongroups/training": [
+            "read"
+        ],
+        "accounts/face/snapshots": [
+            "read"
+        ],
+        "accounts/metricsadvisor/feedback/metric": [
+            "write",
+            "read",
+            "query/action"
+        ],
+        "accounts/metricsadvisor/hooks": [
+            "write",
+            "delete",
+            "read"
+        ],
+        "accounts/imagesearch": [
+            "details/action",
+            "search/action",
+            "trending/action"
+        ],
+        "accounts/immersivereader": [
+            "getcontentmodelforreader/action"
+        ],
+        "accounts/luis": [
+            "predict/action",
+            "unlabeled/action"
+        ],
+        "accounts/luis/apps": [
+            "write",
+            "azureaccounts/action",
+            "delete",
+            "read",
+            "import/action",
+            "publish/action",
+            "querylogsasync/action",
+            "move/action",
+            "subscriptions/action",
+            "unlabeled/action",
+            "testdatasets/action"
+        ],
+        "accounts/luis/apps/azureaccounts": [
+            "read",
+            "delete"
+        ],
+        "accounts/luis/apps/cultures": [
+            "read"
+        ],
+        "accounts/luis/apps/cultures/tokenizerversions": [
+            "read"
+        ],
+        "accounts/luis/apps/domains": [
+            "read"
+        ],
+        "accounts/luis/apps/endpoints": [
+            "read"
+        ],
+        "accounts/luis/apps/publishsettings": [
+            "read",
+            "write"
+        ],
+        "accounts/luis/apps/querylogs": [
+            "read"
+        ],
+        "accounts/luis/apps/querylogsasync": [
+            "read"
+        ],
+        "accounts/luis/apps/settings": [
+            "read",
+            "write"
+        ],
+        "accounts/luis/apps/usagescenarios": [
+            "read"
+        ],
+        "accounts/luis/apps/customprebuiltdomains": [
+            "write",
+            "read"
+        ],
+        "accounts/luis/apps/versions": [
+            "train/action",
+            "clone/action",
+            "delete",
+            "read",
+            "import/action",
+            "write",
+            "predict/action",
+            "evaluations/action",
+            "stats/action",
+            "releasedispatch/action"
+        ],
+        "accounts/luis/apps/versions/settings": [
+            "read",
+            "write"
+        ],
+        "accounts/luis/apps/versions/closedlists": [
+            "write",
+            "delete",
+            "read",
+            "suggest/action"
+        ],
+        "accounts/luis/apps/versions/closedlists/roles": [
+            "write",
+            "delete",
+            "read"
+        ],
+        "accounts/luis/apps/versions/closedlists/sublists": [
+            "write",
+            "delete"
+        ],
+        "accounts/luis/apps/versions/closedlists/presuggestion": [
+            "read"
+        ],
+        "accounts/luis/apps/versions/compositeentities": [
+            "write",
+            "delete",
+            "read"
+        ],
+        "accounts/luis/apps/versions/compositeentities/children": [
+            "write",
+            "delete"
+        ],
+        "accounts/luis/apps/versions/compositeentities/roles": [
+            "write",
+            "delete",
+            "read"
+        ],
+        "accounts/luis/apps/versions/example": [
+            "write"
+        ],
+        "accounts/luis/apps/versions/examples": [
+            "write",
+            "delete",
+            "read"
+        ],
+        "accounts/luis/apps/versions/export": [
+            "read"
+        ],
+        "accounts/luis/apps/versions/features": [
+            "read"
+        ],
+        "accounts/luis/apps/versions/hierarchicalentities": [
+            "write",
+            "delete",
+            "read"
+        ],
+        "accounts/luis/apps/versions/hierarchicalentities/children": [
+            "write",
+            "delete",
+            "read"
+        ],
+        "accounts/luis/apps/versions/hierarchicalentities/roles": [
+            "write",
+            "delete",
+            "read"
+        ],
+        "accounts/luis/apps/versions/intents": [
+            "write",
+            "delete",
+            "read"
+        ],
+        "accounts/luis/apps/versions/intents/patternrules": [
+            "read"
+        ],
+        "accounts/luis/apps/versions/intents/suggest": [
+            "read"
+        ],
+        "accounts/luis/apps/versions/intents/entitiescount": [
+            "read"
+        ],
+        "accounts/luis/apps/versions/intents/features": [
+            "write",
+            "delete",
+            "read"
+        ],
+        "accounts/luis/apps/versions/intents/stats": [
+            "read"
+        ],
+        "accounts/luis/apps/versions/intents/stats/endpointscores": [
+            "read"
+        ],
+        "accounts/luis/apps/versions/models": [
+            "read"
+        ],
+        "accounts/luis/apps/versions/models/endpointscoreshistory": [
+            "read"
+        ],
+        "accounts/luis/apps/versions/models/examples": [
+            "read"
+        ],
+        "accounts/luis/apps/versions/models/review": [
+            "read"
+        ],
+        "accounts/luis/apps/versions/models/reviewlabels": [
+            "read"
+        ],
+        "accounts/luis/apps/versions/models/reviewpredictions": [
+            "read"
+        ],
+        "accounts/luis/apps/versions/patternrule": [
+            "write"
+        ],
+        "accounts/luis/apps/versions/patternrules": [
+            "write",
+            "delete",
+            "read"
+        ],
+        "accounts/luis/apps/versions/patternanyentities": [
+            "write",
+            "delete",
+            "read"
+        ],
+        "accounts/luis/apps/versions/patternanyentities/explicitlist": [
+            "write",
+            "delete",
+            "read"
+        ],
+        "accounts/luis/apps/versions/patternanyentities/roles": [
+            "write",
+            "delete",
+            "read"
+        ],
+        "accounts/luis/apps/versions/phraselists": [
+            "write",
+            "delete",
+            "read",
+            "suggest/action"
+        ],
+        "accounts/luis/apps/versions/phraselists/presuggestion": [
+            "read"
+        ],
+        "accounts/luis/apps/versions/customprebuiltentities": [
+            "write",
+            "read"
+        ],
+        "accounts/luis/apps/versions/customprebuiltentities/roles": [
+            "write",
+            "delete",
+            "read"
+        ],
+        "accounts/luis/apps/versions/customprebuiltintents": [
+            "write",
+            "read"
+        ],
+        "accounts/luis/apps/versions/customprebuiltmodels": [
+            "read"
+        ],
+        "accounts/luis/apps/versions/customprebuiltdomains": [
+            "write",
+            "delete"
+        ],
+        "accounts/luis/apps/versions/listprebuilts": [
+            "read"
+        ],
+        "accounts/luis/apps/versions/prebuilts": [
+            "write",
+            "delete",
+            "read"
+        ],
+        "accounts/luis/apps/versions/prebuilts/roles": [
+            "write",
+            "delete",
+            "read"
+        ],
+        "accounts/luis/apps/versions/regexentities": [
+            "write",
+            "delete",
+            "read"
+        ],
+        "accounts/luis/apps/versions/regexentities/roles": [
+            "write",
+            "delete",
+            "read"
+        ],
+        "accounts/luis/apps/versions/patterns": [
+            "write",
+            "delete",
+            "read"
+        ],
+        "accounts/luis/apps/versions/entities": [
+            "write",
+            "delete",
+            "read"
+        ],
+        "accounts/luis/apps/versions/entities/roles": [
+            "write",
+            "delete",
+            "read"
+        ],
+        "accounts/luis/apps/versions/entities/roles/suggest": [
+            "read"
+        ],
+        "accounts/luis/apps/versions/entities/suggest": [
+            "read"
+        ],
+        "accounts/luis/apps/versions/entities/children": [
+            "write"
+        ],
+        "accounts/luis/apps/versions/entities/stats/endpointscores": [
+            "read"
+        ],
+        "accounts/luis/apps/versions/entities/features": [
+            "write",
+            "delete",
+            "read"
+        ],
+        "accounts/luis/apps/versions/suggest": [
+            "delete"
+        ],
+        "accounts/luis/apps/versions/train": [
+            "read"
+        ],
+        "accounts/luis/apps/versions/assignedkey": [
+            "write",
+            "read"
+        ],
+        "accounts/luis/apps/versions/connectedservices": [
+            "write",
+            "delete",
+            "read"
+        ],
+        "accounts/luis/apps/versions/customprebuiltintentsbatch": [
+            "write"
+        ],
+        "accounts/luis/apps/versions/detailedmodels": [
+            "read"
+        ],
+        "accounts/luis/apps/versions/externalkeys": [
+            "delete",
+            "read",
+            "write"
+        ],
+        "accounts/luis/apps/versions/labeleddata": [
+            "read"
+        ],
+        "accounts/luis/apps/versions/predict": [
+            "read"
+        ],
+        "accounts/luis/apps/versions/evaluations/result": [
+            "read"
+        ],
+        "accounts/luis/apps/versions/testdatasets/run": [
+            "read"
+        ],
+        "accounts/luis/apps/versions/state": [
+            "read"
+        ],
+        "accounts/luis/apps/versions/stats": [
+            "read"
+        ],
+        "accounts/luis/apps/versions/stats/endpointhitshistory": [
+            "read"
+        ],
+        "accounts/luis/apps/versions/stats/examplesperentity": [
+            "read"
+        ],
+        "accounts/luis/apps/versions/stats/labelsperentity": [
+            "read"
+        ],
+        "accounts/luis/apps/versions/stats/labelsperintent": [
+            "read"
+        ],
+        "accounts/luis/apps/versions/stats/operations": [
+            "read"
+        ],
+        "accounts/luis/apps/versions/statsmetadata": [
+            "read"
+        ],
+        "accounts/luis/apps/versions/evaluations/status": [
+            "read"
+        ],
+        "accounts/luis/apps/versions/featuresuggestion/status": [
+            "read"
+        ],
+        "accounts/luis/apps/versions/featuresuggestion/suggestions": [
+            "read"
+        ],
+        "accounts/luis/apps/versions/trainingstatus": [
+            "read"
+        ],
+        "accounts/luis/apps/activeversion": [
+            "write"
+        ],
+        "accounts/luis/apps/assistants": [
+            "read"
+        ],
+        "accounts/luis/apps/stats/detailedendpointhitshistory": [
+            "read"
+        ],
+        "accounts/luis/apps/metadata": [
+            "read",
+            "write"
+        ],
+        "accounts/luis/apps/permissions": [
+            "write",
+            "read",
+            "delete"
+        ],
+        "accounts/luis/apps/runtimepermissions": [
+            "bot/action"
+        ],
+        "accounts/luis/apps/runtimepermissions/bot": [
+            "delete",
+            "read"
+        ],
+        "accounts/luis/apps/slots": [
+            "predict/action",
+            "evaluations/action"
+        ],
+        "accounts/luis/apps/slots/predict": [
+            "read"
+        ],
+        "accounts/luis/apps/slots/evaluations/result": [
+            "read"
+        ],
+        "accounts/luis/apps/slots/evaluations/status": [
+            "read"
+        ],
+        "accounts/luis/apps/subscriptions": [
+            "read",
+            "delete"
+        ],
+        "accounts/luis/apps/testdatasets": [
+            "delete",
+            "read",
+            "write"
+        ],
+        "accounts/luis/apps/testdatasets/download": [
+            "read"
+        ],
+        "accounts/luis/apps/testdatasets/rename": [
+            "write"
+        ],
+        "accounts/luis/azureaccounts": [
+            "read"
+        ],
+        "accounts/luis/package/slot/gzip": [
+            "read"
+        ],
+        "accounts/luis/package/versions/gzip": [
+            "read"
+        ],
+        "accounts/luis/documents/apps/classifierslabelscount": [
+            "read"
+        ],
+        "accounts/luis/documents/storageaccounts/containers": [
+            "read",
+            "status/action",
+            "prepare/action",
+            "sync/action",
+            "write"
+        ],
+        "accounts/luis/documents/storageaccounts/containers/prepare/result": [
+            "read"
+        ],
+        "accounts/luis/documents/storageaccounts/containers/sync/result": [
+            "read"
+        ],
+        "accounts/luis/documents/storageaccounts/containers/operations/prepare/status": [
+            "read"
+        ],
+        "accounts/luis/documents/storageaccounts/containers/operations/sync/status": [
+            "read"
+        ],
+        "accounts/luis/resources/apps/count": [
+            "read"
+        ],
+        "accounts/luis/resources/apps/versions/count": [
+            "read"
+        ],
+        "accounts/luis/documents/featurerepositorystore/features/data": [
+            "read"
+        ],
+        "accounts/luis/documents/entitysuggestions": [
+            "suggestions/action"
+        ],
+        "accounts/luis/documents/entitysuggestions/results": [
+            "read"
+        ],
+        "accounts/luis/documents/entitysuggestions/status": [
+            "read"
+        ],
+        "accounts/luis/documents/entity/exploratorysuggestions": [
+            "suggestions/action"
+        ],
+        "accounts/luis/documents/entity/exploratorysuggestions/results": [
+            "read"
+        ],
+        "accounts/luis/documents/entity/exploratorysuggestions/status": [
+            "read"
+        ],
+        "accounts/luis/externalkeys": [
+            "write",
+            "delete",
+            "read"
+        ],
+        "accounts/luis/documents/apps/extractorslabelscount": [
+            "read"
+        ],
+        "accounts/luis/documents/featurerepositorysearch": [
+            "read"
+        ],
+        "accounts/luis/documents/featurerepositorystore/manifest": [
+            "read"
+        ],
+        "accounts/luis/documents/apps/documents/models": [
+            "trellis/action"
+        ],
+        "accounts/luis/documents/apps/documents/models/operations/trellis": [
+            "read"
+        ],
+        "accounts/luis/documents/apps/documents/models/operations/trellis/status": [
+            "read"
+        ],
+        "accounts/luis/documents/apps/models": [
+            "modeltracker/action",
+            "predict/action",
+            "predicttext/action",
+            "clone/action"
+        ],
+        "accounts/luis/documents/apps/models/operations/modeltracker": [
+            "read"
+        ],
+        "accounts/luis/documents/apps/models/operations/modeltracker/metadata": [
+            "read"
+        ],
+        "accounts/luis/documents/apps/models/operations/modeltracker/status": [
+            "read"
+        ],
+        "accounts/luis/documents/apps/models/operations/predict": [
+            "read"
+        ],
+        "accounts/luis/documents/apps/models/operations/predict/status": [
+            "read"
+        ],
+        "accounts/luis/documents/apps/models/operations/predicttext": [
+            "read"
+        ],
+        "accounts/luis/documents/apps/models/operations/predicttext/status": [
+            "read"
+        ],
+        "accounts/luis/compositesmigration/needmigrationapps": [
+            "read"
+        ],
+        "accounts/luis/documents/apps/operations": [
+            "read"
+        ],
+        "accounts/luis/ping": [
+            "read"
+        ],
+        "accounts/luis/conversations/previewfeatures": [
+            "read"
+        ],
+        "accounts/luis/previewfeatures": [
+            "read"
+        ],
+        "accounts/luis/programmatickey": [
+            "write"
+        ],
+        "accounts/luis/subscriptions": [
+            "write",
+            "delete",
+            "read"
+        ],
+        "accounts/luis/user": [
+            "termsofuse/action",
+            "read",
+            "delete",
+            "write"
+        ],
+        "accounts/luis/user/authoringazureaccount": [
+            "write"
+        ],
+        "accounts/luis/user/collaborators": [
+            "read"
+        ],
+        "accounts/luis/user/detailedinfo": [
+            "read"
+        ],
+        "accounts/luis/user/programmatickey": [
+            "read"
+        ],
+        "accounts/luis/user/programmatickeywithendpointurl": [
+            "read"
+        ],
+        "accounts/luis/user/unownedappsowners": [
+            "read"
+        ],
+        "accounts/luis/compositesmigration/apps/versions": [
+            "migrate/action"
+        ],
+        "accounts/luis/compositesmigration/apps/versions/operations/migrate": [
+            "read"
+        ],
+        "accounts/luis/compositesmigration/apps/versions/operations/migrate/status": [
+            "read"
+        ],
+        "accounts/metricsadvisor/stats/latest": [
+            "read"
+        ],
+        "accounts/speechservices/speechrest": [
+            "models/action",
+            "webhooks/action"
+        ],
+        "accounts/speechservices/speechrest/datasets": [
+            "write",
+            "delete",
+            "read"
+        ],
+        "accounts/speechservices/speechrest/datasets/files": [
+            "read"
+        ],
+        "accounts/speechservices/speechrest/endpoints": [
+            "write",
+            "delete",
+            "read"
+        ],
+        "accounts/speechservices/speechrest/endpoints/files/logs": [
+            "write",
+            "delete",
+            "read"
+        ],
+        "accounts/speechservices/speechrest/evaluations": [
+            "write",
+            "delete",
+            "read"
+        ],
+        "accounts/speechservices/speechrest/evaluations/files": [
+            "read"
+        ],
+        "accounts/speechservices/speechrest/healthstatus": [
+            "read"
+        ],
+        "accounts/speechservices/speechrest/models": [
+            "write",
+            "delete",
+            "read"
+        ],
+        "accounts/speechservices/speechrest/models/base/manifest": [
+            "read"
+        ],
+        "accounts/speechservices/speechrest/models/manifest": [
+            "read"
+        ],
+        "accounts/speechservices/speechrest/projects": [
+            "write",
+            "delete",
+            "read"
+        ],
+        "accounts/speechservices/speechrest/transcriptions": [
+            "write",
+            "delete",
+            "read"
+        ],
+        "accounts/speechservices/speechrest/transcriptions/files": [
+            "read"
+        ],
+        "accounts/speechservices/speechrest/webhooks": [
+            "write",
+            "delete",
+            "read"
+        ],
+        "accounts/newssearch": [
+            "categorysearch/action",
+            "search/action",
+            "trendingtopics/action"
+        ],
+        "accounts/personalizer": [
+            "rank/action",
+            "evaluations/action"
+        ],
+        "accounts/personalizer/status": [
+            "read"
+        ],
+        "accounts/personalizer/configurations": [
+            "client/action"
+        ],
+        "accounts/personalizer/configurations/policy": [
+            "delete",
+            "read",
+            "write"
+        ],
+        "accounts/personalizer/configurations/service": [
+            "read",
+            "write"
+        ],
+        "accounts/personalizer/evaluations": [
+            "delete",
+            "read"
+        ],
+        "accounts/personalizer/events": [
+            "reward/action",
+            "activate/action"
+        ],
+        "accounts/personalizer/logs": [
+            "delete"
+        ],
+        "accounts/personalizer/logs/properties": [
+            "read"
+        ],
+        "accounts/personalizer/model": [
+            "read",
+            "delete"
+        ],
+        "accounts/personalizer/model/properties": [
+            "read"
+        ],
+        "accounts/qnamaker": [
+            "root/action"
+        ],
+        "accounts/qnamaker/alterations": [
+            "read",
+            "write"
+        ],
+        "accounts/qnamaker/endpointkeys": [
+            "read",
+            "refreshkeys/action"
+        ],
+        "accounts/qnamaker/endpointsettings": [
+            "read",
+            "write"
+        ],
+        "accounts/qnamaker/knowledgebases": [
+            "publish/action",
+            "delete",
+            "read",
+            "write",
+            "generateanswer/action",
+            "train/action"
+        ],
+        "accounts/qnamaker/knowledgebases/create": [
+            "write"
+        ],
+        "accounts/qnamaker/knowledgebases/download": [
+            "read"
+        ],
+        "accounts/qnamaker/operations": [
+            "read"
+        ],
+        "accounts/qnamaker.v2": [
+            "root/action"
+        ],
+        "accounts/qnamaker.v2/alterations": [
+            "read",
+            "write"
+        ],
+        "accounts/qnamaker.v2/endpointkeys": [
+            "read",
+            "refreshkeys/action"
+        ],
+        "accounts/qnamaker.v2/endpointsettings": [
+            "read",
+            "write"
+        ],
+        "accounts/qnamaker.v2/knowledgebases": [
+            "publish/action",
+            "delete",
+            "read",
+            "write",
+            "generateanswer/action",
+            "train/action"
+        ],
+        "accounts/qnamaker.v2/knowledgebases/create": [
+            "write"
+        ],
+        "accounts/qnamaker.v2/knowledgebases/download": [
+            "read"
+        ],
+        "accounts/qnamaker.v2/operations": [
+            "read"
+        ],
+        "accounts/formrecognizer/prebuilt/receipt": [
+            "asyncbatchanalyze/action"
+        ],
+        "accounts/formrecognizer/prebuilt/receipt/analyzeresults": [
+            "read"
+        ],
+        "accounts/formrecognizer/prebuilt/receipt/operations": [
+            "read"
+        ],
+        "accounts/metricsadvisor/metrics/series": [
+            "query/action"
+        ],
+        "accounts/spellcheck": [
+            "spellcheck/action"
+        ],
+        "accounts/textanalytics": [
+            "languages/action",
+            "entities/action",
+            "keyphrases/action",
+            "sentiment/action",
+            "analyze/action",
+            "qnamaker/action"
+        ],
+        "accounts/textanalytics/qnamaker/alterations": [
+            "read",
+            "write"
+        ],
+        "accounts/textanalytics/qnamaker/endpointkeys": [
+            "read",
+            "refreshkeys/action"
+        ],
+        "accounts/textanalytics/qnamaker/endpointsettings": [
+            "read",
+            "write"
+        ],
+        "accounts/textanalytics/qnamaker/knowledgebases": [
+            "publish/action",
+            "delete",
+            "read",
+            "write",
+            "generateanswer/action",
+            "train/action"
+        ],
+        "accounts/textanalytics/qnamaker/knowledgebases/create": [
+            "write"
+        ],
+        "accounts/textanalytics/qnamaker/knowledgebases/download": [
+            "read"
+        ],
+        "accounts/textanalytics/qnamaker/operations": [
+            "read"
+        ],
+        "accounts/texttranslation": [
+            "detect/action",
+            "breaksentence/action",
+            "translate/action",
+            "transliterate/action"
+        ],
+        "accounts/texttranslation/dictionary": [
+            "examples/action",
+            "lookup/action"
+        ],
+        "accounts/texttranslation/languages": [
+            "read"
+        ],
+        "accounts/speechservices/unified-speech": [
+            "frontend/action",
+            "management/action",
+            "probes/action",
+            "languages/action"
+        ],
+        "accounts/speechservices/unified-speech/legacy": [
+            "query/action"
+        ],
+        "accounts/videosearch": [
+            "trending/action",
+            "details/action",
+            "search/action"
+        ],
+        "accounts/visualsearch": [
+            "search/action"
+        ],
+        "accounts/websearch": [
+            "search/action"
+        ],
+        "accounts/formrecognizer/prebuilt/iddocument": [
+            "analyze/action"
+        ],
+        "accounts/formrecognizer/prebuilt/iddocument/analyzeresults": [
+            "read"
+        ],
+        "accounts/formrecognizer/prebuilt/invoice": [
+            "analyze/action"
+        ],
+        "accounts/formrecognizer/prebuilt/invoice/analyzeresults": [
+            "read"
+        ]
+    },
+    "microsoft.compute": {
+        "virtualmachines": [
+            "login/action",
+            "loginasadmin/action"
+        ]
+    },
+    "microsoft.containerservice": {
+        "managedclusters/api": [
+            "read"
+        ],
+        "managedclusters/api/v1": [
+            "read"
+        ],
+        "managedclusters/apis": [
+            "read"
+        ],
+        "managedclusters/apis/admissionregistration.k8s.io": [
+            "read"
+        ],
+        "managedclusters/apis/admissionregistration.k8s.io/v1": [
+            "read"
+        ],
+        "managedclusters/apis/admissionregistration.k8s.io/v1beta1": [
+            "read"
+        ],
+        "managedclusters/apis/apiextensions.k8s.io": [
+            "read"
+        ],
+        "managedclusters/apis/apiextensions.k8s.io/v1": [
+            "read"
+        ],
+        "managedclusters/apis/apiextensions.k8s.io/v1beta1": [
+            "read"
+        ],
+        "managedclusters/apis/apiregistration.k8s.io": [
+            "read"
+        ],
+        "managedclusters/apis/apiregistration.k8s.io/v1": [
+            "read"
+        ],
+        "managedclusters/apis/apiregistration.k8s.io/v1beta1": [
+            "read"
+        ],
+        "managedclusters/apis/apps": [
+            "read"
+        ],
+        "managedclusters/apis/apps/v1": [
+            "read"
+        ],
+        "managedclusters/apis/apps/v1beta1": [
+            "read"
+        ],
+        "managedclusters/apis/apps/v1beta2": [
+            "read"
+        ],
+        "managedclusters/apis/authentication.k8s.io": [
+            "read"
+        ],
+        "managedclusters/apis/authentication.k8s.io/v1": [
+            "read"
+        ],
+        "managedclusters/apis/authentication.k8s.io/v1beta1": [
+            "read"
+        ],
+        "managedclusters/apis/authorization.k8s.io": [
+            "read"
+        ],
+        "managedclusters/apis/authorization.k8s.io/v1": [
+            "read"
+        ],
+        "managedclusters/apis/authorization.k8s.io/v1beta1": [
+            "read"
+        ],
+        "managedclusters/apis/autoscaling": [
+            "read"
+        ],
+        "managedclusters/apis/autoscaling/v1": [
+            "read"
+        ],
+        "managedclusters/apis/autoscaling/v2beta1": [
+            "read"
+        ],
+        "managedclusters/apis/autoscaling/v2beta2": [
+            "read"
+        ],
+        "managedclusters/apis/batch": [
+            "read"
+        ],
+        "managedclusters/apis/batch/v1": [
+            "read"
+        ],
+        "managedclusters/apis/batch/v1beta1": [
+            "read"
+        ],
+        "managedclusters/apis/certificates.k8s.io": [
+            "read"
+        ],
+        "managedclusters/apis/certificates.k8s.io/v1beta1": [
+            "read"
+        ],
+        "managedclusters/apis/coordination.k8s.io": [
+            "read"
+        ],
+        "managedclusters/apis/coordination.k8s.io/v1": [
+            "read"
+        ],
+        "managedclusters/apis/coordination.k8s.io/v1beta1": [
+            "read"
+        ],
+        "managedclusters/apis/events.k8s.io": [
+            "read"
+        ],
+        "managedclusters/apis/events.k8s.io/v1beta1": [
+            "read"
+        ],
+        "managedclusters/apis/extensions": [
+            "read"
+        ],
+        "managedclusters/apis/extensions/v1beta1": [
+            "read"
+        ],
+        "managedclusters/apis/metrics.k8s.io": [
+            "read"
+        ],
+        "managedclusters/apis/metrics.k8s.io/v1beta1": [
+            "read"
+        ],
+        "managedclusters/apis/networking.k8s.io": [
+            "read"
+        ],
+        "managedclusters/apis/networking.k8s.io/v1": [
+            "read"
+        ],
+        "managedclusters/apis/networking.k8s.io/v1beta1": [
+            "read"
+        ],
+        "managedclusters/apis/node.k8s.io": [
+            "read"
+        ],
+        "managedclusters/apis/node.k8s.io/v1beta1": [
+            "read"
+        ],
+        "managedclusters/apis/policy": [
+            "read"
+        ],
+        "managedclusters/apis/policy/v1beta1": [
+            "read"
+        ],
+        "managedclusters/apis/rbac.authorization.k8s.io": [
+            "read"
+        ],
+        "managedclusters/apis/rbac.authorization.k8s.io/v1": [
+            "read"
+        ],
+        "managedclusters/apis/rbac.authorization.k8s.io/v1beta1": [
+            "read"
+        ],
+        "managedclusters/apis/scheduling.k8s.io": [
+            "read"
+        ],
+        "managedclusters/apis/scheduling.k8s.io/v1": [
+            "read"
+        ],
+        "managedclusters/apis/scheduling.k8s.io/v1beta1": [
+            "read"
+        ],
+        "managedclusters/apis/storage.k8s.io": [
+            "read"
+        ],
+        "managedclusters/apis/storage.k8s.io/v1": [
+            "read"
+        ],
+        "managedclusters/apis/storage.k8s.io/v1beta1": [
+            "read"
+        ],
+        "managedclusters/apiregistration.k8s.io/apiservices": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "managedclusters/bindings": [
+            "write"
+        ],
+        "managedclusters/certificates.k8s.io/certificatesigningrequests": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "managedclusters/rbac.authorization.k8s.io/clusterrolebindings": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "managedclusters/rbac.authorization.k8s.io/clusterroles": [
+            "read",
+            "write",
+            "delete",
+            "bind/action",
+            "escalate/action"
+        ],
+        "managedclusters/componentstatuses": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "managedclusters/configmaps": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "managedclusters/apps/controllerrevisions": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "managedclusters/batch/cronjobs": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "managedclusters/storage.k8s.io/csidrivers": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "managedclusters/storage.k8s.io/csinodes": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "managedclusters/apiextensions.k8s.io/customresourcedefinitions": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "managedclusters/apps/daemonsets": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "managedclusters/extensions/daemonsets": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "managedclusters/apps/deployments": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "managedclusters/extensions/deployments": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "managedclusters/endpoints": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "managedclusters/events": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "managedclusters/events.k8s.io/events": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "managedclusters/groups": [
+            "impersonate/action"
+        ],
+        "managedclusters/healthz": [
+            "read"
+        ],
+        "managedclusters/healthz/autoregister-completion": [
+            "read"
+        ],
+        "managedclusters/healthz/etcd": [
+            "read"
+        ],
+        "managedclusters/healthz/log": [
+            "read"
+        ],
+        "managedclusters/healthz/ping": [
+            "read"
+        ],
+        "managedclusters/healthz/poststarthook/apiservice-openapi-controller": [
+            "read"
+        ],
+        "managedclusters/healthz/poststarthook/apiservice-registration-controller": [
+            "read"
+        ],
+        "managedclusters/healthz/poststarthook/apiservice-status-available-controller": [
+            "read"
+        ],
+        "managedclusters/healthz/poststarthook/bootstrap-controller": [
+            "read"
+        ],
+        "managedclusters/healthz/poststarthook/rbac/bootstrap-roles": [
+            "read"
+        ],
+        "managedclusters/healthz/poststarthook/scheduling/bootstrap-system-priority-classes": [
+            "read"
+        ],
+        "managedclusters/healthz/poststarthook/ca-registration": [
+            "read"
+        ],
+        "managedclusters/healthz/poststarthook/crd-informer-synced": [
+            "read"
+        ],
+        "managedclusters/healthz/poststarthook/generic-apiserver-start-informers": [
+            "read"
+        ],
+        "managedclusters/healthz/poststarthook/kube-apiserver-autoregistration": [
+            "read"
+        ],
+        "managedclusters/healthz/poststarthook/start-apiextensions-controllers": [
+            "read"
+        ],
+        "managedclusters/healthz/poststarthook/start-apiextensions-informers": [
+            "read"
+        ],
+        "managedclusters/healthz/poststarthook/start-kube-aggregator-informers": [
+            "read"
+        ],
+        "managedclusters/healthz/poststarthook/start-kube-apiserver-admission-initializer": [
+            "read"
+        ],
+        "managedclusters/autoscaling/horizontalpodautoscalers": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "managedclusters/extensions/ingresses": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "managedclusters/networking.k8s.io/ingresses": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "managedclusters/admissionregistration.k8s.io/initializerconfigurations": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "managedclusters/batch/jobs": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "managedclusters/coordination.k8s.io/leases": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "managedclusters/limitranges": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "managedclusters/livez": [
+            "read"
+        ],
+        "managedclusters/livez/autoregister-completion": [
+            "read"
+        ],
+        "managedclusters/livez/etcd": [
+            "read"
+        ],
+        "managedclusters/livez/log": [
+            "read"
+        ],
+        "managedclusters/livez/ping": [
+            "read"
+        ],
+        "managedclusters/livez/poststarthook/apiservice-openapi-controller": [
+            "read"
+        ],
+        "managedclusters/livez/poststarthook/apiservice-registration-controller": [
+            "read"
+        ],
+        "managedclusters/livez/poststarthook/apiservice-status-available-controller": [
+            "read"
+        ],
+        "managedclusters/livez/poststarthook/bootstrap-controller": [
+            "read"
+        ],
+        "managedclusters/livez/poststarthook/rbac/bootstrap-roles": [
+            "read"
+        ],
+        "managedclusters/livez/poststarthook/scheduling/bootstrap-system-priority-classes": [
+            "read"
+        ],
+        "managedclusters/livez/poststarthook/ca-registration": [
+            "read"
+        ],
+        "managedclusters/livez/poststarthook/crd-informer-synced": [
+            "read"
+        ],
+        "managedclusters/livez/poststarthook/generic-apiserver-start-informers": [
+            "read"
+        ],
+        "managedclusters/livez/poststarthook/kube-apiserver-autoregistration": [
+            "read"
+        ],
+        "managedclusters/livez/poststarthook/start-apiextensions-controllers": [
+            "read"
+        ],
+        "managedclusters/livez/poststarthook/start-apiextensions-informers": [
+            "read"
+        ],
+        "managedclusters/livez/poststarthook/start-kube-aggregator-informers": [
+            "read"
+        ],
+        "managedclusters/livez/poststarthook/start-kube-apiserver-admission-initializer": [
+            "read"
+        ],
+        "managedclusters/authorization.k8s.io/localsubjectaccessreviews": [
+            "write"
+        ],
+        "managedclusters/logs": [
+            "read"
+        ],
+        "managedclusters/metrics": [
+            "read"
+        ],
+        "managedclusters/admissionregistration.k8s.io/mutatingwebhookconfigurations": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "managedclusters/namespaces": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "managedclusters/extensions/networkpolicies": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "managedclusters/networking.k8s.io/networkpolicies": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "managedclusters/metrics.k8s.io/nodes": [
+            "read"
+        ],
+        "managedclusters/nodes": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "managedclusters/openapi/v2": [
+            "read"
+        ],
+        "managedclusters/persistentvolumeclaims": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "managedclusters/persistentvolumes": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "managedclusters/policy/poddisruptionbudgets": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "managedclusters/metrics.k8s.io/pods": [
+            "read"
+        ],
+        "managedclusters/pods": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "managedclusters/extensions/podsecuritypolicies": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "managedclusters/policy/podsecuritypolicies": [
+            "read",
+            "write",
+            "delete",
+            "use/action"
+        ],
+        "managedclusters/podtemplates": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "managedclusters/scheduling.k8s.io/priorityclasses": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "managedclusters/readyz": [
+            "read"
+        ],
+        "managedclusters/readyz/autoregister-completion": [
+            "read"
+        ],
+        "managedclusters/readyz/etcd": [
+            "read"
+        ],
+        "managedclusters/readyz/log": [
+            "read"
+        ],
+        "managedclusters/readyz/ping": [
+            "read"
+        ],
+        "managedclusters/readyz/poststarthook/apiservice-openapi-controller": [
+            "read"
+        ],
+        "managedclusters/readyz/poststarthook/apiservice-registration-controller": [
+            "read"
+        ],
+        "managedclusters/readyz/poststarthook/apiservice-status-available-controller": [
+            "read"
+        ],
+        "managedclusters/readyz/poststarthook/bootstrap-controller": [
+            "read"
+        ],
+        "managedclusters/readyz/poststarthook/rbac/bootstrap-roles": [
+            "read"
+        ],
+        "managedclusters/readyz/poststarthook/scheduling/bootstrap-system-priority-classes": [
+            "read"
+        ],
+        "managedclusters/readyz/poststarthook/ca-registration": [
+            "read"
+        ],
+        "managedclusters/readyz/poststarthook/crd-informer-synced": [
+            "read"
+        ],
+        "managedclusters/readyz/poststarthook/generic-apiserver-start-informers": [
+            "read"
+        ],
+        "managedclusters/readyz/poststarthook/kube-apiserver-autoregistration": [
+            "read"
+        ],
+        "managedclusters/readyz/poststarthook/start-apiextensions-controllers": [
+            "read"
+        ],
+        "managedclusters/readyz/poststarthook/start-apiextensions-informers": [
+            "read"
+        ],
+        "managedclusters/readyz/poststarthook/start-kube-aggregator-informers": [
+            "read"
+        ],
+        "managedclusters/readyz/poststarthook/start-kube-apiserver-admission-initializer": [
+            "read"
+        ],
+        "managedclusters/readyz/shutdown": [
+            "read"
+        ],
+        "managedclusters/apps/replicasets": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "managedclusters/extensions/replicasets": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "managedclusters/replicationcontrollers": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "managedclusters/resetmetrics": [
+            "read"
+        ],
+        "managedclusters/resourcequotas": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "managedclusters/rbac.authorization.k8s.io/rolebindings": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "managedclusters/rbac.authorization.k8s.io/roles": [
+            "read",
+            "write",
+            "delete",
+            "bind/action",
+            "escalate/action"
+        ],
+        "managedclusters/node.k8s.io/runtimeclasses": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "managedclusters/secrets": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "managedclusters/authorization.k8s.io/selfsubjectaccessreviews": [
+            "write"
+        ],
+        "managedclusters/authorization.k8s.io/selfsubjectrulesreviews": [
+            "write"
+        ],
+        "managedclusters/serviceaccounts": [
+            "read",
+            "write",
+            "delete",
+            "impersonate/action"
+        ],
+        "managedclusters/services": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "managedclusters/apps/statefulsets": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "managedclusters/storage.k8s.io/storageclasses": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "managedclusters/authorization.k8s.io/subjectaccessreviews": [
+            "write"
+        ],
+        "managedclusters/swagger-api": [
+            "read"
+        ],
+        "managedclusters/swagger-ui": [
+            "read"
+        ],
+        "managedclusters/authentication.k8s.io/tokenreviews": [
+            "write"
+        ],
+        "managedclusters/ui": [
+            "read"
+        ],
+        "managedclusters/authentication.k8s.io/userextras": [
+            "impersonate/action"
+        ],
+        "managedclusters/users": [
+            "impersonate/action"
+        ],
+        "managedclusters/admissionregistration.k8s.io/validatingwebhookconfigurations": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "managedclusters/version": [
+            "read"
+        ],
+        "managedclusters/storage.k8s.io/volumeattachments": [
+            "read",
+            "write",
+            "delete"
+        ]
+    },
+    "microsoft.databox": {
+        "": [
+            "register/action",
+            "unregister/action"
+        ],
+        "subscriptions/resourcegroups": [
+            "moveresources/action",
+            "validatemoveresources/action"
+        ],
+        "jobs": [
+            "cancel/action",
+            "bookshipmentpickup/action",
+            "mitigate/action",
+            "listcredentials/action"
+        ],
+        "locations": [
+            "validateinputs/action",
+            "validateaddress/action",
+            "availableskus/action",
+            "regionconfiguration/action"
+        ]
+    },
+    "microsoft.devices": {
+        "iothubs/cloudtodevicemessages": [
+            "send/action",
+            "feedback/action"
+        ],
+        "iothubs/cloudtodevicemessages/queue": [
+            "purge/action"
+        ],
+        "iothubs/configurations": [
+            "read",
+            "write",
+            "delete",
+            "applytoedgedevice/action",
+            "testqueries/action"
+        ],
+        "iothubs/devices": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "iothubs/directmethods": [
+            "invoke/action"
+        ],
+        "iothubs/fileupload": [
+            "notifications/action"
+        ],
+        "iothubs/jobs": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "iothubs/statistics": [
+            "read"
+        ],
+        "iothubs/twins": [
+            "read",
+            "write"
+        ]
+    },
+    "microsoft.eventhub": {
+        "namespaces/messages": [
+            "send/action",
+            "receive/action"
+        ],
+        "namespaces/schemas": [
+            "read",
+            "write",
+            "delete"
+        ]
+    },
+    "microsoft.insights": {
+        "datacollectionrules/data": [
+            "write"
+        ],
+        "metrics": [
+            "write"
+        ]
+    },
+    "microsoft.keyvault": {
+        "vaults/certificates": [
+            "delete",
+            "read",
+            "backup/action",
+            "purge/action",
+            "update/action",
+            "create/action",
+            "import/action",
+            "recover/action",
+            "restore/action"
+        ],
+        "vaults/certificatecontacts": [
+            "write"
+        ],
+        "vaults/certificatecas": [
+            "delete",
+            "read",
+            "write"
+        ],
+        "vaults/keys": [
+            "read",
+            "update/action",
+            "create/action",
+            "import/action",
+            "recover/action",
+            "restore/action",
+            "delete",
+            "backup/action",
+            "purge/action",
+            "encrypt/action",
+            "decrypt/action",
+            "wrap/action",
+            "unwrap/action",
+            "sign/action",
+            "verify/action"
+        ],
+        "vaults/storageaccounts": [
+            "read",
+            "set/action",
+            "delete",
+            "backup/action",
+            "purge/action",
+            "regeneratekey/action",
+            "recover/action",
+            "restore/action"
+        ],
+        "vaults/storageaccounts/sas": [
+            "set/action",
+            "delete"
+        ],
+        "vaults/secrets": [
+            "delete",
+            "backup/action",
+            "purge/action",
+            "update/action",
+            "recover/action",
+            "restore/action",
+            "readmetadata/action",
+            "getsecret/action",
+            "setsecret/action"
+        ]
+    },
+    "microsoft.maps": {
+        "accounts/services/data": [
+            "read",
+            "delete",
+            "write"
+        ],
+        "accounts/services/elevation": [
+            "read"
+        ],
+        "accounts/services/geolocation": [
+            "read"
+        ],
+        "accounts/services/mobility": [
+            "read"
+        ],
+        "accounts/services/render": [
+            "read"
+        ],
+        "accounts/services/route": [
+            "read"
+        ],
+        "accounts/services/search": [
+            "read"
+        ],
+        "accounts/services/spatial": [
+            "read",
+            "write"
+        ],
+        "accounts/services/timezone": [
+            "read"
+        ],
+        "accounts/services/traffic": [
+            "read"
+        ],
+        "accounts/services/turnbyturn": [
+            "read"
+        ],
+        "accounts/services/weather": [
+            "read"
+        ]
+    },
+    "microsoft.policyinsights": {
+        "": [
+            "checkdatapolicycompliance/action"
+        ],
+        "policyevents": [
+            "logdataevents/action"
+        ]
+    },
+    "microsoft.servicebus": {
+        "namespaces/messages": [
+            "send/action",
+            "receive/action"
+        ]
+    },
+    "microsoft.signalrservice": {
+        "signalr/auth": [
+            "accesskey/action",
+            "clienttoken/action"
+        ],
+        "signalr/clientconnection": [
+            "send/action",
+            "read",
+            "write"
+        ],
+        "signalr/group": [
+            "send/action",
+            "read",
+            "write"
+        ],
+        "signalr/hub": [
+            "send/action"
+        ],
+        "signalr/serverconnection": [
+            "write"
+        ],
+        "signalr/user": [
+            "send/action",
+            "read",
+            "write"
+        ],
+        "webpubsub/clientconnection": [
+            "send/action",
+            "read",
+            "write"
+        ],
+        "webpubsub/group": [
+            "send/action",
+            "read",
+            "write"
+        ],
+        "webpubsub/hub": [
+            "send/action"
+        ],
+        "webpubsub/user": [
+            "send/action",
+            "read"
+        ]
+    },
+    "microsoft.storage": {
+        "storageaccounts/fileservices/fileshares/files": [
+            "read",
+            "write",
+            "delete",
+            "modifypermissions/action",
+            "actassuperuser/action"
+        ],
+        "storageaccounts/blobservices/containers/blobs": [
+            "read",
+            "write",
+            "delete",
+            "deleteblobversion/action",
+            "permanentdelete/action",
+            "add/action",
+            "filter/action",
+            "move/action",
+            "manageownership/action",
+            "modifypermissions/action",
+            "runassuperuser/action"
+        ],
+        "storageaccounts/blobservices/containers/blobs/tags": [
+            "read",
+            "write"
+        ],
+        "storageaccounts/queueservices/queues/messages": [
+            "read",
+            "write",
+            "delete",
+            "add/action",
+            "process/action"
+        ]
+    },
+    "microsoft.blockchain": {
+        "blockchainmembers/transactionnodes": [
+            "connect/action"
+        ]
+    },
+    "microsoft.mixedreality": {
+        "objectanchorsaccounts": [
+            "ingest/action"
+        ],
+        "objectanchorsaccounts/ingest": [
+            "read"
+        ],
+        "objectunderstandingaccounts": [
+            "ingest/action"
+        ],
+        "objectunderstandingaccounts/ingest": [
+            "read"
+        ],
+        "remoterenderingaccounts": [
+            "convert/action",
+            "managesessions/action"
+        ],
+        "remoterenderingaccounts/convert": [
+            "read",
+            "delete"
+        ],
+        "remoterenderingaccounts/diagnostic": [
+            "read"
+        ],
+        "remoterenderingaccounts/managesessions": [
+            "read",
+            "delete"
+        ],
+        "remoterenderingaccounts/render": [
+            "read"
+        ],
+        "spatialanchorsaccounts": [
+            "create/action",
+            "delete",
+            "write"
+        ],
+        "spatialanchorsaccounts/discovery": [
+            "read"
+        ],
+        "spatialanchorsaccounts/properties": [
+            "read"
+        ],
+        "spatialanchorsaccounts/query": [
+            "read"
+        ],
+        "spatialanchorsaccounts/submitdiag": [
+            "read"
+        ]
+    },
+    "microsoft.appconfiguration": {
+        "configurationstores/keyvalues": [
+            "read",
+            "write",
+            "delete"
+        ]
+    },
+    "microsoft.healthcareapis": {
+        "workspaces/dicomservices/resources": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "services/fhir/resources": [
+            "read",
+            "write",
+            "delete",
+            "harddelete/action",
+            "export/action",
+            "convertdata/action",
+            "resourcevalidate/action"
+        ]
+    },
+    "microsoft.desktopvirtualization": {
+        "applicationgroups": [
+            "useapplications/action"
+        ]
+    },
+    "microsoft.appplatform": {
+        "spring/eurekaservice": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "spring/configservice": [
+            "read"
+        ],
+        "spring/logstreamservice": [
+            "read"
+        ]
+    },
+    "microsoft.experimentation": {
+        "experimentworkspaces": [
+            "metricwrite/action",
+            "read",
+            "write",
+            "delete",
+            "admin/action"
+        ],
+        "experimentworkspaces/providers/microsoft.insights/diagnosticsettings": [
+            "read",
+            "write"
+        ],
+        "experimentworkspaces/providers/microsoft.insights/logdefinitions": [
+            "read"
+        ],
+        "experimentworkspaces/experimentationgroups": [
+            "read",
+            "write",
+            "delete",
+            "admin/action",
+            "experimentadmin/action",
+            "experiment/action",
+            "emergencystop/action",
+            "metricwrite/action"
+        ]
+    },
+    "microsoft.projectbabylon": {
+        "accounts/data": [
+            "read",
+            "write"
+        ],
+        "accounts/scan": [
+            "read",
+            "write"
+        ]
+    },
+    "microsoft.digitaltwins": {
+        "": [
+            "query/action"
+        ],
+        "digitaltwins": [
+            "read",
+            "write",
+            "delete",
+            "commands/action"
+        ],
+        "digitaltwins/relationships": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "eventroutes": [
+            "read",
+            "delete",
+            "write"
+        ],
+        "models": [
+            "read",
+            "write",
+            "delete"
+        ]
+    },
+    "microsoft.avs": {
+        "privateclouds": [
+            "listadmincredentials/action"
+        ]
+    },
+    "microsoft.extendedlocation": {
+        "customlocations": [
+            "deploy/action"
+        ]
+    },
+    "microsoft.agfoodplatform": {
+        "attachments": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "boundaries": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "cropvarieties": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "crops": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "farmers": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "farms": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "fields": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "jobs": [
+            "read",
+            "write",
+            "cancel/action"
+        ],
+        "scenes": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "seasonalfields": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "seasons": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "weathers": [
+            "read",
+            "write",
+            "delete"
+        ]
+    },
+    "microsoft.openlogisticsplatform": {
+        "workspaces/deliverynodes": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "workspaces/fulfillmentoptions": [
+            "generate/action"
+        ],
+        "workspaces/fulfillmentplans": [
+            "update/action",
+            "reject/action"
+        ],
+        "workspaces/items": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "workspaces/orderfulfillments": [
+            "read",
+            "create/action",
+            "cancel/action"
+        ],
+        "workspaces/warehouseitems": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "workspaces/warehouses": [
+            "read",
+            "write",
+            "delete"
+        ]
+    },
+    "microsoft.securitydetonation": {
+        "chambers/platforms": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "chambers/platforms/metadata": [
+            "read"
+        ],
+        "chambers/publishrequests": [
+            "read",
+            "cancel/action"
+        ],
+        "chambers/submissions": [
+            "read",
+            "write",
+            "delete",
+            "import/action"
+        ],
+        "chambers/submissions/files": [
+            "read"
+        ],
+        "chambers/submissions/accesskeyview": [
+            "read"
+        ],
+        "chambers/submissions/adminview": [
+            "read"
+        ],
+        "chambers/submissions/analystview": [
+            "read"
+        ],
+        "chambers/submissions/publicview": [
+            "read"
+        ],
+        "chambers/tokens": [
+            "read"
+        ],
+        "chambers/toolsets": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "chambers/toolsets/metadata": [
+            "read"
+        ],
+        "chambers/workflows": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "chambers/workflows/metadata": [
+            "read"
+        ]
+    },
+    "microsoft.purview": {
+        "accounts/data": [
+            "read",
+            "write"
+        ],
+        "accounts/scan": [
+            "read",
+            "write"
+        ]
+    },
+    "microsoft.autonomousdevelopmentplatform": {
+        "accounts/datapools/discoveries": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "accounts/datapools/measurements/states/new": [
+            "read",
+            "write",
+            "delete",
+            "updatemetadata/action",
+            "changestate/action",
+            "runvalidations/action"
+        ],
+        "accounts/datapools/measurements/states/new/datastreams": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "accounts/datapools/measurements/states/operational": [
+            "read",
+            "write",
+            "delete",
+            "updatemetadata/action",
+            "changestate/action",
+            "runvalidations/action"
+        ],
+        "accounts/datapools/measurements/states/operational/datastreams": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "accounts/datapools/uploads": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "accounts/measurementcollections": [
+            "read",
+            "write",
+            "delete"
+        ]
+    },
+    "microsoft.kubernetes": {
+        "connectedclusters/api": [
+            "read"
+        ],
+        "connectedclusters/api/v1": [
+            "read"
+        ],
+        "connectedclusters/apis": [
+            "read"
+        ],
+        "connectedclusters/apis/admissionregistration.k8s.io": [
+            "read"
+        ],
+        "connectedclusters/apis/admissionregistration.k8s.io/v1": [
+            "read"
+        ],
+        "connectedclusters/apis/admissionregistration.k8s.io/v1beta1": [
+            "read"
+        ],
+        "connectedclusters/apis/apiextensions.k8s.io": [
+            "read"
+        ],
+        "connectedclusters/apis/apiextensions.k8s.io/v1": [
+            "read"
+        ],
+        "connectedclusters/apis/apiextensions.k8s.io/v1beta1": [
+            "read"
+        ],
+        "connectedclusters/apis/apiregistration.k8s.io": [
+            "read"
+        ],
+        "connectedclusters/apis/apiregistration.k8s.io/v1": [
+            "read"
+        ],
+        "connectedclusters/apis/apiregistration.k8s.io/v1beta1": [
+            "read"
+        ],
+        "connectedclusters/apis/apps": [
+            "read"
+        ],
+        "connectedclusters/apis/apps/v1beta1": [
+            "read"
+        ],
+        "connectedclusters/apis/apps/v1beta2": [
+            "read"
+        ],
+        "connectedclusters/apis/authentication.k8s.io": [
+            "read"
+        ],
+        "connectedclusters/apis/authentication.k8s.io/v1": [
+            "read"
+        ],
+        "connectedclusters/apis/authentication.k8s.io/v1beta1": [
+            "read"
+        ],
+        "connectedclusters/apis/authorization.k8s.io": [
+            "read"
+        ],
+        "connectedclusters/apis/authorization.k8s.io/v1": [
+            "read"
+        ],
+        "connectedclusters/apis/authorization.k8s.io/v1beta1": [
+            "read"
+        ],
+        "connectedclusters/apis/autoscaling": [
+            "read"
+        ],
+        "connectedclusters/apis/autoscaling/v1": [
+            "read"
+        ],
+        "connectedclusters/apis/autoscaling/v2beta1": [
+            "read"
+        ],
+        "connectedclusters/apis/autoscaling/v2beta2": [
+            "read"
+        ],
+        "connectedclusters/apis/batch": [
+            "read"
+        ],
+        "connectedclusters/apis/batch/v1": [
+            "read"
+        ],
+        "connectedclusters/apis/batch/v1beta1": [
+            "read"
+        ],
+        "connectedclusters/apis/certificates.k8s.io": [
+            "read"
+        ],
+        "connectedclusters/apis/certificates.k8s.io/v1beta1": [
+            "read"
+        ],
+        "connectedclusters/apis/coordination.k8s.io": [
+            "read"
+        ],
+        "connectedclusters/apis/coordination.k8s.io/v1": [
+            "read"
+        ],
+        "connectedclusters/apis/coordination.k8s.io/v1beta1": [
+            "read"
+        ],
+        "connectedclusters/apis/events.k8s.io": [
+            "read"
+        ],
+        "connectedclusters/apis/events.k8s.io/v1beta1": [
+            "read"
+        ],
+        "connectedclusters/apis/extensions": [
+            "read"
+        ],
+        "connectedclusters/apis/extensions/v1beta1": [
+            "read"
+        ],
+        "connectedclusters/apis/metrics.k8s.io": [
+            "read"
+        ],
+        "connectedclusters/apis/metrics.k8s.io/v1beta1": [
+            "read"
+        ],
+        "connectedclusters/apis/networking.k8s.io": [
+            "read"
+        ],
+        "connectedclusters/apis/networking.k8s.io/v1": [
+            "read"
+        ],
+        "connectedclusters/apis/networking.k8s.io/v1beta1": [
+            "read"
+        ],
+        "connectedclusters/apis/node.k8s.io": [
+            "read"
+        ],
+        "connectedclusters/apis/node.k8s.io/v1beta1": [
+            "read"
+        ],
+        "connectedclusters/apis/policy": [
+            "read"
+        ],
+        "connectedclusters/apis/policy/v1beta1": [
+            "read"
+        ],
+        "connectedclusters/apis/rbac.authorization.k8s.io": [
+            "read"
+        ],
+        "connectedclusters/apis/rbac.authorization.k8s.io/v1": [
+            "read"
+        ],
+        "connectedclusters/apis/rbac.authorization.k8s.io/v1beta1": [
+            "read"
+        ],
+        "connectedclusters/apis/scheduling.k8s.io": [
+            "read"
+        ],
+        "connectedclusters/apis/scheduling.k8s.io/v1": [
+            "read"
+        ],
+        "connectedclusters/apis/scheduling.k8s.io/v1beta1": [
+            "read"
+        ],
+        "connectedclusters/apis/storage.k8s.io": [
+            "read"
+        ],
+        "connectedclusters/apis/storage.k8s.io/v1": [
+            "read"
+        ],
+        "connectedclusters/apis/storage.k8s.io/v1beta1": [
+            "read"
+        ],
+        "connectedclusters/apiregistration.k8s.io/apiservices": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "connectedclusters/clusterconfig.azure.com/azureclusteridentityrequests": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "connectedclusters/bindings": [
+            "write"
+        ],
+        "connectedclusters/certificates.k8s.io/certificatesigningrequests": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "connectedclusters/rbac.authorization.k8s.io/clusterrolebindings": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "connectedclusters/rbac.authorization.k8s.io/clusterroles": [
+            "read",
+            "write",
+            "delete",
+            "bind/action",
+            "escalate/action"
+        ],
+        "connectedclusters/componentstatuses": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "connectedclusters/configmaps": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "connectedclusters/apps/controllerrevisions": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "connectedclusters/batch/cronjobs": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "connectedclusters/storage.k8s.io/csidrivers": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "connectedclusters/storage.k8s.io/csinodes": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "connectedclusters/apiextensions.k8s.io/customresourcedefinitions": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "connectedclusters/apps/daemonsets": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "connectedclusters/extensions/daemonsets": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "connectedclusters/apps/deployments": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "connectedclusters/extensions/deployments": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "connectedclusters/endpoints": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "connectedclusters/events": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "connectedclusters/events.k8s.io/events": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "connectedclusters/groups": [
+            "impersonate/action"
+        ],
+        "connectedclusters/healthz": [
+            "read"
+        ],
+        "connectedclusters/healthz/autoregister-completion": [
+            "read"
+        ],
+        "connectedclusters/healthz/etcd": [
+            "read"
+        ],
+        "connectedclusters/healthz/log": [
+            "read"
+        ],
+        "connectedclusters/healthz/ping": [
+            "read"
+        ],
+        "connectedclusters/healthz/poststarthook/apiservice-openapi-controller": [
+            "read"
+        ],
+        "connectedclusters/healthz/poststarthook/apiservice-registration-controller": [
+            "read"
+        ],
+        "connectedclusters/healthz/poststarthook/apiservice-status-available-controller": [
+            "read"
+        ],
+        "connectedclusters/healthz/poststarthook/bootstrap-controller": [
+            "read"
+        ],
+        "connectedclusters/healthz/poststarthook/rbac/bootstrap-roles": [
+            "read"
+        ],
+        "connectedclusters/healthz/poststarthook/scheduling/bootstrap-system-priority-classes": [
+            "read"
+        ],
+        "connectedclusters/healthz/poststarthook/ca-registration": [
+            "read"
+        ],
+        "connectedclusters/healthz/poststarthook/crd-informer-synced": [
+            "read"
+        ],
+        "connectedclusters/healthz/poststarthook/generic-apiserver-start-informers": [
+            "read"
+        ],
+        "connectedclusters/healthz/poststarthook/kube-apiserver-autoregistration": [
+            "read"
+        ],
+        "connectedclusters/healthz/poststarthook/start-apiextensions-controllers": [
+            "read"
+        ],
+        "connectedclusters/healthz/poststarthook/start-apiextensions-informers": [
+            "read"
+        ],
+        "connectedclusters/healthz/poststarthook/start-kube-aggregator-informers": [
+            "read"
+        ],
+        "connectedclusters/healthz/poststarthook/start-kube-apiserver-admission-initializer": [
+            "read"
+        ],
+        "connectedclusters/autoscaling/horizontalpodautoscalers": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "connectedclusters/extensions/ingresses": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "connectedclusters/networking.k8s.io/ingresses": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "connectedclusters/admissionregistration.k8s.io/initializerconfigurations": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "connectedclusters/batch/jobs": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "connectedclusters/coordination.k8s.io/leases": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "connectedclusters/limitranges": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "connectedclusters/livez": [
+            "read"
+        ],
+        "connectedclusters/livez/autoregister-completion": [
+            "read"
+        ],
+        "connectedclusters/livez/etcd": [
+            "read"
+        ],
+        "connectedclusters/livez/log": [
+            "read"
+        ],
+        "connectedclusters/livez/ping": [
+            "read"
+        ],
+        "connectedclusters/livez/poststarthook/apiservice-openapi-controller": [
+            "read"
+        ],
+        "connectedclusters/livez/poststarthook/apiservice-registration-controller": [
+            "read"
+        ],
+        "connectedclusters/livez/poststarthook/apiservice-status-available-controller": [
+            "read"
+        ],
+        "connectedclusters/livez/poststarthook/bootstrap-controller": [
+            "read"
+        ],
+        "connectedclusters/livez/poststarthook/rbac/bootstrap-roles": [
+            "read"
+        ],
+        "connectedclusters/livez/poststarthook/scheduling/bootstrap-system-priority-classes": [
+            "read"
+        ],
+        "connectedclusters/livez/poststarthook/ca-registration": [
+            "read"
+        ],
+        "connectedclusters/livez/poststarthook/crd-informer-synced": [
+            "read"
+        ],
+        "connectedclusters/livez/poststarthook/generic-apiserver-start-informers": [
+            "read"
+        ],
+        "connectedclusters/livez/poststarthook/kube-apiserver-autoregistration": [
+            "read"
+        ],
+        "connectedclusters/livez/poststarthook/start-apiextensions-controllers": [
+            "read"
+        ],
+        "connectedclusters/livez/poststarthook/start-apiextensions-informers": [
+            "read"
+        ],
+        "connectedclusters/livez/poststarthook/start-kube-aggregator-informers": [
+            "read"
+        ],
+        "connectedclusters/livez/poststarthook/start-kube-apiserver-admission-initializer": [
+            "read"
+        ],
+        "connectedclusters/authorization.k8s.io/localsubjectaccessreviews": [
+            "write"
+        ],
+        "connectedclusters/logs": [
+            "read"
+        ],
+        "connectedclusters/metrics": [
+            "read"
+        ],
+        "connectedclusters/admissionregistration.k8s.io/mutatingwebhookconfigurations": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "connectedclusters/namespaces": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "connectedclusters/extensions/networkpolicies": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "connectedclusters/networking.k8s.io/networkpolicies": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "connectedclusters/metrics.k8s.io/nodes": [
+            "read"
+        ],
+        "connectedclusters/nodes": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "connectedclusters/openapi/v2": [
+            "read"
+        ],
+        "connectedclusters/persistentvolumeclaims": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "connectedclusters/persistentvolumes": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "connectedclusters/policy/poddisruptionbudgets": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "connectedclusters/metrics.k8s.io/pods": [
+            "read"
+        ],
+        "connectedclusters/pods": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "connectedclusters/extensions/podsecuritypolicies": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "connectedclusters/policy/podsecuritypolicies": [
+            "read",
+            "write",
+            "delete",
+            "use/action"
+        ],
+        "connectedclusters/podtemplates": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "connectedclusters/scheduling.k8s.io/priorityclasses": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "connectedclusters/readyz": [
+            "read"
+        ],
+        "connectedclusters/readyz/autoregister-completion": [
+            "read"
+        ],
+        "connectedclusters/readyz/etcd": [
+            "read"
+        ],
+        "connectedclusters/readyz/log": [
+            "read"
+        ],
+        "connectedclusters/readyz/ping": [
+            "read"
+        ],
+        "connectedclusters/readyz/poststarthook/apiservice-openapi-controller": [
+            "read"
+        ],
+        "connectedclusters/readyz/poststarthook/apiservice-registration-controller": [
+            "read"
+        ],
+        "connectedclusters/readyz/poststarthook/apiservice-status-available-controller": [
+            "read"
+        ],
+        "connectedclusters/readyz/poststarthook/bootstrap-controller": [
+            "read"
+        ],
+        "connectedclusters/readyz/poststarthook/rbac/bootstrap-roles": [
+            "read"
+        ],
+        "connectedclusters/readyz/poststarthook/scheduling/bootstrap-system-priority-classes": [
+            "read"
+        ],
+        "connectedclusters/readyz/poststarthook/ca-registration": [
+            "read"
+        ],
+        "connectedclusters/readyz/poststarthook/crd-informer-synced": [
+            "read"
+        ],
+        "connectedclusters/readyz/poststarthook/generic-apiserver-start-informers": [
+            "read"
+        ],
+        "connectedclusters/readyz/poststarthook/kube-apiserver-autoregistration": [
+            "read"
+        ],
+        "connectedclusters/readyz/poststarthook/start-apiextensions-controllers": [
+            "read"
+        ],
+        "connectedclusters/readyz/poststarthook/start-apiextensions-informers": [
+            "read"
+        ],
+        "connectedclusters/readyz/poststarthook/start-kube-aggregator-informers": [
+            "read"
+        ],
+        "connectedclusters/readyz/poststarthook/start-kube-apiserver-admission-initializer": [
+            "read"
+        ],
+        "connectedclusters/readyz/shutdown": [
+            "read"
+        ],
+        "connectedclusters/apps/replicasets": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "connectedclusters/extensions/replicasets": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "connectedclusters/replicationcontrollers": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "connectedclusters/resetmetrics": [
+            "read"
+        ],
+        "connectedclusters/resourcequotas": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "connectedclusters/rbac.authorization.k8s.io/rolebindings": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "connectedclusters/rbac.authorization.k8s.io/roles": [
+            "read",
+            "write",
+            "delete",
+            "bind/action",
+            "escalate/action"
+        ],
+        "connectedclusters/node.k8s.io/runtimeclasses": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "connectedclusters/secrets": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "connectedclusters/authorization.k8s.io/selfsubjectaccessreviews": [
+            "write"
+        ],
+        "connectedclusters/authorization.k8s.io/selfsubjectrulesreviews": [
+            "write"
+        ],
+        "connectedclusters/serviceaccounts": [
+            "read",
+            "write",
+            "delete",
+            "impersonate/action"
+        ],
+        "connectedclusters/services": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "connectedclusters/apps/statefulsets": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "connectedclusters/storage.k8s.io/storageclasses": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "connectedclusters/authorization.k8s.io/subjectaccessreviews": [
+            "write"
+        ],
+        "connectedclusters/swagger-api": [
+            "read"
+        ],
+        "connectedclusters/swagger-ui": [
+            "read"
+        ],
+        "connectedclusters/authentication.k8s.io/tokenreviews": [
+            "write"
+        ],
+        "connectedclusters/ui": [
+            "read"
+        ],
+        "connectedclusters/authentication.k8s.io/userextras": [
+            "impersonate/action"
+        ],
+        "connectedclusters/users": [
+            "impersonate/action"
+        ],
+        "connectedclusters/admissionregistration.k8s.io/validatingwebhookconfigurations": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "connectedclusters/version": [
+            "read"
+        ],
+        "connectedclusters/storage.k8s.io/volumeattachments": [
+            "read",
+            "write",
+            "delete"
+        ]
+    },
+    "microsoft.deviceupdate": {
+        "accounts/instances/management": [
+            "read",
+            "write",
+            "delete"
+        ],
+        "accounts/instances/updates": [
+            "read",
+            "write",
+            "delete"
+        ]
+    },
+    "microsoft.anybuild": {
+        "clusters/build": [
+            "read",
+            "write"
+        ]
+    }
+}

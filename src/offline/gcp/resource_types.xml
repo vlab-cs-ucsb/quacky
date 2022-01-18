@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div _ngcontent-swa-c202="" aria-label="Options" role="listbox" tabindex="-1" class="ace-select-body cfc-select-body ng-star-inserted" id="cfc-select-1-listbox">
+   <mat-option _ngcontent-swa-c700="" role="option" class="mat-option mat-focus-indicator ng-star-inserted" id="mat-option-961" tabindex="0" aria-disabled="false">
+      <span class="mat-option-text">bigtableadmin.googleapis.com/Cluster</span>
+      <div mat-ripple="" class="mat-ripple mat-option-ripple" />
+   </mat-option>
+   <mat-option _ngcontent-swa-c700="" role="option" class="mat-option mat-focus-indicator ng-star-inserted" id="mat-option-962" tabindex="-1" aria-disabled="false">
+      <span class="mat-option-text">bigtableadmin.googleapis.com/Instance</span>
+      <div mat-ripple="" class="mat-ripple mat-option-ripple" />
+   </mat-option>
+   <mat-option _ngcontent-swa-c700="" role="option" class="mat-option mat-focus-indicator ng-star-inserted" id="mat-option-963" tabindex="-1" aria-disabled="false">
+      <span class="mat-option-text">bigtableadmin.googleapis.com/Table</span>
+      <div mat-ripple="" class="mat-ripple mat-option-ripple" />
+   </mat-option>
+   <mat-option _ngcontent-swa-c700="" role="option" class="mat-option mat-focus-indicator ng-star-inserted" id="mat-option-964" tabindex="-1" aria-disabled="false">
+      <span class="mat-option-text">cloud.googleapis.com/Location</span>
+      <div mat-ripple="" class="mat-ripple mat-option-ripple" />
+   </mat-option>
+   <mat-option _ngcontent-swa-c700="" role="option" class="mat-option mat-focus-indicator ng-star-inserted" id="mat-option-965" tabindex="-1" aria-disabled="false">
+      <span class="mat-option-text">cloudkms.googleapis.com/CryptoKey</span>
+      <div mat-ripple="" class="mat-ripple mat-option-ripple" />
+   </mat-option>
+   <mat-option _ngcontent-swa-c700="" role="option" class="mat-option mat-focus-indicator ng-star-inserted" id="mat-option-966" tabindex="-1" aria-disabled="false">
+      <span class="mat-option-text">cloudkms.googleapis.com/CryptoKeyVersion</span>
+      <div mat-ripple="" class="mat-ripple mat-option-ripple" />
+   </mat-option>
+   <mat-option _ngcontent-swa-c700="" role="option" class="mat-option mat-focus-indicator ng-star-inserted" id="mat-option-967" tabindex="-1" aria-disabled="false">
+      <span class="mat-option-text">cloudkms.googleapis.com/KeyRing</span>
+      <div mat-ripple="" class="mat-ripple mat-option-ripple" />
+   </mat-option>
+   <mat-option _ngcontent-swa-c700="" role="option" class="mat-option mat-focus-indicator ng-star-inserted" id="mat-option-968" tabindex="-1" aria-disabled="false">
+      <span class="mat-option-text">cloudresourcemanager.googleapis.com/Folder</span>
+      <div mat-ripple="" class="mat-ripple mat-option-ripple" />
+   </mat-option>
+   <mat-option _ngcontent-swa-c700="" role="option" class="mat-option mat-focus-indicator ng-star-inserted" id="mat-option-969" tabindex="-1" aria-disabled="false">
+      <span class="mat-option-text">cloudresourcemanager.googleapis.com/Organization</span>
+      <div mat-ripple="" class="mat-ripple mat-option-ripple" />
+   </mat-option>
+   <mat-option _ngcontent-swa-c700="" role="option" class="mat-option mat-focus-indicator ng-star-inserted" id="mat-option-970" tabindex="-1" aria-disabled="false">
+      <span class="mat-option-text">cloudresourcemanager.googleapis.com/Project</span>
+      <div mat-ripple="" class="mat-ripple mat-option-ripple" />
+   </mat-option>
+   <mat-option _ngcontent-swa-c700="" role="option" class="mat-option mat-focus-indicator ng-star-inserted" id="mat-option-971" tabindex="-1" aria-disabled="false">
+      <span class="mat-option-text">compute.googleapis.com/BackendService</span>
+      <div mat-ripple="" class="mat-ripple mat-option-ripple" />
+   </mat-option>
+   <mat-option _ngcontent-swa-c700="" role="option" class="mat-option mat-focus-indicator ng-star-inserted" id="mat-option-972" tabindex="-1" aria-disabled="false">
+      <span class="mat-option-text">compute.googleapis.com/Disk</span>
+      <div mat-ripple="" class="mat-ripple mat-option-ripple" />
+   </mat-option>
+   <mat-option _ngcontent-swa-c700="" role="option" class="mat-option mat-focus-indicator ng-star-inserted" id="mat-option-973" tabindex="-1" aria-disabled="false">
+      <span class="mat-option-text">compute.googleapis.com/Firewall</span>
+      <div mat-ripple="" class="mat-ripple mat-option-ripple" />
+   </mat-option>
+   <mat-option _ngcontent-swa-c700="" role="option" class="mat-option mat-focus-indicator ng-star-inserted" id="mat-option-974" tabindex="-1" aria-disabled="false">
+      <span class="mat-option-text">compute.googleapis.com/ForwardingRule</span>
+      <div mat-ripple="" class="mat-ripple mat-option-ripple" />
+   </mat-option>
+   <mat-option _ngcontent-swa-c700="" role="option" class="mat-option mat-focus-indicator ng-star-inserted" id="mat-option-975" tabindex="-1" aria-disabled="false">
+      <span class="mat-option-text">compute.googleapis.com/GlobalForwardingRule</span>
+      <div mat-ripple="" class="mat-ripple mat-option-ripple" />
+   </mat-option>
+   <mat-option _ngcontent-swa-c700="" role="option" class="mat-option mat-focus-indicator ng-star-inserted" id="mat-option-976" tabindex="-1" aria-disabled="false">
+      <span class="mat-option-text">compute.googleapis.com/Image</span>
+      <div mat-ripple="" class="mat-ripple mat-option-ripple" />
+   </mat-option>
+   <mat-option _ngcontent-swa-c700="" role="option" class="mat-option mat-focus-indicator ng-star-inserted" id="mat-option-977" tabindex="-1" aria-disabled="false">
+      <span class="mat-option-text">compute.googleapis.com/Instance</span>
+      <div mat-ripple="" class="mat-ripple mat-option-ripple" />
+   </mat-option>
+   <mat-option _ngcontent-swa-c700="" role="option" class="mat-option mat-focus-indicator ng-star-inserted" id="mat-option-978" tabindex="-1" aria-disabled="false">
+      <span class="mat-option-text">compute.googleapis.com/InstanceTemplate</span>
+      <div mat-ripple="" class="mat-ripple mat-option-ripple" />
+   </mat-option>
+   <mat-option _ngcontent-swa-c700="" role="option" class="mat-option mat-focus-indicator ng-star-inserted" id="mat-option-979" tabindex="-1" aria-disabled="false">
+      <span class="mat-option-text">compute.googleapis.com/Snapshot</span>
+      <div mat-ripple="" class="mat-ripple mat-option-ripple" />
+   </mat-option>
+   <mat-option _ngcontent-swa-c700="" role="option" class="mat-option mat-focus-indicator ng-star-inserted" id="mat-option-980" tabindex="-1" aria-disabled="false">
+      <span class="mat-option-text">compute.googleapis.com/TargetHttpProxy</span>
+      <div mat-ripple="" class="mat-ripple mat-option-ripple" />
+   </mat-option>
+   <mat-option _ngcontent-swa-c700="" role="option" class="mat-option mat-focus-indicator ng-star-inserted" id="mat-option-981" tabindex="-1" aria-disabled="false">
+      <span class="mat-option-text">compute.googleapis.com/TargetHttpsProxy</span>
+      <div mat-ripple="" class="mat-ripple mat-option-ripple" />
+   </mat-option>
+   <mat-option _ngcontent-swa-c700="" role="option" class="mat-option mat-focus-indicator ng-star-inserted" id="mat-option-982" tabindex="-1" aria-disabled="false">
+      <span class="mat-option-text">compute.googleapis.com/TargetSslProxy</span>
+      <div mat-ripple="" class="mat-ripple mat-option-ripple" />
+   </mat-option>
+   <mat-option _ngcontent-swa-c700="" role="option" class="mat-option mat-focus-indicator ng-star-inserted" id="mat-option-983" tabindex="-1" aria-disabled="false">
+      <span class="mat-option-text">compute.googleapis.com/TargetTcpProxy</span>
+      <div mat-ripple="" class="mat-ripple mat-option-ripple" />
+   </mat-option>
+   <mat-option _ngcontent-swa-c700="" role="option" class="mat-option mat-focus-indicator ng-star-inserted" id="mat-option-984" tabindex="-1" aria-disabled="false">
+      <span class="mat-option-text">gkemulticloud.googleapis.com/AwsCluster</span>
+      <div mat-ripple="" class="mat-ripple mat-option-ripple" />
+   </mat-option>
+   <mat-option _ngcontent-swa-c700="" role="option" class="mat-option mat-focus-indicator ng-star-inserted" id="mat-option-985" tabindex="-1" aria-disabled="false">
+      <span class="mat-option-text">gkemulticloud.googleapis.com/AwsNodePool</span>
+      <div mat-ripple="" class="mat-ripple mat-option-ripple" />
+   </mat-option>
+   <mat-option _ngcontent-swa-c700="" role="option" class="mat-option mat-focus-indicator ng-star-inserted" id="mat-option-986" tabindex="-1" aria-disabled="false">
+      <span class="mat-option-text">gkemulticloud.googleapis.com/AzureCluster</span>
+      <div mat-ripple="" class="mat-ripple mat-option-ripple" />
+   </mat-option>
+   <mat-option _ngcontent-swa-c700="" role="option" class="mat-option mat-focus-indicator ng-star-inserted" id="mat-option-987" tabindex="-1" aria-disabled="false">
+      <span class="mat-option-text">gkemulticloud.googleapis.com/AzureNodePool</span>
+      <div mat-ripple="" class="mat-ripple mat-option-ripple" />
+   </mat-option>
+   <mat-option _ngcontent-swa-c700="" role="option" class="mat-option mat-focus-indicator ng-star-inserted" id="mat-option-988" tabindex="-1" aria-disabled="false">
+      <span class="mat-option-text">gkemulticloud.googleapis.com/Location</span>
+      <div mat-ripple="" class="mat-ripple mat-option-ripple" />
+   </mat-option>
+   <mat-option _ngcontent-swa-c700="" role="option" class="mat-option mat-focus-indicator ng-star-inserted" id="mat-option-989" tabindex="-1" aria-disabled="false">
+      <span class="mat-option-text">iap.googleapis.com/Tunnel</span>
+      <div mat-ripple="" class="mat-ripple mat-option-ripple" />
+   </mat-option>
+   <mat-option _ngcontent-swa-c700="" role="option" class="mat-option mat-focus-indicator ng-star-inserted" id="mat-option-990" tabindex="-1" aria-disabled="false">
+      <span class="mat-option-text">iap.googleapis.com/TunnelInstance</span>
+      <div mat-ripple="" class="mat-ripple mat-option-ripple" />
+   </mat-option>
+   <mat-option _ngcontent-swa-c700="" role="option" class="mat-option mat-focus-indicator ng-star-inserted" id="mat-option-991" tabindex="-1" aria-disabled="false">
+      <span class="mat-option-text">iap.googleapis.com/TunnelZone</span>
+      <div mat-ripple="" class="mat-ripple mat-option-ripple" />
+   </mat-option>
+   <mat-option _ngcontent-swa-c700="" role="option" class="mat-option mat-focus-indicator ng-star-inserted" id="mat-option-992" tabindex="-1" aria-disabled="false">
+      <span class="mat-option-text">iap.googleapis.com/Web</span>
+      <div mat-ripple="" class="mat-ripple mat-option-ripple" />
+   </mat-option>
+   <mat-option _ngcontent-swa-c700="" role="option" class="mat-option mat-focus-indicator ng-star-inserted" id="mat-option-993" tabindex="-1" aria-disabled="false">
+      <span class="mat-option-text">iap.googleapis.com/WebService</span>
+      <div mat-ripple="" class="mat-ripple mat-option-ripple" />
+   </mat-option>
+   <mat-option _ngcontent-swa-c700="" role="option" class="mat-option mat-focus-indicator ng-star-inserted" id="mat-option-994" tabindex="-1" aria-disabled="false">
+      <span class="mat-option-text">iap.googleapis.com/WebServiceVersion</span>
+      <div mat-ripple="" class="mat-ripple mat-option-ripple" />
+   </mat-option>
+   <mat-option _ngcontent-swa-c700="" role="option" class="mat-option mat-focus-indicator ng-star-inserted" id="mat-option-995" tabindex="-1" aria-disabled="false">
+      <span class="mat-option-text">iap.googleapis.com/WebType</span>
+      <div mat-ripple="" class="mat-ripple mat-option-ripple" />
+   </mat-option>
+   <mat-option _ngcontent-swa-c700="" role="option" class="mat-option mat-focus-indicator ng-star-inserted" id="mat-option-996" tabindex="-1" aria-disabled="false">
+      <span class="mat-option-text">pubsublite.googleapis.com/Location</span>
+      <div mat-ripple="" class="mat-ripple mat-option-ripple" />
+   </mat-option>
+   <mat-option _ngcontent-swa-c700="" role="option" class="mat-option mat-focus-indicator ng-star-inserted" id="mat-option-997" tabindex="-1" aria-disabled="false">
+      <span class="mat-option-text">pubsublite.googleapis.com/Topic</span>
+      <div mat-ripple="" class="mat-ripple mat-option-ripple" />
+   </mat-option>
+   <mat-option _ngcontent-swa-c700="" role="option" class="mat-option mat-focus-indicator ng-star-inserted" id="mat-option-998" tabindex="-1" aria-disabled="false">
+      <span class="mat-option-text">pubsublite.googleapis.com/Subscription</span>
+      <div mat-ripple="" class="mat-ripple mat-option-ripple" />
+   </mat-option>
+   <mat-option _ngcontent-swa-c700="" role="option" class="mat-option mat-focus-indicator ng-star-inserted" id="mat-option-999" tabindex="-1" aria-disabled="false">
+      <span class="mat-option-text">secretmanager.googleapis.com/Secret</span>
+      <div mat-ripple="" class="mat-ripple mat-option-ripple" />
+   </mat-option>
+   <mat-option _ngcontent-swa-c700="" role="option" class="mat-option mat-focus-indicator ng-star-inserted" id="mat-option-1000" tabindex="-1" aria-disabled="false">
+      <span class="mat-option-text">secretmanager.googleapis.com/SecretVersion</span>
+      <div mat-ripple="" class="mat-ripple mat-option-ripple" />
+   </mat-option>
+   <mat-option _ngcontent-swa-c700="" role="option" class="mat-option mat-focus-indicator ng-star-inserted" id="mat-option-1001" tabindex="-1" aria-disabled="false">
+      <span class="mat-option-text">storage.googleapis.com/Bucket</span>
+      <div mat-ripple="" class="mat-ripple mat-option-ripple" />
+   </mat-option>
+   <mat-option _ngcontent-swa-c700="" role="option" class="mat-option mat-focus-indicator ng-star-inserted" id="mat-option-1002" tabindex="-1" aria-disabled="false">
+      <span class="mat-option-text">storage.googleapis.com/Object</span>
+      <div mat-ripple="" class="mat-ripple mat-option-ripple" />
+   </mat-option>
+   <mat-option _ngcontent-swa-c700="" role="option" class="mat-option mat-focus-indicator ng-star-inserted" id="mat-option-1003" tabindex="-1" aria-disabled="false">
+      <span class="mat-option-text">spanner.googleapis.com/Database</span>
+      <div mat-ripple="" class="mat-ripple mat-option-ripple" />
+   </mat-option>
+   <mat-option _ngcontent-swa-c700="" role="option" class="mat-option mat-focus-indicator ng-star-inserted" id="mat-option-1004" tabindex="-1" aria-disabled="false">
+      <span class="mat-option-text">spanner.googleapis.com/Instance</span>
+      <div mat-ripple="" class="mat-ripple mat-option-ripple" />
+   </mat-option>
+   <mat-option _ngcontent-swa-c700="" role="option" class="mat-option mat-focus-indicator ng-star-inserted" id="mat-option-1005" tabindex="-1" aria-disabled="false">
+      <span class="mat-option-text">sqladmin.googleapis.com/Instance</span>
+      <div mat-ripple="" class="mat-ripple mat-option-ripple" />
+   </mat-option>
+</div>

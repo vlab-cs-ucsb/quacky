@@ -1,0 +1,51 @@
+{
+"Version": "2012-10-17",
+"Id": "httpRefererPolicy",
+"Statement": [
+{
+"Sid": "AllowRequestsReferred",
+"Effect": "Allow",
+"Principal": "*",
+"Action": "s3:*",
+"Resource": "arn:aws:s3:::example/*",
+"Condition": {
+"StringLike": {
+"aws:Referer": [
+"https://www.example.com/*",
+"https://example.com/*",
+"https://example.herokuapp.com/*",
+"https://dfgdsfgdfg.cloudfront.net/*",
+"https://yygertwgbvcv.cloudfront.net/*"
+]
+},
+"IpAddress": {
+"aws:SourceIp": "219.77.225.235"
+}
+}
+},
+{
+"Sid": "DenyRequestsReferred",
+"Effect": "Deny",
+"NotPrincipal": {
+"Service": "lambda.amazonaws.com"
+},
+"Action": "s3:*",
+"Resource": "arn:aws:s3:::example/*",
+"Condition": {
+"StringNotLike": {
+"aws:Referer": [
+"https://www.example.com/*",
+"https://example.com/*",
+"https://example.herokuapp.com/*",
+"https://dfgdsfgdfg.cloudfront.net/*",
+"https://yygertwgbvcv.cloudfront.net/*"
+]
+},
+"NotIpAddress": {
+"aws:SourceIp": "219.77.225.235"
+}
+}
+}
+
+]
+}

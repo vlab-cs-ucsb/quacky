@@ -1,0 +1,11 @@
+**/*.DS_Store
+**/*.out
+**/*.pyc
+**/*.sh
+**/*.smt2
+**/*.swp
+**/geckodriver*
+src/*.json
+
+**/__pycache__
+**/.vs
