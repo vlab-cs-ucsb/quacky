@@ -1,26 +1,34 @@
 
 # Quacky
 
-Quacky quantitatively assesses the (relative) permissiveness of access control policies for the cloud. It 
+Quacky quantitatively assesses the (relative) permissiveness of access control policies for the cloud. It
+
 1. translates policies into constraint formulas that conform to the [SMT-LIB 2](http://smtlib.cs.uiowa.edu/language.shtml) standard, and
 2. counts models satisfying the formulas using the model counting constraint solver [ABC](https://github.com/vlab-cs-ucsb/ABC). 
 
 Quacky supports access control policies written in the following policy languages:
+
 1. [Amazon Web Services (AWS) Identity and Access Management (IAM)](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html)
 2. [Microsoft Azure](https://docs.microsoft.com/en-us/azure/role-based-access-control/overview)
 3. [Google Cloud Platform (GCP)](https://cloud.google.com/iam)
 
 ## Getting Quacky
-We recommend downloading Quacky from [the latest release on GitHub](https://github.com/vlab-cs-ucsb/quacky/releases).
+You can download the Quacky ICSE 2022 artifact from either of the following sources:
 
-The unzipped repository contains
+- [GitHub releases](https://github.com/vlab-cs-ucsb/quacky/releases)
+- Zenodo
+
+The artifact is a .zip file containing the following:
+
 - source code for Quacky (under `src`),
 - sample policies used in experiments (under `samples`),
 - experimental results (under `results`)
 - a copy of the accepted technical paper (under `docs`).
 
+*Note: To unzip the artifact, you can double click on the .zip file or use the `unzip` utility.*
+
 ## Installing Quacky
-See `REQUIREMENTS.md` and `INSTALL.md`.
+See `REQUIREMENTS` and `INSTALL`.
 
 ## Running Experiments
 The commands to get the raw data from each experiment are shown below. First,
@@ -90,11 +98,20 @@ python3 runner_single_nolog.py -d s3 -b 100 -c -e
 ### Microsoft Azure Policies
 #### Table 5
 ```
-python3 quacky.py -rd ../samples/azure/role_definitions/compute.json -ra1 ../samples/azure/role_assignments/compute_user_login.json -b 150 -c
-python3 quacky.py -rd ../samples/azure/role_definitions/compute.json -ra1 ../samples/azure/role_assignments/compute_admin_login.json -b 150 -c
-python3 quacky.py -rd ../samples/azure/role_definitions/storage.json -ra1 ../samples/azure/role_assignments/storage_data_reader.json -b 150 -c
-python3 quacky.py -rd ../samples/azure/role_definitions/storage.json -ra1 ../samples/azure/role_assignments/storage_data_contributor.json -b 150 -c
-python3 quacky.py -rd ../samples/azure/role_definitions/storage.json -ra1 ../samples/azure/role_assignments/storage_data_owner.json -b 150 -c
+python3 quacky.py -rd ../samples/azure/role_definitions/compute.json \
+  -ra1 ../samples/azure/role_assignments/compute_user_login.json -b 150 -c
+
+python3 quacky.py -rd ../samples/azure/role_definitions/compute.json \
+  -ra1 ../samples/azure/role_assignments/compute_admin_login.json -b 150 -c
+  
+python3 quacky.py -rd ../samples/azure/role_definitions/storage.json \
+  -ra1 ../samples/azure/role_assignments/storage_data_reader.json -b 150 -c
+
+python3 quacky.py -rd ../samples/azure/role_definitions/storage.json \
+  -ra1 ../samples/azure/role_assignments/storage_data_contributor.json -b 150 -c
+  
+python3 quacky.py -rd ../samples/azure/role_definitions/storage.json \
+  -ra1 ../samples/azure/role_assignments/storage_data_owner.json -b 150 -c
 ```
 
 ### Tips and Tricks

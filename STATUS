@@ -1,0 +1,47 @@
+We are claiming 3 badges (Functional, Reusable, and Available) under the 
+Artifacts Evaluated and Available sections. 
+
+===== Functional =====
+The artifact is documented because it contains an inventory of the source code,
+the policy dataset, and the results, and it contains documentation about how to
+exercise the artifact, i.e. how to run the code on the policies to produce the 
+data. The artifact is because, as mentioned previously, it contains Quacky and 
+the inputs used to produce the results in the technical paper. The artifact is
+complete because it includes all the components relevant to the technical 
+paper. In fact, it also includes beta features not used in the technical paper,
+such as support for policies written in Google Cloud Platform's policy
+language, as well as unused policies and prior results. The artifact is 
+exercisable because the scripts to produce the results can be run successfully
+using the commands provided in the documentation.
+
+===== Reusable =====
+We strongly believe that the artifact is of a quality conducive to reusability
+and extensibility. The main entry points into Quacky have user-friendly 
+command-line interfaces which give help and usage information.
+
+Quacky is written in Python because of its ease of development and package 
+library. The architecture comprises four separate components, namely the 
+
+1) frontend, 
+2) backend, 
+3) model counter, and 
+4) resource type constraint generator. 
+
+The source code is clean, commented, and consistent with the architecture; 
+therefore, the community can improve or extend each component separately and 
+incrementally. For example, when we added support for a new policy language 
+(Google Cloud Platform), we simply extended 
+
+1) the frontend to parse policies written in that language into our policy 
+    model,
+2)the backend to handle new or existing policy elements from that language,
+    and
+3) the resource type constraint generator to capture the valid resource type 
+    and action pairings for that cloud provider
+
+Quacky can also be extended to use other constraint solvers or model counters, 
+as we did in our experiments with Z3.
+
+===== Available =====
+The artifact is in a public GitHub repository so that the community can reuse, 
+improve, and extend it. We released it on GitHub releases and Zenodo.

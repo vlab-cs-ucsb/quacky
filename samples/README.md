@@ -1,27 +1,14 @@
 # Sample Policies
 
-**Single/Multiple Policies**
-|namespace|# single|# multiple|
-|-|-|-|
-|ec2|13|2|
-|iam|8|3|
-|s3|20|5|
+## Contents
+- `azure`: Azure role definitions and role assignments from Azure portal
+- `ec2`: AWS IAM policies for the EC2 service
+- `iam`: AWS IAM policies for the IAM service
+- `s3`: AWS IAM policies for the S3 service
+- `manual_enumerative`: toy policies for testing the enumerative model counting approach
+- `mutations`: AWS IAM policies synthesized by mutating policies in `ec2`, `iam`, `s3`
 
-**Mutated Policies**
-|namespace|# original|# mutated|
-|-|-|-|
-|ec2|9|240|
-|iam|6|26|
-|s3|14|280|
+Some directories contain a subdirectory called `exp_single` and/or a subdirectory called `exp_multiple`.
 
-**Directories**
-- benchmark: curated list of policies for future testing
-- ec2: policies in EC2
-- iam: policies in IAM
-- manual_const: toy policies for testing constraints
-- manual_enumerative: toy policies for testing enumerative model counting
-- manual_s3: S3 policies for testing domains and enumerative model counting
-- og: starter policies
-- s3: policies in S3
-- vlab: policies from VLab
-- william: policies from Will
+- policies in `exp_single` are meant for permissiveness analysis (by themselves)
+- policies in `exp_multiple` are meant for relative permissiveness analysis (between two policies)

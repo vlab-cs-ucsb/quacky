@@ -1,0 +1,18 @@
+===== Software Requirements =====
+Quacky has been developed and tested on Ubuntu 20.04 LTS only. We require
+
+- Linux 4.4.0-198 or higher, 64-bit
+- Python 3.8 or higher
+- latest version of Git
+- latest version of pip3
+- latest version of ABC (see INSTALL)
+- Python 3 packages in requirements.txt (see INSTALL)
+
+===== Hardware Requirements =====
+Quacky does not require any specific hardware. However, to best reproduce our
+results, we recommend 128+ GB RAM. On machines with less memory (e.g. laptops
+and virtual machine instances), the experiments will take longer to run because
+ABC consumes a lot of memory during execution. For our experiments, we used
+
+- Intel i5 3.5GHz X4 processor
+- 128 GB DDR3 RAM

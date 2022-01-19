@@ -1,7 +1,9 @@
+# Generates table 3 in the ICSE 2022 technical paper.
+
 import csv
 import math
 
-datasets = ['ec2', 'iam', 's3']
+datasets = ['ec2', 'iam', 's3'] # change me!
 
 for dataset in datasets:
     reader = csv.reader(open('{}.csv'.format(dataset), 'r'))
@@ -70,12 +72,3 @@ for dataset in datasets:
         out = out[:-1]
 
         print(out)
-
-
-
-
-    
-            
-
-    
-    

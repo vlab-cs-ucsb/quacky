@@ -1,3 +1,5 @@
+# Converts Markdown results to CSV
+
 import re
 import sys
 
