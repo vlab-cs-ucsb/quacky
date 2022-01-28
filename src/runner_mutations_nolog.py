@@ -69,7 +69,7 @@ def call_abc(orig_path, mutated_path, p1, p2):
     #Populate the markdown table with the results
     md = ''
     md += '|[{}/{}]({}/{})|[{}/{}]({}/{})|'.format(orig_path, p1, orig_path, p1, mutated_path, p2, mutated_path, p2)
-    if result1['is_sat'] == "SAT" and 'count' in result1.keys():
+    if result1['is_sat'] == 'sat' and 'count' in result1.keys():
         md += '{}|{}|{}|{}|'.format(result1['is_sat'], result1['solve_time'], 
             result1['count'], result1['count_time']
         )
@@ -85,7 +85,7 @@ def call_abc(orig_path, mutated_path, p1, p2):
         if args.variable: 
             md += '-|-|-|'
 
-    if result2['is_sat'] == "SAT" and 'count' in result2.keys():
+    if result2['is_sat'] == 'sat' and 'count' in result2.keys():
         md += '{}|{}|{}|{}|'.format(result2['is_sat'], result2['solve_time'], 
             result2['count'], result2['count_time']
         )

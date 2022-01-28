@@ -49,7 +49,7 @@ def call_abc(path, policy):
     result = get_abc_result_line(out,err)
     
     #Populate the markdown table with the results
-    if result['is_sat'] == "SAT":
+    if result['is_sat'] == 'sat':
         md = '|[{}/{}]({}/{})|{}|{}|{}|{}|'.format(path, policy, path, policy, 
             result['is_sat'], result['solve_time'],
             math.log(int(result['count']), 2), result['count_time']
