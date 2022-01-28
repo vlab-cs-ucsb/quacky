@@ -52,7 +52,7 @@ def call_solvers(path, policy):
     z3_count = models
 
     # Call ABC for policy
-    cmd = 'abc -bs {} -v 0 -i output_1.smt2 --count-tuple'.format(args.bound)
+    cmd = 'abc -bs {} -v 0 -i output_1.smt2 --precise --count-tuple'.format(args.bound)
     out, err = shell.runcmd(cmd)
     if args.verbose:
         print(out, err)

@@ -39,7 +39,7 @@ def call_abc(path, policy):
         print(out, err)
 
     #Call ABC on the outputted policy translation
-    cmd = 'abc -bs {} -v 0 -i output_1.smt2 --count-tuple'.format(args.bound)
+    cmd = 'abc -bs {} -v 0 -i output_1.smt2 --precise --precise --count-tuple'.format(args.bound)
     if args.variable:
         cmd += ' --count-variable principal,action,resource'
     

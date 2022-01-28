@@ -42,7 +42,7 @@ def call_abc(orig_path, mutated_path, p1, p2):
    
     #Call ABC on the first outputted translation
     cmd = 'timeout {}s '.format(args.timeout)
-    cmd += 'abc -bs {} -v 0 -i output_1.smt2 --count-tuple --cache-subformula --cache-automata'.format(args.bound)
+    cmd += 'abc -bs {} -v 0 -i output_1.smt2 --precise --count-tuple --cache-subformula --cache-automata'.format(args.bound)
     if args.variable:
         cmd += ' --count-variable principal,action,resource'
     
@@ -55,7 +55,7 @@ def call_abc(orig_path, mutated_path, p1, p2):
     
     #Call ABC on the second outputted translation
     cmd = 'timeout {}s '.format(args.timeout)
-    cmd = 'abc -bs {} -v 0 -i output_2.smt2 --count-tuple --cache-subformula --cache-automata'.format(args.bound)
+    cmd = 'abc -bs {} -v 0 -i output_2.smt2 --precise --count-tuple --cache-subformula --cache-automata'.format(args.bound)
     if args.variable:
         cmd += ' --count-variable principal,action,resource'
     

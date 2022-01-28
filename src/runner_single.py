@@ -37,7 +37,7 @@ def call_abc(path, policy):
         print(out, err)
 
     #Call ABC on the outputted policy translation
-    cmd = 'abc -bs {} -v 0 -i output_1.smt2 --count-tuple'.format(args.bound)
+    cmd = 'abc -bs {} -v 0 -i output_1.smt2 --precise --count-tuple'.format(args.bound)
     if args.variable:
         cmd += ' --count-variable principal,action,resource'
     
@@ -47,7 +47,7 @@ def call_abc(path, policy):
 
     #Parse output of ABC to get a dictionary of the results
     result = get_abc_result_line(out,err)
-
+    
     #Populate the markdown table with the results
     if result['is_sat'] == "SAT":
         md = '|[{}/{}]({}/{})|{}|{}|{}|{}|'.format(path, policy, path, policy, 

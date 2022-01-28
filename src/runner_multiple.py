@@ -38,7 +38,7 @@ def call_abc(path, p1, p2):
         print(out, err)
  
     #Call ABC on the domain translation
-    cmd = 'abc -bs {} -v 0 -i output_0.smt2 --count-tuple'.format(args.bound)
+    cmd = 'abc -bs {} -v 0 -i output_0.smt2 --precise --count-tuple'.format(args.bound)
     if args.variable:
         cmd += ' --count-variable principal,action,resource'
     
@@ -50,7 +50,7 @@ def call_abc(path, p1, p2):
     result0 = get_abc_result_line(out,err)
    
     #Call ABC on the first outputted translation
-    cmd = 'abc -bs {} -v 0 -i output_1.smt2 --count-tuple'.format(args.bound)
+    cmd = 'abc -bs {} -v 0 -i output_1.smt2 --precise --count-tuple'.format(args.bound)
     if args.variable:
         cmd += ' --count-variable principal,action,resource'
     
@@ -62,7 +62,7 @@ def call_abc(path, p1, p2):
     result1 = get_abc_result_line(out,err)
     
     #Call ABC on the second outputted translation
-    cmd = 'abc -bs {} -v 0 -i output_2.smt2 --count-tuple'.format(args.bound)
+    cmd = 'abc -bs {} -v 0 -i output_2.smt2 --precise --count-tuple'.format(args.bound)
     if args.variable:
         cmd += ' --count-variable principal,action,resource'
     

@@ -12,7 +12,7 @@ def call_abc(args):
     policy1, policy2 = validate_args(args)
 
     # Call ABC on formula 1
-    cmd = 'abc -bs {} -v 0 -i {}_1.smt2 --count-tuple'.format(args.bound, args.output)
+    cmd = 'abc -bs {} -v 0 -i {}_1.smt2 --precise --count-tuple'.format(args.bound, args.output)
     if args.variable:
         cmd += ' --count-variable principal,action,resource'
     
@@ -50,7 +50,7 @@ def call_abc(args):
         return
 
     # Call ABC on formula 2
-    cmd = 'abc -bs {} -v 0 -i {}_2.smt2 --count-tuple'.format(args.bound, args.output)
+    cmd = 'abc -bs {} -v 0 -i {}_2.smt2 --precise --count-tuple'.format(args.bound, args.output)
     if args.variable:
         cmd += ' --count-variable principal,action,resource'
         
