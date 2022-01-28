@@ -15,7 +15,7 @@ cd quacky
 
 *Note: Alternatively, you can just clone Quacky from GitHub.*
 ```
-git clone git@github.com:vlab-cs-ucsb/quacky.git
+git clone https://github.com/vlab-cs-ucsb/quacky.git
 cd quacky
 ```
 
@@ -57,8 +57,6 @@ Policy 1
 │ Count Time (ms) │ 2.97606            │
 ├─────────────────┼────────────────────┤
 │ lg(requests)    │ 1600.0112931262822 │
-├─────────────────┼────────────────────┤
-│ lg(resource)    │ 800.0056465631411  │
 ╘═════════════════╧════════════════════╛
 
 ```
