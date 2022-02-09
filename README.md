@@ -119,9 +119,10 @@ Some experiments are long (they can take a couple hours). To facilitate these, w
 
 #### Run experiments in the background.
 ```
-python3 runner_mutations.py [args]              # run in foreground
-python3 runner_mutations.py [args] > out.txt &  # redirect output and run in background
-python3 runner_mutations.py [args] > out.txt &! # redirect outupt, disown, and run in background
+# note: this example command is the same as the one used for Table 3.
+python3 runner_mutations_nolog.py -d ec2 -b 100 -t 600 -c -e # run in foreground
+python3 runner_mutations_nolog.py -d ec2 -b 100 -t 600 -c -e > out.txt &  # redirect output and run in background
+python3 runner_mutations_nolog.py -d ec2 -b 100 -t 600 -c -e > out.txt &! # redirect output, run in background, and disown
 ```
 *Note: to terminate a background process, do*
 ```
@@ -138,9 +139,9 @@ sudo kill -9 [PID]
 #### Run experiments in bulk.
 ```
 $ cat bulkrun.sh
-python3 runner_single.py -d ec2 [args] > ec2.txt
-python3 runner_single.py -d iam [args] > iam.txt
-python3 runner_single.py -d s3 [args] > s3.txt
+python3 runner_single.py -d ec2 -b 100 -c -e > ec2.txt # run for EC2
+python3 runner_single.py -d iam -b 100 -c -e > iam.txt # run for IAM
+python3 runner_single.py -d s3 -b 100 -c -e > s3.txt # run for S3
 
 $ sh bulkrun.sh &!
 ```
