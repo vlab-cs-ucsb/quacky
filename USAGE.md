@@ -45,6 +45,8 @@ optional arguments:
 
 ```
 
+In the examples that follow, we reuse Quacky outside of our experiments.
+
 #### Example: Basic Usage Example
 *Note: this example is also covered in `INSTALL`.*
 
@@ -83,6 +85,82 @@ Policy 1
 │ Count Time (ms) │ 2.97606            │
 ├─────────────────┼────────────────────┤
 │ lg(requests)    │ 1600.0112931262822 │
+╘═════════════════╧════════════════════╛
+```
+
+#### Example: Analyze Multiple AWS IAM Policies
+In this example, we analyze the relative permissiveness of Policies 2(a) and 2(b) in the technical paper.
+
+First, we copy and paste Policy 2(a) into JSON files as shown below.
+
+```
+$ cd src
+$ cat policy2a.json
+{"Statement": [{
+    "Effect": "Allow",
+    "Principal": "*",
+    "Action": "s3:GetObject",
+    "Resource": "arn:aws:s3:::myexamplebucket/*"},
+  {
+    "Effect": "Deny",
+    "Principal": "*",
+    "Action": "s3:GetObject",
+    "Resource": "arn:aws:s3:::myexamplebucket/*"}]}
+$ cat policy2b.json
+{"Statement": [{
+  "Effect": "Allow",
+  "Principal": "*",
+  "Action": "s3:GetObject",
+  "Resource": "arn:aws:s3:::myexamplebucket/*"},
+{
+  "Effect": "Deny",
+  "Principal": "*",
+  "Action": "s3:GetObject",
+  "Resource": "arn:aws:s3:::myexamplebucket/*",
+  "Condition": {
+    "StringNotLike": {
+      "aws:userId": [
+        "AROAEXAMPLEID:*", "AIDAEXAMPLEID", "111111111111"]}}}]}
+```
+
+First, we analyze Policy 2(a). Our arguments are
+- policy1: policy2a.json
+- bound: `100`
+
+```
+$ python3 quacky.py -p1 policy2a.json -b 100
+Policy 1
+╒═════════════════╤═════════╕
+│ Solve Time (ms) │ 87.8023 │
+├─────────────────┼─────────┤
+│ Satisfiability  │ UNSAT   │
+├─────────────────┼─────────┤
+│ requests        │ 0       │
+╘═════════════════╧═════════╛
+```
+
+Next, we analyze Policy 2(b). Our arguments are
+- policy1: policy2b.json
+- bound: `100`
+- variable: `true`
+
+```
+$ python3 quacky.py -p1 policy2b.json -b 100 -f
+Policy 1
+╒═════════════════╤════════════════════╕
+│ Solve Time (ms) │ 1239.3             │
+├─────────────────┼────────────────────┤
+│ Satisfiability  │ SAT                │
+├─────────────────┼────────────────────┤
+│ Count Time (ms) │ 154.561            │
+├─────────────────┼────────────────────┤
+│ lg(requests)    │ 2048.0169396894235 │
+├─────────────────┼────────────────────┤
+│ lg(principal)   │ 800.0056465631411  │
+├─────────────────┼────────────────────┤
+│ lg(action)      │ 0.0                │
+├─────────────────┼────────────────────┤
+│ lg(resource)    │ 560.0056465631411  │
 ╘═════════════════╧════════════════════╛
 ```
 
@@ -167,6 +245,8 @@ python3 translator.py -p1 ../samples/iam/exp_multiple/iam_policy_allow_adding_de
 
 *Note: Quacky produces 2 formulas: `output_1.smt2` and `output_2.smt2`. To change the name, use `-o`.*
 
+We can read the SMT formula as shown below.
+
 ```
 $ cat output_1.smt2 | head -n10
 (set-logic ALL)
@@ -179,6 +259,77 @@ $ cat output_1.smt2 | head -n10
 (declare-const aws.username.exists Bool)
 
 (assert (= aws.username.exists (not (= aws.username ""))))
+```
+
+If you had Z3 installed (not required), you could get a model as shown below.
+
+```
+$ z3 output_1.smt2
+sat
+(
+  (define-fun resource () String
+    "arn:aws:iam::000000000000:*")
+  (define-fun action () String
+    "iam:createuser")
+  (define-fun aws.username () String
+    "G")
+  (define-fun p0.s0.cStringNotLikeaws.username () Bool
+    true)
+  (define-fun p0.s0.a () Bool
+    true)
+  (define-fun p1.neutral () Bool
+    true)
+  (define-fun p0.allows () Bool
+    true)
+  (define-fun p1.allows () Bool
+    false)
+  (define-fun p1.denies () Bool
+    false)
+  (define-fun p1.s0.allows () Bool
+    false)
+  (define-fun p1.s0.denies () Bool
+    false)
+  (define-fun p1.s0.r () Bool
+    false)
+  (define-fun p1.s0.a () Bool
+    true)
+  (define-fun p1.s0.pr () Bool
+    true)
+  (define-fun p0.neutral () Bool
+    false)
+  (define-fun p0.denies () Bool
+    false)
+  (define-fun p0.s0.allows () Bool
+    true)
+  (define-fun p0.s0.denies () Bool
+    false)
+  (define-fun p0.s0.pr () Bool
+    true)
+  (define-fun aws.username.exists () Bool
+    true)
+  (define-fun p0.s0.r () Bool
+    true)
+  (define-fun principal () String
+    "")
+)
+```
+
+#### Example: Translating a Single AWS IAM Policy to Count a Variable with ABC
+In this example, we translate Policy 2(b) into an SMT formula and count the number of allowed `aws:userId`s, this time allowing strings with all ASCII characters up to length 64. 
+
+*Note: because we are using ABC, we do not need to use `-s`.*
+
+```
+$ python3 translator.py -p1 policy2b.json
+$ abc -i output_1.smt2 -bs 64 -v 0 --count-variable aws.userId
+attribute
+I20220221 17:01:33.239962  3843 main.cpp:211] Done solving
+sat
+I20220221 17:01:33.240065  3843 main.cpp:299] report is_sat: SAT time: 1257.07 ms
+I20220221 17:01:33.240087  3843 main.cpp:326] report var: aws.userId
+I20220221 17:01:33.525513  3843 main.cpp:340] report bound: 64 count: 2592376348197053329223197286403023685601586992016789095233916844213356044063966062059565531136138371951338086372640620804 time: 285.417 ms
+I20220221 17:01:33.525573  3843 main.cpp:380] done.
+
 ```
 
 #### Example: Translate a Single Azure Role Definition and Role Assignment
