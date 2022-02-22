@@ -1,4 +1,3 @@
-
 # Quacky
 
 Quacky quantitatively assesses the (relative) permissiveness of access control policies for the cloud. It
@@ -29,6 +28,9 @@ The artifact is a .zip file containing the following:
 
 ## Installing Quacky
 See `REQUIREMENTS` and `INSTALL`.
+
+## Using Quacky
+See `USAGE`.
 
 ## Running Experiments
 The commands to get the raw data from each experiment are shown below. First,
@@ -146,148 +148,3 @@ python3 runner_single.py -d s3 -b 100 -c -e > s3.txt # run for S3
 $ sh bulkrun.sh &!
 ```
 *Note: don't use for each loops!*
-
-## Other Use Cases
-### Translating Policies
-You may wish to pass a formula into another constraint solver or model counter (e.g. to get a model).
-
-#### Command-Line Arguments
-```
-$ cd src
-$ python3 translator.py -h
-usage: translator.py [-h] [-p1 POLICY1] [-p2 POLICY2] [-rd ROLE_DEFINITIONS]
-                     [-ra1 ROLE_ASSIGNMENT1] [-ra2 ROLE_ASSIGNMENT2]
-                     [-r ROLES] [-rb1 ROLE_BINDING1] [-rb2 ROLE_BINDING2]
-                     [-d DOMAIN] [-o OUTPUT] [-s] [-e] [-c]
-
-Translate access control policies to SMT formulas
-
-optional arguments:
-  -h, --help            show this help message and exit
-  -p1 POLICY1, --policy1 POLICY1
-                        policy 1 (AWS)
-  -p2 POLICY2, --policy2 POLICY2
-                        policy 2 (AWS)
-  -rd ROLE_DEFINITIONS, --role-definitions ROLE_DEFINITIONS
-                        role definitions (Azure)
-  -ra1 ROLE_ASSIGNMENT1, --role-assignment1 ROLE_ASSIGNMENT1
-                        role assignment 1 (Azure)
-  -ra2 ROLE_ASSIGNMENT2, --role-assignment2 ROLE_ASSIGNMENT2
-                        role assignment 2 (Azure)
-  -r ROLES, --roles ROLES
-                        roles (GCP)
-  -rb1 ROLE_BINDING1, --role-binding1 ROLE_BINDING1
-                        role binding 1 (GCP)
-  -rb2 ROLE_BINDING2, --role-binding2 ROLE_BINDING2
-                        role binding 2 (GCP)
-  -d DOMAIN, --domain DOMAIN
-                        domain file (not supported)
-  -o OUTPUT, --output OUTPUT
-                        output file
-  -s, --smt-lib         use SMT-LIB syntax
-  -e, --enc             use action encoding
-  -c, --constraints     use resource type constraints
-```
-
-#### Example: Translate Multiple AWS IAM Policies, With Resource Type Constraints
-```
-cd src
-python3 translator.py -p1 [file1].json -p2 [file2].json -c -s
-```
-
-*Note: we use the `-s` flag to use SMT-LIB syntax. By default, ABC supports PCRE syntax for regex.*
-
-*Note: Quacky produces 2 formulas: `output_1.smt2` and `output_2.smt2`. To change the name, use `-o`.*
-
-#### Example: Translate a Single Azure Role Definition and Role Assignment
-```
-cd src
-python3 translator.py -rd [file].json -ra1 [file].json -s
-```
-
-*Note: although we pass in two files, they form a single "policy" in our policy model.*
-
-### Mutating Policies
-If you wish to mutate policies (in case you implement new/modified mutation types),
-```
-cd samples
-python3 mutate.py -d [dir] # e.g. iam/exp_single
-```
-
-### Building Resource Type Constraints Offline
-If you wish to rebuild resource type constraints or action encoding offline, do the following:
-
-*Note: we recommend doing steps 1-2 once in a while.*
-
-#### AWS
-1. **(optional)** Download [Selenium WebDriver](https://selenium-python.readthedocs.io/installation.html#drivers) for your browser to `src/offline/aws`
-
-2. **(optional)** Scrape AWS documentation
-
-```
-cd src/offline/aws
-```
-
-2a. Uncomment the line(s) corresponding to your WebDriver. For example, for Firefox,
-```
-$ vim awsscraper.py
-16	# browser = webdriver.Chrome(options = options)
-17	# browser = webdriver.Opera(options = options, executable_path = './operadriver')
-18	browser = webdriver.Firefox(options = options, executable_path = './geckodriver')
-...
-84	# browser = webdriver.Chrome(options = options)
-85	# browser = webdriver.Opera(options = options, executable_path = './operadriver')
-86	browser = webdriver.Firefox(options = options, executable_path = './geckodriver')
-```
-
-*Note: you may have to rename the WebDriver executable for Opera and Firefox.*
-
-2b. Run
-```
-python3 awsscraper.py
-```
-
-3. Update `resource_regex.json` and `resource_regex_z3.json`
-
-4. Build action encoding
-```
-python3 encoder.py
-```
-
-5. Build resource type constraints
-```
-python3 constraintgen.py
-python3 constraintgen_z3.py # with SMT-LIB syntax
-python3 constraintgen_enc.py # with action encoding
-python3 constraintgen_enc_z3.py
-```
-
-#### Azure
-1. **(optional)** Download permissions CSV from [Azure portal](https://portal.azure.com) to `src/offline/azure/permissions.csv`
-
-2. Scrape `permissions.csv`
-```
-cd src/offline/azure
-python3 azurescraper.py
-```
-
-3. Build action encoding
-```
-python3 encoder.py
-```
-
-#### GCP
-1. **(optional)** Download permissions from [GCP docs](https://cloud.google.com/iam/docs/permissions-reference) to `src/offline/gcp/permissions.html`
-
-2. **(optional)** Download resource types from [GCP console](https://console.cloud.google.com) to `src/offline/gcp/resource_types.xml`
-
-3. Scrape `permissions.html` and `resource_types.xml`
-```
-cd src/offline/gcp
-python3 gcpscraper.py
-```
-
-4. Build action encoding
-```
-python3 encoder.py
-```

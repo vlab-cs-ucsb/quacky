@@ -94,7 +94,7 @@ def call_abc(args):
         print('Policy 1 and Policy 2 are equivalent.')
 
 if __name__ == '__main__':
-    parser = ap.ArgumentParser(description = 'Translate access control policies to SMT formulas')
+    parser = ap.ArgumentParser(description = 'Quantitatively analyze permissiveness of access control policies')
     parser.add_argument('-p1' , '--policy1'         , help = 'policy 1 (AWS)'               , required = False)
     parser.add_argument('-p2' , '--policy2'         , help = 'policy 2 (AWS)'               , required = False)
     parser.add_argument('-rd' , '--role-definitions', help = 'role definitions (Azure)'     , required = False)
