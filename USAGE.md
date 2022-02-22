@@ -2,7 +2,7 @@
 *Note: instructions for running experiments are in the `README`.*
 
 ## Analyzing Policies
-The main usage of Quacky is to quantitatively assess the (relative) permissiveness of access control policies for the cloud. The entry point into this analysis is `quacky.py`.
+Quacky's main purpose is to quantitatively assess the (relative) permissiveness of access control policies for the cloud. The entry point into this analysis is `quacky.py`.
 
 #### Command-Line Arguments
 ```
@@ -111,7 +111,7 @@ python3 translator.py -rd ../samples/azure/role_definitions/compute.json -ra1 ..
 
 ## Other Use Cases
 ### Translating Policies
-By default, Quacky uses the model counting constraint solver [ABC](https://github.com/vlab-cs-ucsb/ABC. While ABC is useful for counting the number of allowed requests for policies in a single call, you may instead wish to get an instance (i.e. a satisfying assignment or model) of an allowed request. That is, you may wish to  translate the policy into a SMT formula and pass that into another constraint solver, bypassing ABC. The entry point into this translation is `translator.py`.
+By default, Quacky uses the model counting constraint solver [ABC](https://github.com/vlab-cs-ucsb/ABC). While ABC is useful for counting the number of allowed requests for policies in a single call, you may instead wish to get an instance (i.e. a satisfying assignment or model) of an allowed request. That is, you may wish to  translate the policy into a SMT formula and pass that into another constraint solver, bypassing ABC. The entry point into this translation is `translator.py`.
 
 #### Command-Line Arguments
 ```
