@@ -175,7 +175,7 @@ def gcp_action_encoding(action, smt_lib):
     # get actions and respective encodings
     disjunction = [v for k, v in encoding_actions_json['_all'].items() if re.match(pattern, k)]
 
-    ranges = disjunction_to_ranges(disjunction)
+    ranges = disjunction_to_ranges(disjunction, 'gcp')
 
     if len(ranges) > 1:
         smt += ' (or'
