@@ -1,0 +1,47 @@
+[{
+    "name": "roles/compute.osAdminLogin",
+    "title": "Compute OS Admin Login",
+    "includedPermissions": [
+        "compute.disks.listEffectiveTags",
+        "compute.disks.listTagBindings",
+        "compute.images.listEffectiveTags",
+        "compute.images.listTagBindings",
+        "compute.instances.get",
+        "compute.instances.list",
+        "compute.instances.listEffectiveTags",
+        "compute.instances.listTagBindings",
+        "compute.instances.osAdminLogin",
+        "compute.instances.osLogin",
+        "compute.projects.get",
+        "compute.snapshots.listEffectiveTags",
+        "compute.snapshots.listTagBindings",
+        "resourcemanager.projects.get",
+        "resourcemanager.projects.list",
+        "serviceusage.quotas.get",
+        "serviceusage.services.get",
+        "serviceusage.services.list"
+    ]
+},
+{
+    "name": "roles/compute.osLogin",
+    "title": "Compute OS Login",
+    "includedPermissions": [
+        "compute.disks.listEffectiveTags",
+        "compute.disks.listTagBindings",
+        "compute.images.listEffectiveTags",
+        "compute.images.listTagBindings",
+        "compute.instances.get",
+        "compute.instances.list",
+        "compute.instances.listEffectiveTags",
+        "compute.instances.listTagBindings",
+        "compute.instances.osLogin",
+        "compute.projects.get",
+        "compute.snapshots.listEffectiveTags",
+        "compute.snapshots.listTagBindings",
+        "resourcemanager.projects.get",
+        "resourcemanager.projects.list",
+        "serviceusage.quotas.get",
+        "serviceusage.services.get",
+        "serviceusage.services.list"
+    ]
+}]

@@ -1,0 +1,34 @@
+[{
+    "name": "roles/storage.objectAdmin",
+    "title": "Storage Object Admin",
+    "includedPermissions": [
+        "orgpolicy.policy.get",
+        "resourcemanager.projects.get",
+        "resourcemanager.projects.list",
+        "storage.multipartUploads.*",
+        "storage.objects.*"
+    ]
+},
+{
+    "name": "roles/storage.objectCreator",
+    "title": "Storage Object Creator",
+    "includedPermissions": [
+        "orgpolicy.policy.get",
+        "resourcemanager.projects.get",
+        "resourcemanager.projects.list",
+        "storage.multipartUploads.abort",
+        "storage.multipartUploads.create",
+        "storage.multipartUploads.listParts",
+        "storage.objects.create"
+    ]
+},
+{
+    "name": "roles/storage.objectViewer",
+    "title": "Storage Object Viewer",
+    "includedPermissions": [
+        "resourcemanager.projects.get",
+        "resourcemanager.projects.list",
+        "storage.objects.get",
+        "storage.objects.list"
+    ]
+}]
