@@ -25,7 +25,7 @@ def call_abc(args):
     # Format results table
     table1 = [
         ['Solve Time (ms)', result1['solve_time']],
-        ['Satisfiability', result1['is_sat']]
+        ['satisfiability', result1['is_sat']]
     ]
 
     if 'count' in result1 and int(result1['count']) > 0:
@@ -63,7 +63,7 @@ def call_abc(args):
     # Format results table
     table2 = [
         ['Solve Time (ms)', result2['solve_time']],
-        ['Satisfiability', result2['is_sat']]
+        ['satisfiability', result2['is_sat']]
     ]
 
     if 'count' in result2 and int(result2['count']) > 0:
@@ -84,11 +84,11 @@ def call_abc(args):
     print(tabulate(table2, tablefmt = 'fancy_grid'))
     print()
 
-    if result1['is_sat'] == 'SAT' and result2['is_sat'] == 'SAT':
+    if result1['is_sat'] == 'sat' and result2['is_sat'] == 'sat':
         print('Policy 1 and Policy 2 do not subsume each other.')
-    elif result1['is_sat'] == 'SAT' and result2['is_sat'] == 'UNSAT':
+    elif result1['is_sat'] == 'sat' and result2['is_sat'] == 'unsat':
         print('Policy 1 is more permissive than Policy 2.')
-    elif result1['is_sat'] == 'UNSAT' and result2['is_sat'] == 'SAT':
+    elif result1['is_sat'] == 'unsat' and result2['is_sat'] == 'sat':
         print('Policy 1 is less permissive than Policy 2.')
     else:
         print('Policy 1 and Policy 2 are equivalent.')
