@@ -104,7 +104,7 @@ def azure2policy_helper(role_definitions, role_assignment):
                 }
 
                 if len(rd['NotActions'] + rd['NotDataActions']) > 0:
-                    statement['NotAction']: [a.lower() for a in rd['NotActions'] + rd['NotDataActions']]
+                    statement['NotAction'] = [a.lower() for a in rd['NotActions'] + rd['NotDataActions']]
 
                 if ra['scope'].count('/') > 6:
                     statement['Resource'].append(ra['scope'].lower())
@@ -113,7 +113,8 @@ def azure2policy_helper(role_definitions, role_assignment):
                     statement['Condition'] = ra['properties']['condition']
 
                 statements.append(statement)
-        
+    
+    print(statements)
     return {'Version': 'azure', 'Statement': statements}
 
 def gcp2policy(roles, role_binding1, role_binding2 = None):
