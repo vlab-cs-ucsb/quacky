@@ -1,4 +1,5 @@
 bs4>=0.0.1
+cachetools>=5.2.0
 cel-python>=0.1.5
 lark>=0.12.0
 selenium>=4.1.0

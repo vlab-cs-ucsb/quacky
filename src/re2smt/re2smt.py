@@ -1,7 +1,11 @@
 # RE2SMT: translates PCRE regex to SMT-LIB
 
+from cachetools import cached
 from lark import *
 import re
+
+grammar = open('re2smt/pcre.lark', 'r').read()
+pcre_parser = Lark(grammar)
 
 # Visitor for PCRE regex grammar
 class PCREInterpreter(visitors.Interpreter):
@@ -156,6 +160,7 @@ class PCREInterpreter(visitors.Interpreter):
     def start(self, tree):
         self.visit_children(tree)
 
+@cached(cache = {})
 def re2smt(obj):
     """
     Translate PCRE regex into SMT-LIB
@@ -167,8 +172,6 @@ def re2smt(obj):
         str: SMT-LIB regex
     """
 
-    grammar = open('re2smt/pcre.lark', 'r').read()
-    pcre_parser = Lark(grammar)
     ast = pcre_parser.parse(obj)
     
     return str(PCREInterpreter(ast))
