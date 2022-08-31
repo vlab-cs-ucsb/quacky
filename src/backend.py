@@ -35,6 +35,7 @@ def visit_policy_model(obj, domain, from_domain, smt_lib, enc, cnstr):
         lang = obj['Version'] if 'Version' in obj else 'aws'
         body += Policy('p0', obj, smt_lib, enc).smt()
 
+    """
     # Add all SMT translations for the domain
     if 'Principal' in domain.keys():
         body += Principal('', domain['Principal'], False, smt_lib).smt()
@@ -57,15 +58,14 @@ def visit_policy_model(obj, domain, from_domain, smt_lib, enc, cnstr):
                 body += ' ' + expr(i.replace(':', '.'), j, dtype = dtype, smt_lib = smt_lib)
             
             body += ')))\n'
-        body += '\n'
+        body += '\n' 
+    """
 
     # Add all declarations to the header of the SMT formula
-    for declaration in static_declarations:
-        header += declaration
+    header += ''.join(static_declarations)
 
     if not from_domain:
-        for declaration in declarations:
-            header += declaration
+        header += ''.join(declarations)
 
     # Add resource type constraints
     if cnstr:
