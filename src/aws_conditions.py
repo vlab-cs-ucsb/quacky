@@ -241,6 +241,13 @@ def if_null(key, values, for_all, smt_lib):
 
     return dtype, body
 
+# Not-prefixed operators evaluate to true when the key is absent from the request context.
+not_ops = {
+    'StringNotEquals', 'StringNotEqualsIgnoreCase', 'StringNotLike',
+    'NumericNotEquals', 'DateNotEquals', 'NotIpAddress',
+    'ArnNotEquals', 'ArnNotLike',
+}
+
 # Map condition operators to functions in operators.py
 ops = {
     'StringEquals': string_equals,
@@ -337,7 +344,10 @@ class AWSCondition:
             body += ' (=> {}.exists {})'.format(self.key, smt)
         else:
             if 'Null' not in self.op:
-                body += ' (and {}.exists {})'.format(self.key, smt)
+                if op in not_ops:
+                    body += ' (or (not {}.exists) {})'.format(self.key, smt)
+                else:
+                    body += ' (and {}.exists {})'.format(self.key, smt)
             else:
                 body += ' ' + smt
 
